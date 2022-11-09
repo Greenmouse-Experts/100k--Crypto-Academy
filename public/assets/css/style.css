@@ -1,0 +1,1664 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Montserrat', sans-serif !important;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/* ===== Scrollbar CSS ===== */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 2px;
+}
+*::-moz-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+/*****Header Navbar*****/
+header .navbar{
+    padding: 5px 5px !important;
+    background-color: #003D6C;
+}
+header .navbar .navbar-brand img{
+    width: 68px;
+}
+header .navbar .navbar-nav{
+    position: relative;
+    left: 150px;
+    margin-top: 10px;
+}
+header .navbar .nav-item{
+    padding: 5px 30px;
+}
+header .navbar .nav-item .nav-link{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+header nav .navbar-nav .nav-item .active{
+    color: #fff !important;
+    border-top: 1px solid #fff;
+}
+header .navbar .nav-item .nav-link:hover{
+    color: #fff;
+}
+header .navbar .nav-item .nav-link:after {
+    display:block;
+    content: '';
+    padding: 2px 0 0 0;
+    border-bottom: solid 2px #fff;  
+    border-radius: 1px;
+    -webkit-transform: scaleX(0);  
+            transform: scaleX(0);  
+    -webkit-transition: -webkit-transform 250ms ease-in-out;  
+    transition: -webkit-transform 250ms ease-in-out;  
+    transition: transform 250ms ease-in-out;  
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    visibility: hidden;
+}
+header .navbar .nav-item .nav-link:hover::after{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+header .navbar .nav-auth{
+    margin-top: 23px;
+}
+header .navbar .nav-auth a{
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 2px;
+    font-weight: 600;
+    font-size: 15px;
+}
+header .navbar .nav-auth a.btn-signup{
+    background-color: #fff;
+    transition: 0.6s;
+    color: #1D79D0;
+}
+header .navbar .navbar-toggler{
+    border: 1px solid #fff !important;
+}
+header .navbar .navbar-toggler i{
+    color: #fff;
+}
+header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #fff !important; 
+}
+@media(max-width: 1400px){
+    header .navbar .nav-item{
+        padding: 5px 15px;
+    }
+}
+@media(max-width: 1199px){
+    header .navbar .nav-item{
+        padding: 5px 10px;
+    }
+    header .navbar .navbar-nav{
+        position: relative;
+        left: 80px;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 991px){
+    header .navbar .offcanvas{
+        background-color: #000;
+    }
+    header .navbar .navbar-brand img{
+        width: 50px;
+    }
+    header .navbar .navbar-nav{
+        position: relative;
+        left: 20px;
+        margin-top: 10px;
+    }
+    header .navbar .offcanvas-body{
+        margin-top: -20px;
+    }
+    header .navbar .nav-item{
+        padding: 7px 1px;
+    }
+    .header .navbar .nav-item .nav-link{
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    header .navbar .nav-auth a{
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin: 2px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    header .navbar .nav-auth{
+        margin-top: 10px;
+    }
+    header .navbar .btn-offcanvas-close i{
+        font-size: 22px;
+        color: #fff;
+        background-color: #000;
+        border: none;
+    }
+    header .navbar .offcanvas button{
+        background-color: #000;
+        border: none;
+    }
+}
+@media(max-width: 373px){
+    header .navbar .navbar-brand img{
+        width: 50px;
+    }
+}
+/* Header Ends */
+
+/* Welcome Page */
+.welcome{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667484666/EProd%20Images/Rectangle-19326_owtdy5.jpg);
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 140px 0px;
+}
+/* .welcome .children{
+
+} */
+.welcome .bet {
+    padding: 100px 0px 0px 0px;
+}
+.welcome .bet button{
+    padding: 10px 50px 10px 50px;
+    border: none;
+    background-color: #fff;
+    color: #1D79D0;
+    margin-top: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+.welcome .bet h1{
+    font-size: 55px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 70px;
+}
+/* .welcome .children img{
+    width: 100%;
+    display: block;
+    margin: auto;
+} */
+@media (max-width:1400px) {
+    .welcome .bet h1{
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 70px;
+    }
+}
+@media (max-width:1372px) {
+    .welcome .bet {
+        padding: 50px 0px 0px 0px;
+    }
+}
+@media (max-width:1196px) {
+    .welcome .bet h1{
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 70px;
+    }
+    .welcome{
+        background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667484666/EProd%20Images/Rectangle-19326_owtdy5.jpg);
+        margin-top: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 0px 100px 0px;
+    }
+    .welcome .bet button{
+        padding: 10px 50px 10px 50px;
+        border: none;
+        background-color: #fff;
+        color: #1D79D0;
+        margin-top: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 3px;
+    }
+    .platform{
+        background-color: #1D79D0;
+        padding: 0px 0px 0px 0px ;
+        margin-top: 50px !important;
+        border-radius: 3px;
+    }
+    .platform .carousel-inner{
+        padding: 10px 0px 0px 0px;
+    
+    }
+}
+@media (max-width:992px) {
+    .welcome .bet h1{
+        padding: 10px 0 0 0;
+       text-align: left;
+       line-height: 50px;
+       font-size: 31px;
+    }
+}
+@media (max-width:520px) {
+    .welcome .bet h1{
+        text-align: center;
+        line-height: 45px;
+        font-size: 28px;
+    }
+    .welcome .bet button{
+        display: block;
+        margin-top: 40px !important;
+        margin: auto;
+    }
+    .welcome{
+        background-size: cover;
+        padding: 70px 0px 80px 0px;
+    }
+}
+@media (max-width:400px) {
+    .welcome .bet h1{
+        line-height: 35px;
+        font-size: 25px;
+     }
+}
+.platform{
+    background-color: #003D6C;
+    padding: 0px 0px 0px 0px ;
+    margin-top: 100px;
+    border-radius: 3px;
+}
+.platform .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 0rem;
+    left: 15%;
+    padding-top:0rem !important;
+    padding-bottom: 0rem !important;
+    color: #fff;
+    text-align: center;
+}
+.platform .carousel-caption h5{
+    text-align: left !important;
+    color: #fff;
+    font-weight: 600;
+}
+.platform .carousel-caption h5 button{
+    padding: 10px 30px 10px 30px;
+    border: none;
+    background-color: #FF65C3;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 15px;
+    float: right !important;
+}
+.platform .carousel-caption p{
+    text-align: left !important;
+    color: #fff;
+}
+.platform .carousel-inner{
+    padding: 100px 0px 0px 0px;
+    margin-bottom: -20px;
+
+}
+/* Welcome Page Ends */
+
+/* Choose-Us Page Ends */
+.choose{
+    padding: 150px 0px 100px 0px;
+    background-color: #F2F2F2;
+    border-radius: 0px 100px 0px 100px;
+}
+.choose .drop-btn img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.choose .drop-text h1{
+    font-size: 25px;
+    font-weight: 700;
+    color: #464646;
+    padding: 10px 0px 10px 0px;
+}
+.choose .drop-text p{
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+}
+.choose .drop-text p strong{
+    font-weight: 600;
+}
+@media (max-width:1200px) {
+    .choose .drop-text p{
+        font-size: 15px;
+        line-height: 2;
+        font-weight: 500;
+    }
+}
+@media (max-width:1000px) {
+    .choose .drop-btn img{
+        width: 95%;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px !important;
+    }
+    .choose{
+        padding: 90px 15px 90px 15px;
+        background-color: #F2F2F2;
+        border-radius: 0px 100px 0px 100px;
+    }
+}
+/* Choose-Us Page Ends */
+
+/* Features Page Ends */
+.feature{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1666625962/EProd%20Images/Vector_9_epglns.png);
+    background-size: cover;
+    padding: 50px 0px 100px 0px;
+}
+.feature h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.feature .btn-holder{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    background-color: #fff;
+}
+.feature .btn-holder .control img{
+    width: 80px;
+}
+.feature .btn-holder .control .fullOption{
+    padding: 0px 0px 0px 100px;
+    margin-top: -70px;
+}
+.feature .btn-holder .control .fullOption h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+@media (max-width:1000px) {
+    .feature .btn-holder .control .fullOption p{
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+}
+@media (max-width:767px) {
+    .feature .btn-holder .control .fullOption{
+        margin-bottom: 30px;
+        display: block !important;
+        margin: auto !important;
+        padding: 0px 0px 0px 0px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    .feature .btn-holder{
+        background-color: #F2F2F2;
+    }
+    .feature .btn-holder .control{
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        padding: 10px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    .feature .btn-holder .control img{
+        display: block;
+        margin: auto;
+        margin-bottom: 10px !important;
+    }
+    .feature{
+        padding: 90px 0px 90px 0px;
+    }
+}
+.feature .object{
+    padding: 180px 0px 0px 0px;
+}
+.feature .object p{
+    color: #1D79D0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.feature .object .update{
+    padding: 50px 0px 0px 0px;
+}
+.feature .object .updating{
+    padding: 40px 0px 0px 0px;
+}
+.feature .object .update img{
+    width: 20px;
+    display: inline-block;
+}
+.feature .object .update span{
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 20px !important;
+}
+.feature .object .updating img{
+    width: 20px;
+    display: inline-block;
+}
+.feature .object .updating span{
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 20px !important;
+}
+.feature .object .emmet img{
+    width: 470px;
+    display: block;
+    margin: auto;
+}
+@media (max-width:1300px) {
+    .feature .object{
+        padding: 130px 0px 0px 0px;
+    }
+    .feature .object .updating span{
+        margin-left: 10px !important;
+    }
+    .feature .object .update span{
+        margin-left: 10px !important;
+    }
+}
+@media (max-width:1200px) {
+    .feature .object .updating span{
+        margin-left: 10px !important;
+        font-size: 15px !important;
+    }
+    .feature .object .update span{
+        font-size: 15px !important;
+        margin-left: 10px !important;
+    }
+}
+@media (max-width:991px) {
+    .feature .object .emmet img{
+        margin-top: 50px !important;
+        width: 400px;
+        display: block;
+        margin: auto;
+    }
+    .feature .object{
+        padding: 100px 0px 0px 0px;
+    }
+    .feature .object .updating{
+        padding: 20px 0px 0px 0px;
+    }
+}
+@media (max-width:760px) {
+    .feature .object .emmet img{
+        margin-top: 50px !important;
+        width: 90%;
+        margin-bottom: 30px !important;
+    }
+    .feature .object .update{
+        padding: 30px 0px 0px 0px;
+    }
+    .feature{
+        padding: 0px 20px !important;
+    }
+}
+@media (max-width:400px) {
+    .feature .object .update img{
+        width: 10px;
+        display: inline-block;
+    }
+    .feature .object .updating img{
+        width: 10px;
+        display: inline-block;
+    }
+    .feature .object .update span{
+        font-size: 13px !important;
+        margin-left: 3px !important;
+    }
+    .feature .object .updating span{
+        font-size: 13px !important;
+        margin-left: 3px !important;
+    }
+    .feature .object h1 {
+        color: #4B4B4B;
+        font-size: 20px !important;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+}
+.feature .object h1{
+    color: #4B4B4B;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.feature .object .line{
+    background-color: #1D79D0;
+    height: 3px;
+    width: 25%;
+    margin: auto;
+   display: inline-block;
+}
+.feature .course button{
+    padding: 10px 50px 10px 50px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+.feature .learner{
+    padding: 40px 0px 0px 0px;
+}
+.feature .learner .avalable{
+    padding: 0px 0px 20px 0px;
+    border-radius: 12px 12px 10px 10px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.feature .learner .avalable .moving{
+    background-color: #EC4B1D;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    width: 25%;
+    position: relative;
+    top: -20px;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+}
+.feature .learner .avalable img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.feature .learner .avalable .calling{
+    padding: 0px 30px 0px 30px;
+}
+.feature .learner .avalable .calling h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.feature .learner .avalable .calling img{
+    width: 50%;
+    display: inline-block;
+    margin: auto;
+}
+.feature .learner .avalable .calling .images img{
+    width: 18px;
+    margin-left: 10px;
+}
+.feature .learner .avalable .calling .images img span{
+    color: #4B4B4B !important;
+}
+@media (max-width:1200px) {
+    .feature .learner .avalable .moving {
+        display: inline-block;
+        padding: 10px;
+        width: 35%;
+    }
+    .feature .learner .avalable .calling{
+        padding: 0px 15px 0px 15px;
+    }
+    .feature .learner .avalable .calling h1{
+        font-size: 19px;
+        font-weight: 600;
+    }
+    .feature .learner .avalable .calling .images img{
+        width: 18px;
+        margin-left: 5px;
+    }
+}
+@media (max-width:990px) {
+    .feature .learner .avalable .moving {
+        display: inline-block;
+        padding: 10px;
+        width: 50%;
+    }
+}
+@media (max-width:768px) {
+    .feature .object {
+        padding: 80px 0px 0px 0px;
+    }
+    .feature .course button {
+        padding: 10px 50px 10px 50px;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+        display: block;
+        margin: auto;
+        border-radius: 3px;
+    }
+    .feature .learner .avalable .calling h1{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+@media (max-width:600px) {
+    .feature .learner .avalable .moving {
+        display: inline-block;
+        padding: 10px;
+        width: 25%;
+    }
+    .feature .learner .avalable img {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .feature .learner .avalable{
+        width: 95%;
+        display: block;
+        margin: auto;
+        margin-bottom: 25px !important;
+    }
+    .feature{
+        padding: 150px 0px 50px 0px;
+    }
+    .feature .course button {
+       display: none;
+    }
+}
+/* Features Page Ends */
+
+/* Features Page Ends */
+
+
+/* How-IT-Works Page  */
+.How{
+    padding: 60px 0px 50px 0px;
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1666800529/EProd%20Images/Group_222_jbzznf.png);
+    background-size: cover;
+}
+.How .reserve p{
+    font-size: 15px;
+    color: #ffff;
+    margin-bottom: 0;
+}
+.How .reserve h1{
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 500;
+    color: #ffff;
+}
+.How .reserve .borderless{
+    background: linear-gradient(99.38deg, #1D79D0 8.3%, #FF65C3 80.45%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    padding: 3px;
+    margin-bottom: 30px;
+}
+.How .reserve .borderless .letbean{
+    background-color: #fff;
+    padding: 25px 50px 25px 50px;
+}
+.How .reserve .borderless .letbean img{
+    display: block;
+    margin: auto;
+    width: 60px;
+}
+.How .reserve .borderless .letbean p{
+    padding: 10px 0 0 0;
+    color: #000;
+    line-height: 2;
+    font-size: 18px;
+    text-align: center;
+}
+@media (max-width:1192px) {
+    .How .reserve h1{
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: 500;
+        color: #ffff;
+    }
+    .How .reserve .borderless .letbean{
+        background-color: #fff;
+        padding: 25px 20px 25px 20px;
+    }
+}
+@media (max-width:751px) {
+    .How .reserve h1{
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 500;
+        color: #ffff;
+        margin-bottom: 20px;
+    }
+    .How .reserve .borderless .letbean{
+        background-color: #fff;
+        padding: 25px 20px 25px 20px;
+    }
+    .How{
+       padding: 80px 15px 80px 15px;
+    }
+}
+@media (max-width:437px) {
+    .How .reserve h1{
+        font-size: 25px;
+        line-height: 35px;
+        font-weight: 500;
+        color: #ffff;
+        margin-bottom: 20px;
+    }
+    .How .reserve .borderless .letbean p{
+        padding: 10px 0 0 0;
+        color: #000;
+        line-height: 1.5;
+        font-size: 16px;
+        text-align: center;
+    }
+    .How .reserve .borderless .letbean img{
+        display: block;
+        margin: auto;
+        width: 50px;
+    }
+}
+/* How-IT-Works Page Ends */
+
+/* Why Choosing Us  */
+.choosing{
+    padding: 80px 0px 50px 0px;
+    background-color: #FFF2FA;
+    display: flex;
+}
+.choosing .why h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 0px 0px 20px 30px;
+}
+.choosing .why img{
+    width: 20px;
+    display: inline-block;
+    margin: auto;
+}
+.choosing .why p{
+   line-height: 1.8;
+   padding: 0px 0px 0px 30px;
+   margin-top: -30px;
+   font-size: 17px;
+}
+.choosing .image img{
+    width: 380px;
+    display: block;
+    margin: auto;
+}
+@media (max-width:520px) {
+    .choosing .why h1{
+        font-size: 27px;
+        font-weight: 600;
+        color: #4B4B4B;
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+    .choosing .why p{
+        line-height: 1.7;
+        padding: 0px 0px 0px 30px;
+        margin-top: -30px;
+        font-size: 15px;
+    }
+    .choosing .image img{
+        width: 350px;
+        display: block;
+        margin: auto;
+    }
+}
+/* Why Choosing Us Ends */
+
+/* Testimonials  */
+.Testimonials {
+    padding: 100px 0px 50px 0px;
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1666863913/EProd%20Images/Rectangle_19278_xl75se.png);
+    background-size: cover;
+}
+.Testimonials .text-center p{
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #4B4B4B;
+}
+.Testimonials .text-center h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: #4B4B4B;
+}
+.Testimonials .carol{
+    padding: 50px 0 0 0;
+}
+.Testimonials .carol .control{
+    margin-bottom: 150px;
+}
+.Testimonials .carol .control img{
+    width: 70px;
+}
+.Testimonials .carol .control h1{
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 600;
+    color: #4B4B4B;
+}
+.Testimonials .carol .images img{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+/* .Testimonials .carol .carousel-indicators{
+    background-color: #000 !important;
+} */
+.Testimonials .carol .carousel-indicators button{
+    background-color: #FF65C3 !important;
+    width: 10px;
+    height: 3px;
+}
+@media (max-width:1392px) {
+    .Testimonials .carol .control{
+        margin-bottom: 120px;
+    }
+}
+@media (max-width:1192px) {
+    .Testimonials .carol .control h1{
+        font-size: 30px;
+        line-height: 60px;
+        font-weight: 600;
+        color: #4B4B4B;
+    }
+}
+@media (max-width:772px) {
+    .Testimonials .carol .control{
+        margin-bottom: 30px;
+        padding: 0px 15px 0px 15px;
+    }
+    .Testimonials .carol .images{
+        margin-bottom: 90px;
+    }
+}
+@media (max-width:567px) {
+    .Testimonials .carol .control h1{
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #4B4B4B;
+    }
+    .Testimonials {
+        padding: 70px 0px 50px 0px;
+    }
+    .Testimonials .text-center h1{
+        font-size: 30px;
+        font-weight: 600;
+        color: #4B4B4B;
+    }
+}
+@media (max-width:410px) {
+    .Testimonials .carol .control h1{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #4B4B4B;
+    }
+    .Testimonials .carol .control img{
+        width: 50px;
+    }
+}
+/* Testimonials  Ends */
+
+/* Learning  */
+.learning{
+    padding: 50px 0px 50px 0px;
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1666868440/EProd%20Images/Group_225_gshxa5.png);
+    background-size: cover;
+}
+.learning .output h1{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 55px;
+}
+.learning .output a{
+    text-decoration: none;
+    color: #fff;
+}
+.learning .output button{
+    padding: 15px 40px 15px 40px;
+    display: block;
+    margin: auto;
+    margin-top: 40px !important;
+    border: none;
+    border-radius: 7px;
+    background-color: #1D79D0;
+    color: #fff;
+}
+@media (max-width:1000px) {
+    .learning .output h1{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+/* Learning  Ends */
+
+/* Footer Page */
+footer{
+    background: #003D6C !important;
+    width: 100%;
+    padding: 80px 0px 0px 0px;
+}
+footer .conting img{
+    width: 80px;
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 10px !important;
+}
+footer .conting p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+footer .conting .link img{
+    width: 30px;
+    margin: 0px 5px;
+}
+footer .conting .link a{
+    text-decoration: none;
+}
+.footer .ruling img{
+    height: 250px;
+    display: block;
+    margin: auto;
+}
+footer .conting h1{
+    padding: 0px 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+footer .input-group>.form-control, .input-group>.form-select:focus{
+    outline:0px !important;
+    box-shadow: none !important;
+    border: 1px solid #fff;
+}
+footer .search-bar input::placeholder{
+    font-size: 12px;
+}
+footer .input-group-text{
+    border: none;
+    background-color: #1D79D0;
+    padding: 10px 30px 10px 30px;
+}
+footer .input-group-text img{
+    width: 20px;
+}
+@media (max-width:1000px) {
+    footer .conting h1{
+        padding: 0px 0 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    footer .ruling{
+        display: none;
+    }
+    footer .conting .link img{
+        width: 30px;
+        margin: 0px 5px;
+    }
+    footer .conting p{
+        font-size: 14.5px;
+        font-weight: 400;
+        color: #fff;
+    }
+    .footer .col-sm-3{
+        width: calc(100% / 2 - 0px);
+    }
+}
+@media (max-width:583px) {
+    footer .conting img{
+        width: 80px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px !important;
+    }
+    footer .conting p{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+    }
+    footer .conting .link img{
+        width: 30px;
+        display: inline-block;
+        margin:auto ;
+        margin-top: 10px ;
+        margin-left: 70px;
+    }
+    footer .conting h1{
+        margin-top: 20px;
+        padding: 0px 0 12px 0;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        color: #fff;
+    }
+    .footer .col-sm-3{
+        width:100%;
+    }
+    footer .input-group-text img{
+        width: 20px;
+    }
+    footer .input-group-text{
+        border: none;
+        background-color: #1D79D0;
+        padding: 7px 20px 7px 20px;
+    }
+}
+@media (max-width:475px) {
+    footer .conting .link img{
+        margin-left: 55px;
+    }
+}
+@media (max-width:400px) {
+    footer .conting .link img{
+        margin-left: 45px;
+    }
+}
+@media (max-width:371px) {
+    footer .conting .link img{
+        width: 30px;
+        display: inline-block;
+        margin:auto ;
+        margin-top: 10px ;
+        margin-left: 35px;
+    }
+}
+/* Footer Page Ends */
+
+/* About Us */
+.Breadcrumb{
+    background-image: linear-gradient(90deg, #1d1d1d50, #1a223ba2), url('https://res.cloudinary.com/greenmouse-tech/image/upload/v1667560255/EProd%20Images/Rectangle_19286_q5ano1.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 150px 10px;
+    margin-top: 80px;
+    color: #fff;
+}
+.Breadcrumb h1{
+    font-weight: 700;
+    font-size: 45px;
+}
+.Breadcrumb p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.Breadcrumb p a:hover{
+    text-decoration: underline;
+}
+.Breadcrumb p i{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* Why about Us  */
+.about{
+    padding: 100px 0px 100px 0px;
+    background-color: #FFF2FA;
+    display: flex;
+}
+.about .why h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 0px 0px 20px 0px;
+}
+.about .why p{
+   line-height: 1.8;
+   font-size: 17px;
+   color: #000;
+}
+.about .image img{
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+@media (max-width:520px) {
+    .about .why h1{
+        font-size: 27px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+    .about .why p{
+        line-height: 1.7;
+        padding: 0px 0px 0px 0px;
+        font-size: 15px;
+    }
+    .about .image img{
+        width: 350px;
+        display: block;
+        margin: auto;
+    }
+}
+/* Why about Us Ends */
+/* Why missionUs  */
+.mission{
+    padding: 80px 0px 50px 0px;
+    background-color: #fff;
+    display: flex;
+}
+.mission .why h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 0px 0px 20px 30px;
+}
+.mission .why img{
+    width: 20px;
+    display: inline-block;
+    margin: auto;
+}
+.mission .why p{
+   line-height: 1.8;
+   padding: 0px 0px 0px 30px;
+   margin-top: -30px;
+   font-size: 17px;
+}
+.mission .image img{
+    width: 380px;
+    display: block;
+    margin: auto;
+}
+@media (max-width:520px) {
+    .mission .why h1{
+        font-size: 27px;
+        font-weight: 600;
+        color: #4B4B4B;
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+    .mission .why p{
+        line-height: 1.7;
+        padding: 0px 0px 0px 30px;
+        margin-top: -30px;
+        font-size: 15px;
+    }
+    .mission .image img{
+        width: 350px;
+        display: block;
+        margin: auto;
+    }
+}
+/* Why missionUs Ends */
+/* About Us Ends */
+
+/**********Next Page ENDS*************/
+.next{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667574405/EProd%20Images/Vector_10_srzo5p.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0px 50px 0px;
+}
+.next .why h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 0px 0px 20px 0px;
+}
+.next .why p{
+   line-height: 1.8;
+   font-size: 17px;
+   color: #000;
+}
+.next .image img{
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+@media (max-width:520px) {
+    .next .why h1{
+        font-size: 27px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+    .next .why p{
+        line-height: 1.7;
+        padding: 0px 0px 0px 0px;
+        font-size: 15px;
+    }
+    .next .image img{
+        width: 350px;
+        display: block;
+        margin: auto;
+    }
+}
+.conting a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-white p{
+    font-size: 13px;
+}
+/**********Next Page ENDS*************/
+/* OBJECTIVE */
+.objective{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667813115/EProd%20Images/contact_w4efx0.jpg);
+    margin-top: 80px;
+    padding: 150px 0px 350px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* OBJECTIVE ENDS */
+/******Connect********/
+.connect h1{
+   padding: 0px 0px 70px 0px;
+}
+.connect{
+    margin-top: -250px;
+    margin-bottom: 50px;
+}
+.connect .support{
+    background-color: #1D79D0;
+    color: #fff;
+    position: relative;
+    left: 25px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 100px 30px 140px 30px;
+}
+.connect .support p{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.connect .support ul li{
+    list-style-type: none;
+    float: left;
+    margin-top: 40px;
+    width: 30%;
+}
+.connect .support img{
+    display: block;
+    margin: auto;
+    width: 60px;
+}
+.accept {
+    background-color: #F2F2F2;
+    border-radius: 0px 10px 10px 0px;
+    width: 100%;
+}
+.sign .sign-div {
+    border-radius: 2px;
+    width: 100%;
+    padding: 30px 40px;
+    margin-bottom: 10px;
+}
+.sign .sign-div ::placeholder{
+    font-size: 12px;
+    color: #000;
+}
+.sign .sign-div textarea::placeholder{
+    font-size: 12px;
+    color: #000;
+}
+.sign .sign-div label{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sign .sign-div input{
+    display: block;
+    width: 100%;
+    padding: 10px 5px 10px 20px;
+    border-radius: 7px;
+    border: none;
+    letter-spacing: 0.8px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: 0.6s;
+}
+.sign .sign-div textarea{
+    display: block;
+    width: 100%;
+    padding: 10px 5px 10px 20px;
+    border-radius: 7px;
+    border: none;
+    letter-spacing: 0.8px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: 0.6s;
+}
+.sign .sign-div button{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: none;
+    background-color: #1D79D0;
+    color: #fff;
+    border-radius: 7px;
+}
+@media (max-width:1200px) {
+    .connect .support{
+        background-color: #1D79D0;
+        color: #fff;
+        position: relative;
+        left: 25px;
+        border-radius: 10px 0px 0px 10px;
+        padding: 100px 30px 105px 30px;
+    }
+    .connect .support p{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media (max-width:991px) {
+    .connect .support{
+        background-color: #1D79D0;
+        color: #fff;
+        position: relative;
+        left: 25px;
+        border-radius: 10px 0px 0px 10px;
+        padding: 30px 20px 90px 20px;
+    }
+    .connect .support p{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .sign .sign-div {
+        border-radius: 2px;
+        width: 100%;
+        padding: 30px 20px;
+        margin-bottom: 10px;
+    }
+    .object{
+        margin-top: 60px;
+        padding: 150px 0px 250px 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width:767px) {
+    .connect .support{
+        background-color: #1D79D0;
+        color: #fff;
+        position: relative;
+        left: 0px !important;
+        border-radius: 10px 10px 0px 0px;
+        padding: 50px 0px 110px 0px;
+    }
+    .connect .support p{
+        font-size: 16px !important;
+        font-weight: 500;
+        padding: 0px 20px;
+        text-align: center;
+        line-height: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .sign .sign-div {
+        border-radius: 2px;
+        width: 100%;
+        padding: 30px 20px;
+        margin-bottom: 10px;
+    }
+    .object{
+        margin-top: 60px;
+        padding: 150px 0px 250px 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .connect{
+        margin-top: -200px;
+        margin-bottom: 100px;
+    }
+    .connect h1{
+        padding: 0px 0px 30px 0px;
+    }
+    .accept {
+        background-color: #F2F2F2;
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+    }
+    .connect .support img{
+        display: block;
+        margin: auto;
+        width: 60px;
+    }
+}
+@media (max-width:520px) {
+    .connect .support p{
+        font-size: 15px !important;
+        font-weight: 500;
+        padding: 0px 10px;
+        text-align: center;
+        line-height: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+/******Connect ENDS********/
+
+/******Learning********/
+.learn{
+    margin-top: 80px;
+    padding: 100px 0px 100px 0;
+    background-color: #fff !important;
+}
+.learn input::placeholder{
+    font-size: 12px;
+}
+.learn input{
+    display: block;
+    width: 100%;
+    padding: 10px 5px 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #1D79D0;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    transition: 0.6s;
+}
+.learn .control{
+    background-color: #1D79D0;
+    color: #fff;
+}
+.learn h1{
+    font-size: 25px;
+    padding: 50px 0px 30px 0px;
+    font-weight: 600;
+}
+.learn .topic .explore img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.learn .topic .exploret img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 25px !important;
+}
+.learn .carousel-indicators button{
+    background-color: #FF65C3 !important;
+    width: 10px;
+    height: 3px;
+}
+@media (max-width:1000px) {
+    .learn .topic .explore img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-bottom: 25px !important;
+    }
+}
+/******Learning ENDS********/
+
+/******Assets********/
+.assets{
+    margin-top: 80px;
+    padding: 120px 0px;
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667826817/EProd%20Images/Rectangle_19493_cpahi4.png);
+}
+@media (max-width:991px) {
+    .assets{
+        margin-top: 60px;
+    } 
+}
+.assets .question{
+    text-align: center;
+    color: #fff;
+}
+.assets .question h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.Accordion{
+    padding: 100px 0px ;
+}
+.Accordion h1{
+    padding: 50px 0px 0px 0px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #1D79D0;
+}
+.Accordion .accord .accordion-item {
+    border: 1px solid #1D79D0 !important;
+    padding: 5px;
+    margin: 10px;
+    outline:0px !important;
+    border-radius: 6px;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+.accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.faq .question .accordion-item  input:focus{
+    outline:0px !important;
+    box-shadow: none !important;
+}
+/******Assets ENDS********/
+.signn .sign-div {
+    border-radius: 2px;
+    width: 100%;
+    padding: 30px 10px;
+    margin-bottom: 10px;
+}
+.signn .sign-div ::placeholder{
+    font-size: 12px;
+    color: #000;
+}
+.signn .sign-div textarea::placeholder{
+    font-size: 12px;
+    color: #000;
+}
+.signn .sign-div label{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.signn .sign-div input{
+    display: block;
+    width: 100%;
+    padding: 10px 5px 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #1D79D0;
+    letter-spacing: 0.8px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: 0.6s;
+}
+.signn .sign-div textarea{
+    display: block;
+    width: 100%;
+    padding: 10px 5px 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #1D79D0;
+    letter-spacing: 0.8px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: 0.6s;
+}
+.signn .sign-div button{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: none;
+    background-color: #1D79D0;
+    color: #fff;
+    border-radius: 7px;
+}
+/***********Resources Page**********/
+.resourcePage .col-xl-11{
+    background-color: #fff;
+    padding: 20px 20px !important;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #cecece;
+    border: 1px solid #d3d3d3;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #000000;
+}
+.resourcePage h1{
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.resourcePage p{
+    font-size: 16px;
+    line-height: 2;
+    padding-bottom: 10px;
+}
+.resourcePage ol li{
+    font-weight: 700;
+    font-size: 18px;
+}
+.resourcePage ul li{
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 7px;
+    list-style:disc;
+}
+.resourcePage .other-ols li{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.text-center p a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-center p a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
