@@ -27,3 +27,9 @@ Route::get('/policy', [App\Http\Controllers\HomePageController::class, 'policy']
 Route::get('/sign', [App\Http\Controllers\HomePageController::class, 'sign'])->name('sign');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
+
+// User Dashboard
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');
+});
