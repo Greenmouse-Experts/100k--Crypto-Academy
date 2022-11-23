@@ -32,4 +32,5 @@ Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot']
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('/training', [App\Http\Controllers\DashboardController::class, 'training'])->name('user.training');
 });

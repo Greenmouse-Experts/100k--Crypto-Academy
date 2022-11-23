@@ -51,6 +51,7 @@
         <!-- Page-Content -->
         @yield('page-content')
         <!-- Page-Content Ends -->
+        @includeIf('layouts.dashboard-footer')
     </div>
     <!-- END layout-wrapper -->
 

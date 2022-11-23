@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html, body{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-size: cover;
@@ -375,10 +375,11 @@ body[data-layout=horizontal] .page-content {
     padding: 20px calc(24px * .75);
     position: absolute;
     right: 0;
-    color: var(--bs-footer-color);
+    color: #000;
     left: 250px;
     height: 60px;
-    background-color: var(--bs-footer-bg);
+    background-color: #fff;
+    text-align: center;
 }
 @media (max-width:991.98px) {
     .footer {
@@ -732,13 +733,13 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
     color: #000;
 }
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a {
-    color: #000;
+    color: #fff;
 }
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a:hover {
     color: #000;
 }
 body[data-sidebar=dark].vertical-collpsed {
-    min-height: 1760px;
+    min-height: auto;
 }
 body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hover>a {
     background: #003D6C;
@@ -777,8 +778,8 @@ body[data-sidebar=dark] .mm-active>i {
     color: #fff!important;
 }
 body[data-sidebar=dark] .mm-active .active {
-    color: #714091!important;
-    background-color: #F5E6FE !important;
+    color: #000 !important;
+    background-color: #fff !important;
 }
 body[data-sidebar=dark] .mm-active .active i {
     color: #fff!important;

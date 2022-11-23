@@ -24,16 +24,16 @@
 
             <button type="button" class="btn btn-sm px-3 font-80 header-item" id="vertical-menu-btn">
                 <div class="effect">
-                <i class="bi bi-filter-right"></i>
+                    <i class="bi bi-filter-right"></i>
                 </div>
             </button>
             <!-- App Search-->
             <form class="app-search d-none d-lg-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="bx bx-search-alt"></span>
-                            </div>
-                        </form>
+                <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="bx bx-search-alt"></span>
+                </div>
+            </form>
             <div class="dropdown dropdown-mega d-none d-lg-block ms-3">
                 <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                     <span key="t-megamenu">
