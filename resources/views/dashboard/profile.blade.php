@@ -50,7 +50,7 @@
 
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col-xl-4">
                     <div class="card">
                         <div class="card-body">
@@ -78,6 +78,28 @@
                                 </div>
                             </form>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Upload Profile</h4>
+                            <p class="card-title-desc"></p>
+                            <div class="div text-center">
+                                <div class="bg-img m-auto">
+                                    <img class="rounded-circle profile-user" src="{{URL::asset('dash/assets/images/users/avatar-5.jpg')}}" alt="Header Avatar" />
+                                </div>
+                                <div class="profile pt-2 mb-2">
+                                    <h4 class="mb-3">Hamzat</h4>
+                                    <input type="file" class="form-control mb-3">
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                        Upload Avatar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- end col -->

@@ -38,4 +38,5 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
     Route::get('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe'])->name('user.subscribe');
     Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
+    Route::get('/affiliate', [App\Http\Controllers\DashboardController::class, 'affiliate'])->name('user.affiliate');
 });

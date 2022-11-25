@@ -40,4 +40,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.profile');
     }
+    
+    public function affiliate()
+    {
+        return view('dashboard.affiliate');
+    }
 }

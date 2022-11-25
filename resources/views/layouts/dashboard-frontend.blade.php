@@ -28,8 +28,8 @@
 
     <script type="text/javascript">
         window.setTimeout(function() {
-            $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
-                $(this).remove(); 
+            $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function() {
+                $(this).remove();
             });
         }, 8000);
     </script>
@@ -145,7 +145,22 @@
             </div>
         </div>
     </div>
+    <script>
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
 
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
     <!-- JAVASCRIPT -->
     <script src="{{URL::asset('dash/assets/libs/jquery/jquery.min.js')}}"></script>
     <script src="{{URL::asset('dash/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -272,8 +287,8 @@
     <!-- App js -->
     <script src="{{URL::asset('dash/assets/js/app.js')}}"></script>
     <script>
-        function showPreview(event){
-            if(event.target.files.length > 0){
+        function showPreview(event) {
+            if (event.target.files.length > 0) {
                 var src = URL.createObjectURL(event.target.files[0]);
                 var preview = document.getElementById("file-ip-1-preview");
                 preview.src = src;

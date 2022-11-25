@@ -40,7 +40,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('user.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
             <span key="t-dashboards">Affiliate</span>
           </a>
