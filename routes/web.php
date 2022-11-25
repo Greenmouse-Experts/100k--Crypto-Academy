@@ -33,4 +33,9 @@ Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot']
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');
     Route::get('/training', [App\Http\Controllers\DashboardController::class, 'training'])->name('user.training');
+    Route::get('/wallet', [App\Http\Controllers\DashboardController::class, 'wallet'])->name('user.wallet');
+    Route::get('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit'])->name('user.deposit');
+    Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
+    Route::get('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe'])->name('user.subscribe');
+    Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
 });

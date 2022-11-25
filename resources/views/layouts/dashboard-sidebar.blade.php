@@ -12,20 +12,31 @@
           </a>
         </li>
         <li>
+          <a href="{{route('user.subscribe')}}">
+            <i class="bi bi-journal-check"></i>
+            <span key="t-dashboards">Subscribe</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{route('user.wallet')}}">
+            <i class="bi bi-credit-card-fill"></i>
+            <span key="t-dashboards">Wallet</span>
+          </a>
+        </li>
+        <li>
           <a href="#" class="has-arrow">
-            <i class="bx bx-task"></i>
-            <span key="t-tasks">Asset</span>
+            <i class="bi bi-bank"></i>
+            <span key="t-dashboards">Transaction</span>
           </a>
           <ul class="sub-menu" aria-expanded="false">
-            <li><a href="#">Deposit</a></li>
-            <li><a href="#">Withdraw</a></li>
-            <li><a href="#">Transfer</a></li>
+            <li><a href="{{route('user.deposit')}}" key="t-tui-calendar">Deposit</a></li>
+            <li><a href="{{route('user.withdraw')}}" key="t-full-calendar">Withdraw</a></li>
           </ul>
         </li>
         <li>
           <a href="{{route('user.training')}}">
             <i class="bi bi-book-half"></i>
-            <span key="t-dashboards">Training</span>
+            <span key="t-dashboards">Trainings</span>
           </a>
         </li>
         <li>
@@ -37,23 +48,14 @@
         <li>
           <a href="#">
             <i class="bi bi-reception-4"></i>
-            <span key="t-dashboards">Signals</span>
+            <span key="t-dashboards">Signals Room</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class="bi bi-info-circle"></i>
-            <span key="t-dashboards">Help centre</span>
+          <a href="{{route('user.profile')}}">
+            <i class="bi bi-sliders2-vertical"></i>
+            <span key="t-tasks">Profile</span>
           </a>
-        </li>
-        <li>
-          <a href="#" class="has-arrow">
-          <i class="bi bi-sliders2-vertical"></i>
-            <span key="t-tasks">Settings</span>
-          </a>
-          <ul class="sub-menu" aria-expanded="false">
-            <li><a href="#">Account</a></li>
-          </ul>
         </li>
         <li class="mt-4">
           <a href="#">

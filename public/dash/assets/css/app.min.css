@@ -768,8 +768,8 @@ body[data-sidebar=dark] .mm-active {
     background-color: F5E6FE;
 }
 body[data-sidebar=dark] .mm-active>a {
-    color: #000!important;
-    background-color: #fff !important;
+    color: #fff!important;
+    background-color: #003D6C !important;
 }
 body[data-sidebar=dark] .mm-active>a i {
     color: #000!important;

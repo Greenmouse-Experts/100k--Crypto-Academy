@@ -17,4 +17,27 @@ class DashboardController extends Controller
     {
         return view('dashboard.training');
     }
+    public function wallet()
+    {
+        return view('dashboard.wallet');
+    }
+    public function deposit()
+    {
+        return view('dashboard.deposit');
+    }
+    
+    public function withdraw()
+    {
+        return view('dashboard.withdraw');
+    }
+
+    public function subscribe()
+    {
+        return view('dashboard.subscribe');
+    }
+
+    public function profile()
+    {
+        return view('dashboard.profile');
+    }
 }

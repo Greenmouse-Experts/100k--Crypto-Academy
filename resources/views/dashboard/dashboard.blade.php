@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="runtime">
-                        <h1>Total wallet</h1>
+                        <h1>Total Balance</h1>
                         <p>
                             1500
                         </p>

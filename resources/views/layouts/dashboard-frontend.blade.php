@@ -155,6 +155,8 @@
 
     <!-- apexcharts -->
     <script src="{{URL::asset('dash/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
+    <!-- crypto-wallet init -->
+    <script src="{{URL::asset('dash/assets/js/pages/crypto-wallet.init.js')}}"></script>
 
     <!-- email automation chart -->
     <script>

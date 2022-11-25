@@ -9,98 +9,80 @@
         <!-- container-fluid -->
         <div class="container-fluid">
             <!-- start page title -->
-            <div class="start">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="start-main">
-                            <h1>Create Training</h1>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="d-flex align-items-start">
+
+                        <div class="flex-grow-1 align-self-center">
+                            <div class="text-muted">
+                                <h5>View Training</h5>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6"></div>
                 </div>
             </div>
             <!-- end page title -->
             <div class="row">
-                <div class="col-lg-12 mt-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Create New Task</h4>
-                            <form class="outer-repeater" method="post">
-                                <div data-repeater-list="outer-group" class="outer">
-                                    <div data-repeater-item class="outer">
-                                        <div class="form-group row mb-4">
-                                            <label for="taskname" class="col-form-label col-lg-2">Training Name</label>
-                                            <div class="col-lg-10">
-                                                <input id="taskname" name="taskname" type="text" class="form-control" placeholder="Enter Task Name...">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row mb-4">
-                                            <label class="col-form-label col-lg-2">Training Description</label>
-                                            <div class="col-lg-10">
-                                               <textarea name="" class="form-control"  id="taskdesc-editor" cols="30" rows="5"></textarea>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row mb-4">
-                                            <label class="col-form-label col-lg-2">Start Date</label>
-                                            <div class="col-lg-10">
-                                                <div class="input-daterange input-group" data-provide="datepicker">
-                                                    <input type="text" class="form-control" placeholder="Start Date" name="start" />
-                                                    <input type="text" class="form-control" placeholder="End Date" name="end" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="inner-repeater mb-4">
-                                            <div data-repeater-list="inner-group" class="inner form-group mb-0 row">
-                                                <label class="col-form-label col-lg-2">Add Team Member</label>
-                                                <div data-repeater-item class="inner col-lg-10 ms-md-auto">
-                                                    <div class="mb-3 row align-items-center">
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="inner form-control" placeholder="Enter Name..." />
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mt-4 mt-md-0">
-                                                                <input class="form-control" type="file">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="mt-2 mt-md-0 d-grid">
-                                                                <input data-repeater-delete type="button" class="btn btn-danger inner" value="Delete" />
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row justify-content-end">
-                                                <div class="col-lg-10">
-                                                    <input data-repeater-create type="button" class="btn btn-info inner" value="Add Number" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row mb-4">
-                                            <label for="taskbudget" class="col-form-label col-lg-2">Your Budget</label>
-                                            <div class="col-lg-10">
-                                                <input id="taskbudget" name="taskbudget" type="text" placeholder="Enter Your Budget..." class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="row justify-content-end">
-                                <div class="col-lg-10">
-                                    <button type="submit" class="btn btn-success">Create Training</button>
-                                </div>
-                            </div>
-
+                <div class="col-lg-12">
+                    <div class="runtown">
+                        <h1>
+                            Available Trainings
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="calling">
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122219/EProd%20Images/Image_fczwzs.png" draggable="false" alt="">
+                        <p>
+                            Training
+                        </p>
+                        <div class="die">
+                            <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122591/EProd%20Images/Combined_Shape_jnlms8.png" draggable="false" alt="">
+                            <span>15 Lessons (10h 5m)</span> <span class="paint">$140</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="calling">
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122592/EProd%20Images/Imagge_o56jat.png" draggable="false" alt="">
+                        <p>
+                            Trainings
+                        </p>
+                        <div class="die">
+                            <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122591/EProd%20Images/Combined_Shape_jnlms8.png" draggable="false" alt="">
+                            <span>20 Lessons (10h 5m)</span> <span class="paint">$150</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="calling">
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122219/EProd%20Images/Imae_jvgt5e.png" draggable="false" alt="">
+                        <p>
+                            Trainings
+                        </p>
+                        <div class="die">
+                            <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122591/EProd%20Images/Combined_Shape_jnlms8.png" draggable="false" alt="">
+                            <span>10 Lessons (10h 5m)</span> <span class="paint">$100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="calling">
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669125140/EProd%20Images/Image_cnjzfq.png" draggable="false" alt="">
+                        <p>
+                            Trainings
+                        </p>
+                        <div class="die">
+                            <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122591/EProd%20Images/Combined_Shape_jnlms8.png" draggable="false" alt="">
+                            <span>10 Lessons (8h 6m)</span> <span class="paint">$200</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Page-content -->
 </div>
-<!-- end main content-->
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
 @endsection
