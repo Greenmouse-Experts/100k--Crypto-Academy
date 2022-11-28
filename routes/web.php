@@ -20,6 +20,7 @@ Route::get('/about', [App\Http\Controllers\HomePageController::class, 'about'])-
 Route::get('/affiliate', [App\Http\Controllers\HomePageController::class, 'affiliate'])->name('affiliate');
 Route::get('/faq', [App\Http\Controllers\HomePageController::class, 'faq'])->name('faq');
 Route::get('/contact', [App\Http\Controllers\HomePageController::class, 'contact'])->name('contact');
+Route::get('/blog', [App\Http\Controllers\HomePageController::class, 'blog'])->name('blog');
 Route::get('/terms', [App\Http\Controllers\HomePageController::class, 'terms'])->name('terms');
 Route::get('/policy', [App\Http\Controllers\HomePageController::class, 'policy'])->name('policy');
 

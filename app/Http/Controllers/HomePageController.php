@@ -30,6 +30,12 @@ class HomePageController extends Controller
     {
         return view('frontend.contact');
     }
+
+    public function blog()
+    {
+        return view('frontend.blog');
+    }
+
     public function terms()
     {
         return view('frontend.terms');

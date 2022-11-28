@@ -10,20 +10,6 @@
                     <div class="speacial">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668766054/EProd%20Images/Line_5_zj46r0.png" draggable="false" alt="">
                     </div>
-                    <!-- <div class="link">
-                            <a href="">
-                             <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667492442/EProd%20Images/brandico_facebook-rect_kh45fo.png" alt="">
-                            </a>
-                            <a href="">
-                             <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667492442/EProd%20Images/fa-brands_instagram-square_a8ficg.png" alt="">
-                            </a>
-                            <a href="">
-                             <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667492442/EProd%20Images/fa_twitter-square_olzu94.png" alt="">
-                            </a>
-                            <a href="">
-                             <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667492442/EProd%20Images/akar-icons_linkedin-v1-fill_zaxwtv.png" alt="">
-                            </a>
-                         </div> -->
                 </div>
             </div>
             <div class="col-sm-2">
@@ -32,32 +18,32 @@
                         LINKS
                     </h1>
                     <p>
-                        <a href="index">
+                        <a href="{{route('index')}}">
                             Home
                         </a>
                     </p>
                     <p>
-                        <a href="about">
+                        <a href="{{route('about')}}">
                             About Us
                         </a>
                     </p>
                     <p>
-                        <a href="#">
+                        <a href="{{route('affiliate')}}">
                             Affiliate
                         </a>
                     </p>
                     <p>
-                        <a href="faq">
+                        <a href="{{route('faq')}}">
                             FAQs
                         </a>
                     </p>
                     <p>
-                        <a href="blog">
+                        <a href="{{route('blog')}}">
                             Blog
                         </a>
                     </p>
                     <p>
-                        <a href="contact">
+                        <a href="{{route('contact')}}">
                             Contact Us
                         </a>
                     </p>
@@ -69,12 +55,12 @@
                         Account
                     </h1>
                     <p>
-                        <a href="signUp">
+                        <a href="{{route('signUp')}}">
                             Sign Up
                         </a>
                     </p>
                     <p>
-                        <a href="LogIn">
+                        <a href="{{route('sign')}}">
                             Sign In
                         </a>
                     </p>
@@ -86,12 +72,12 @@
                         Resources
                     </h1>
                     <p>
-                        <a href="policy">
+                        <a href="{{route('policy')}}">
                             Privacy policy
                         </a>
                     </p>
                     <p>
-                        <a href="terms">
+                        <a href="{{route('terms')}}">
                             Terms and Condition
                         </a>
                     </p>

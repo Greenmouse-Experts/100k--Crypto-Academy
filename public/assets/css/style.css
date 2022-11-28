@@ -27,11 +27,11 @@ html, body{
 
 /*****Header Navbar*****/
 header .navbar{
-    padding: 5px 5px !important;
+    padding: 0px 0px !important;
     background-color: #003D6C;
 }
 header .navbar .navbar-brand img{
-    width: 68px;
+    width: 100px;
 }
 header .navbar .navbar-nav{
     position: relative;
@@ -123,7 +123,7 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
         background-color: #000;
     }
     header .navbar .navbar-brand img{
-        width: 50px;
+        width: 70px;
     }
     header .navbar .navbar-nav{
         position: relative;
@@ -927,10 +927,9 @@ footer{
     padding: 80px 0px 0px 0px;
 }
 footer .conting img{
-    width: 80px;
+    width: 100px;
     display: inline-block;
     margin: auto;
-    margin-bottom: 10px !important;
 }
 footer .conting p{
     font-size: 16px;

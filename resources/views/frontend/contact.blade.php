@@ -93,6 +93,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="cap">
+                                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669284502/EProd%20Images/Group_8852_dqasma.png" draggable="false" alt="">
+                                    </div>
                                     <div class="col-md-12 mb-3">
                                         <a href="#">
                                             <button value="">Submit</button>
