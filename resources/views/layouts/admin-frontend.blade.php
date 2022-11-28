@@ -8,16 +8,16 @@
     <meta content="100k Crypto Academy |  Dashboard" name="100k Crypto Academy |  Dashboard" />
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{URL::asset('dash/assets/images/Logo-fav.png')}}" />
+    <link rel="shortcut icon" href="{{URL::asset('admin/assets/images/Logo-fav.png')}}" />
 
     <!-- Bootstrap Css -->
-    <link href="{{URL::asset('dash/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="{{URL::asset('admin/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{URL::asset('dash/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{URL::asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- style Css -->
-    <link href="{{URL::asset('dash/assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{URL::asset('admin/assets/css/style.css')}}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="{{URL::asset('dash/assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="{{URL::asset('admin/assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
     <!-- Font Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,17 +41,17 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
         <!-- Header -->
-        @includeIf('layouts.dashboard-header')
+        @includeIf('layouts.admin-header')
         <!-- Header Ends -->
 
         <!-- Sidebar -->
-        @includeIf('layouts.dashboard-sidebar')
+        @includeIf('layouts.admin-sidebar')
         <!-- Sidebar Ends -->
 
         <!-- Page-Content -->
         @yield('page-content')
         <!-- Page-Content Ends -->
-        @includeIf('layouts.dashboard-footer')
+        @includeIf('layouts.admin-footer')
     </div>
     <!-- END layout-wrapper -->
 
@@ -162,16 +162,16 @@
         }
     </script>
     <!-- JAVASCRIPT -->
-    <script src="{{URL::asset('dash/assets/libs/jquery/jquery.min.js')}}"></script>
-    <script src="{{URL::asset('dash/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{URL::asset('dash/assets/libs/metismenu/metisMenu.min.js')}}"></script>
-    <script src="{{URL::asset('dash/assets/libs/simplebar/simplebar.min.js')}}"></script>
-    <script src="{{URL::asset('dash/assets/libs/node-waves/waves.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/jquery/jquery.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/metismenu/metisMenu.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/node-waves/waves.min.js')}}"></script>
 
     <!-- apexcharts -->
-    <script src="{{URL::asset('dash/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
     <!-- crypto-wallet init -->
-    <script src="{{URL::asset('dash/assets/js/pages/crypto-wallet.init.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/js/pages/crypto-wallet.init.js')}}"></script>
 
     <!-- email automation chart -->
     <script>
@@ -282,10 +282,10 @@
     <script src="https://kit.fontawesome.com/997b229808.js" crossorigin="anonymous"></script>
 
     <!-- dashboard init -->
-    <script src="{{URL::asset('dash/assets/js/pages/dashboard.init.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/js/pages/dashboard.init.js')}}"></script>
 
     <!-- App js -->
-    <script src="{{URL::asset('dash/assets/js/app.js')}}"></script>
+    <script src="{{URL::asset('admin/assets/js/app.js')}}"></script>
     <script>
         function showPreview(event) {
             if (event.target.files.length > 0) {

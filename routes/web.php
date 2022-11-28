@@ -41,3 +41,9 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
     Route::get('/affiliate', [App\Http\Controllers\DashboardController::class, 'affiliate'])->name('user.affiliate');
 });
+
+
+// Admin Dashboard
+Route::prefix('adminwelcome')->group(function () {
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'welcome'])->name('user.welcome');
+});
