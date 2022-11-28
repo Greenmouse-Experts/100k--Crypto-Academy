@@ -12,7 +12,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.members')}}">
             <i class="bi bi-person-circle"></i>
             <span key="t-dashboards">Members</span>
           </a>
