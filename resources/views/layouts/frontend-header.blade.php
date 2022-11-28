@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="header">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667483700/EProd%20Images/log_fltrgb.png" alt="EPROD">
+                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669630298/EProd%20Images/WhatsApp_Image_2022-11-26_at_10.13.06_AM_ycwms2.jpg" alt="EPROD">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <i class="bi bi-list"></i>
@@ -26,18 +26,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('courses')}}" class="nav-link {{ (request()->is('courses')) ? 'active' : '' }}" class="routers">
-                                Courses
+                            <a href="{{route('affiliate')}}" class="nav-link {{ (request()->is('affiliate')) ? 'active' : '' }}" class="routers">
+                                Affiliate
                             </a>
                         </li>
                         <li class="nav-item">
                         <a href="{{route('faq')}}" class="nav-link {{ (request()->is('faq')) ? 'active' : '' }}" class="routers">
-                                Faq
+                                FAQs
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Affliate</a>
-                        </li> -->
                         <li class="nav-item">
                         <a href="{{route('contact')}}" class="nav-link {{ (request()->is('contact')) ? 'active' : '' }}" class="routers">
                             Contact Us

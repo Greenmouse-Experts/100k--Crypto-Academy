@@ -123,7 +123,7 @@
                                             <h5>$ 654.42</h5>
 
                                             <div class="mt-3">
-                                                <a href="javascript: void(0);" class="btn btn-primary btn-sm w-md">Send</a>
+                                                <a href="{{route('user.deposit')}}" class="btn btn-primary btn-sm w-md">Send</a>
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@
                                             <h5>$ 824.34</h5>
 
                                             <div class="mt-3">
-                                                <a href="javascript: void(0);" class="btn btn-primary btn-sm w-md">Withdraw</a>
+                                                <a href="{{route('user.withdraw')}}" class="btn btn-primary btn-sm w-md">Withdraw</a>
                                             </div>
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title mb-4">Recent Wallet</h4>
+                            <h4 class="card-title mb-4">Recent Transcation</h4>
 
                             <div class="mt-4">
                                 <div class="table-responsive">
@@ -188,7 +188,7 @@
                                             <tr>
                                                 <td><a href="javascript: void(0);" class="text-body fw-bold">#SK3215</a></td>
 
-                                                <td>03 Mar, 2020</td>
+                                                <td>03 Mar, 2022</td>
                                                 <td>Buy</td>
                                                 <td>Bitcoin</td>
                                                 <td>1.00952 BTC</td>

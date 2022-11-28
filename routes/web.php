@@ -17,7 +17,7 @@ Route::get('/test', [App\Http\Controllers\HomePageController::class, 'test']);
 
 Route::get('/', [App\Http\Controllers\HomePageController::class, 'index'])->name('index');
 Route::get('/about', [App\Http\Controllers\HomePageController::class, 'about'])->name('about');
-Route::get('/courses', [App\Http\Controllers\HomePageController::class, 'courses'])->name('courses');
+Route::get('/affiliate', [App\Http\Controllers\HomePageController::class, 'affiliate'])->name('affiliate');
 Route::get('/faq', [App\Http\Controllers\HomePageController::class, 'faq'])->name('faq');
 Route::get('/contact', [App\Http\Controllers\HomePageController::class, 'contact'])->name('contact');
 Route::get('/terms', [App\Http\Controllers\HomePageController::class, 'terms'])->name('terms');

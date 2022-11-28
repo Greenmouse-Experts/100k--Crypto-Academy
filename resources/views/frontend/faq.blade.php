@@ -8,7 +8,7 @@
             <div class="col-lg-12">
                 <div class="question">
                     <p>
-                        FAQ
+                        FAQs
                     </p>
                     <h1>
                         Frequently Asked Questions
@@ -138,4 +138,5 @@
     </div>
 </section>
 <!-- Accordion Ends -->
+<!-- Footer Page-->
 @endsection

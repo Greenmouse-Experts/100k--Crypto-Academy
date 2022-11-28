@@ -38,6 +38,9 @@ header .navbar .navbar-nav{
     left: 150px;
     margin-top: 10px;
 }
+header a{
+    text-decoration: none;
+}
 header .navbar .nav-item{
     padding: 5px 30px;
 }
@@ -57,7 +60,6 @@ header .navbar .nav-item .nav-link:after {
     display:block;
     content: '';
     padding: 2px 0 0 0;
-    border-bottom: solid 2px #fff;  
     border-radius: 1px;
     -webkit-transform: scaleX(0);  
             transform: scaleX(0);  
@@ -171,17 +173,14 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
 
 /* Welcome Page */
 .welcome{
-    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667484666/EProd%20Images/Rectangle-19326_owtdy5.jpg);
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1668688694/EProd%20Images/Group_25_x8wbul.png);
     margin-top: 80px;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0px 140px 0px;
+    padding: 80px 0 20px 0px;
 }
-/* .welcome .children{
-
-} */
 .welcome .bet {
-    padding: 100px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
 }
 .welcome .bet button{
     padding: 10px 50px 10px 50px;
@@ -194,181 +193,143 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
     border-radius: 3px;
 }
 .welcome .bet h1{
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 600;
     color: #fff;
-    line-height: 70px;
 }
-/* .welcome .children img{
-    width: 100%;
-    display: block;
+.welcome .bet h1 span{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1668766994/EProd%20Images/Vector_286_dwaknc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5px;
+}
+.welcome .svg{
+    width: 10%;
+}
+.welcome .right{
+    position: relative;
+    left: 80px;
+    width: 40%;
+}
+.welcome .left{
+    position: relative;
+    left: 150px;
+    bottom: -100px;
+    width: 30%;
+}
+.welcome .images .middle{
+    width: 70%;
+    display:block;
     margin: auto;
-} */
-@media (max-width:1400px) {
-    .welcome .bet h1{
-        font-size: 42px;
-        font-weight: 700;
-        color: #fff;
-        line-height: 70px;
-    }
 }
-@media (max-width:1372px) {
-    .welcome .bet {
-        padding: 50px 0px 0px 0px;
-    }
+.right {
+  animation: right 3s ease-in-out 4s infinite alternate;
 }
-@media (max-width:1196px) {
+@keyframes right {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.left{
+  animation: left 3s ease-in-out 1s infinite alternate;
+}
+@keyframes left {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.welcome .bet p{
+    font-size: 26px;
+    color: #fff;
+}
+@media (max-width:1199px) {
     .welcome .bet h1{
         font-size: 40px;
-        font-weight: 700;
-        color: #fff;
-        line-height: 70px;
-    }
-    .welcome{
-        background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667484666/EProd%20Images/Rectangle-19326_owtdy5.jpg);
-        margin-top: 50px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 100px 0px 100px 0px;
-    }
-    .welcome .bet button{
-        padding: 10px 50px 10px 50px;
-        border: none;
-        background-color: #fff;
-        color: #1D79D0;
-        margin-top: 50px;
-        font-size: 15px;
         font-weight: 600;
-        border-radius: 3px;
+        color: #fff;
     }
-    .platform{
-        background-color: #1D79D0;
-        padding: 0px 0px 0px 0px ;
-        margin-top: 50px !important;
-        border-radius: 3px;
-    }
-    .platform .carousel-inner{
-        padding: 10px 0px 0px 0px;
-    
+    .welcome .images .middle{
+        width: 65%;
+        display:block;
+        margin: auto;
     }
 }
 @media (max-width:992px) {
+    .welcome{
+        margin-top: 70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px 0;
+    }
     .welcome .bet h1{
-        padding: 10px 0 0 0;
-       text-align: left;
-       line-height: 50px;
-       font-size: 31px;
+        font-size: 50px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .welcome .bet p{
+        margin-bottom: 20px;
+    }
+    .welcome .left{
+        display:none;
+    }
+    .welcome .right{
+        display:none;
+    }
+}
+@media (max-width:767px) {
+    .welcome .bet h1{
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .welcome .search-bar{
+        padding: 20px 0 50px 0;
+    }
+}
+@media (max-width:584px) {
+    .welcome{
+        padding: 30px 10px 50px 10px;
     }
 }
 @media (max-width:520px) {
-    .welcome .bet h1{
+    .welcome .bet p{
+        font-size: 20px !important;
+        color: #fff;
         text-align: center;
-        line-height: 45px;
-        font-size: 28px;
     }
-    .welcome .bet button{
-        display: block;
-        margin-top: 40px !important;
-        margin: auto;
-    }
-    .welcome{
-        background-size: cover;
-        padding: 70px 0px 80px 0px;
+    .welcome .bet h1{
+        font-size: 30px !important;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
     }
 }
 @media (max-width:400px) {
+    .welcome .bet p{
+        font-size: 15px !important;
+        color: #fff;
+    }
     .welcome .bet h1{
-        line-height: 35px;
-        font-size: 25px;
-     }
-}
-.platform{
-    background-color: #003D6C;
-    padding: 0px 0px 0px 0px ;
-    margin-top: 100px;
-    border-radius: 3px;
-}
-.platform .carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 0rem;
-    left: 15%;
-    padding-top:0rem !important;
-    padding-bottom: 0rem !important;
-    color: #fff;
-    text-align: center;
-}
-.platform .carousel-caption h5{
-    text-align: left !important;
-    color: #fff;
-    font-weight: 600;
-}
-.platform .carousel-caption h5 button{
-    padding: 10px 30px 10px 30px;
-    border: none;
-    background-color: #FF65C3;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 15px;
-    float: right !important;
-}
-.platform .carousel-caption p{
-    text-align: left !important;
-    color: #fff;
-}
-.platform .carousel-inner{
-    padding: 100px 0px 0px 0px;
-    margin-bottom: -20px;
-
+        font-size: 25px !important;
+        font-weight: 600 !important;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 /* Welcome Page Ends */
 
-/* Choose-Us Page Ends */
-.choose{
-    padding: 150px 0px 100px 0px;
-    background-color: #F2F2F2;
-    border-radius: 0px 100px 0px 100px;
-}
-.choose .drop-btn img{
-    width: 100%;
-    display: block;
-    margin: auto;
-}
-.choose .drop-text h1{
-    font-size: 25px;
-    font-weight: 700;
-    color: #464646;
-    padding: 10px 0px 10px 0px;
-}
-.choose .drop-text p{
-    font-size: 18px;
-    line-height: 2;
-    font-weight: 500;
-}
-.choose .drop-text p strong{
-    font-weight: 600;
-}
-@media (max-width:1200px) {
-    .choose .drop-text p{
-        font-size: 15px;
-        line-height: 2;
-        font-weight: 500;
-    }
-}
-@media (max-width:1000px) {
-    .choose .drop-btn img{
-        width: 95%;
-        display: block;
-        margin: auto;
-        margin-bottom: 30px !important;
-    }
-    .choose{
-        padding: 90px 15px 90px 15px;
-        background-color: #F2F2F2;
-        border-radius: 0px 100px 0px 100px;
-    }
-}
-/* Choose-Us Page Ends */
 
 /* Features Page Ends */
 .feature{
@@ -505,7 +466,7 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
 @media (max-width:760px) {
     .feature .object .emmet img{
         margin-top: 50px !important;
-        width: 90%;
+        width: 95%;
         margin-bottom: 30px !important;
     }
     .feature .object .update{
@@ -515,10 +476,16 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
         padding: 0px 20px !important;
     }
 }
-@media (max-width:400px) {
+@media (max-width:520px) {
     .feature .object .update img{
         width: 10px;
         display: inline-block;
+    }
+    .feature .object {
+        padding: 40px 0px 0px 0px !important;
+    }
+    .feature{
+        padding: 0px 10px !important;
     }
     .feature .object .updating img{
         width: 10px;
@@ -537,6 +504,9 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
         font-size: 20px !important;
         font-weight: 700;
         margin-bottom: 0px;
+    }
+    .feature .object .updating{
+        padding: 10px 0px 0px 0px;
     }
 }
 .feature .object h1{
@@ -967,6 +937,26 @@ footer .conting p{
     font-weight: 400;
     color: #fff;
 }
+footer .conting .speacial img{
+    float: right;
+    width: 1px;
+    height: 300px;
+    position: relative;
+    top: -150px;
+}
+.footer .line{
+    background-color: #fff;
+    margin-top: -40px;
+}
+@media (max-width:991px) {
+    footer .conting .speacial img{
+        display: none;
+    }
+    .footer .line{
+        background-color: #fff;
+        margin-top: 20px;
+    }
+}
 footer .conting .link img{
     width: 30px;
     margin: 0px 5px;
@@ -1201,6 +1191,7 @@ footer .input-group-text img{
         margin: auto;
     }
 }
+
 /* Why missionUs Ends */
 /* About Us Ends */
 
@@ -1256,9 +1247,9 @@ footer .input-group-text img{
 /**********Next Page ENDS*************/
 /* OBJECTIVE */
 .objective{
-    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1667813115/EProd%20Images/contact_w4efx0.jpg);
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1669283799/EProd%20Images/Rectangle_19422_bnlqd2.png);
     margin-top: 80px;
-    padding: 150px 0px 350px 0px;
+    padding: 150px 0px 250px 0px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1277,7 +1268,11 @@ footer .input-group-text img{
     position: relative;
     left: 25px;
     border-radius: 10px 0px 0px 10px;
-    padding: 100px 30px 140px 30px;
+    padding: 100px 30px 210px 30px;
+}
+.accept .cap img{
+    width: 50%;
+    margin-bottom: 18px;
 }
 .connect .support p{
     font-size: 18px;
@@ -1636,7 +1631,6 @@ footer .input-group-text img{
 }
 .resourcePage p{
     font-size: 16px;
-    line-height: 2;
     padding-bottom: 10px;
 }
 .resourcePage ol li{
@@ -1662,3 +1656,235 @@ footer .input-group-text img{
     text-decoration: underline;
     color: #fff;
 }
+.millo p{
+    font-size: 17px;
+    line-height: 2;
+}
+/* Special */
+.Special{
+    padding: 80px 0px 50px 0px;
+    background-color: #fff;
+}
+.Special .front .tech{
+   display: block;
+   margin: auto;
+}
+.Special .front .perfect img{
+    display: block;
+    margin: auto;
+    width: 12%;
+    margin-bottom: 10px;
+}
+.Special .front .perfect{
+    position: relative;
+    top: -160px;
+    text-align: center;
+}
+.Special .front .perfect h1{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.Special .who h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #4B4B4B;
+}
+.Special .colum img{
+    width: 70%;
+    display:block;
+    margin: auto;
+}
+.Special .com{
+    padding: 60px 0 0 0;
+}
+.Special .com p b{
+    color: #003D6C;
+}
+.Special .com p{
+    font-size: 20px;
+    line-height: 2;
+}
+@media (max-width:992px) {
+    .Special .front .perfect img{
+        display: block;
+        margin: auto;
+        width: 10%;
+        margin-bottom: 10px;
+    }
+    .Special .front .perfect{
+        position: relative;
+        top: -180px;
+        text-align: center;
+    }
+    .Special .light{
+        margin-top: -90px !important;
+        margin-bottom: -0px;
+    }
+    .Special .colum img{
+        width: 80%;
+        display:block;
+        margin: auto;
+    }
+    .Special .com{
+        padding: 30px 0 0 0;
+    }
+}
+@media (max-width:767px) {
+    .Special .front .perfect{
+        position: relative;
+        top: -170px;
+        text-align: center;
+    }
+}
+@media (max-width:584px) {
+    .Special{
+        padding: 80px 10px 50px 10px;
+        background-color: #fff;
+    }
+}
+@media (max-width:450px) {
+    .Special .front .perfect{
+        position: relative;
+        top: -150px;
+        text-align: center;
+    }
+    .Special .com p{
+        font-size: 18px;
+        line-height: 2;
+    }
+}
+/* Special  Ends*/
+
+/* Choose */
+.Choose{
+    background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1668700910/EProd%20Images/Rectangle_19327_awd2qr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -220px;
+    width: 100% !important;
+    padding: 80px 0 100px 0px;
+}
+@media (max-width:1400px) {
+    .Choose{
+        background-position-y: -125px;
+    }
+}
+@media (max-width:1387px) {
+    .Choose{
+        background-position-y: -100px;
+    }
+}
+@media (max-width:1325px) {
+    .Choose{
+        background-position-y: -80px;
+    }
+}
+@media (max-width:1298px) {
+    .Choose{
+        background-position-y: -50px;
+    }
+}
+
+.Choose .who h1{
+    font-size: 30px;
+    color: #4B4B4B;
+    font-weight: 600;
+}
+.Choose .who p{
+    font-size: 19px;
+}
+.Choose .tailor{
+    padding: 50px 0 0 0;
+}
+.Choose .tailor img{
+    display: block;
+    margin: auto;
+}
+.Choose .tailor p{
+    padding: 15px 10px 30px 10px;
+    font-weight: 600;
+    text-align: center;
+}
+/* Choose  Ends*/
+
+/* What our Clients say */
+.Clients{
+    padding: 100px 0px 50px 0px;
+}
+.Clients .who h1{
+    font-size: 30px;
+    color: #4B4B4B;
+    font-weight: 600;
+}
+.Clients .potent{
+    padding: 40px 0px 20px 0px;
+}
+.Clients .colum{
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+    padding: 30px;
+    height: 250px;
+    border-radius: 10px;
+}
+.Clients .colum p{
+    font-size: 20px;
+    color: #4B4B4B;
+}
+.Clients .colum h6{
+    margin-top: 20px;
+    font-weight: 600;
+}
+@media (max-width:1400px) {
+    .Clients .colum{
+        height: 270px;
+        border-radius: 10px;
+    }
+}
+@media (max-width:991px) {
+    .Clients .colum{
+        height: auto;
+        border-radius: 10px;
+    }
+    .Clients{
+        padding: 0px 0px 50px 0px;
+    }
+}
+/* What our Clients say  Ends*/
+
+/* FAQ*/
+.falcon{
+    padding: 80px 0px;
+}
+.falcon .who h1{
+    font-size: 30px;
+    color: #4B4B4B;
+    font-weight: 600;
+}
+.falcon .accord {
+    padding: 50px 0 0 0;
+}
+.falcon .accord .accordion-item {
+    border: 1px solid #1D79D0 !important;
+    padding: 5px;
+    margin: 10px;
+    outline:0px !important;
+    border-radius: 6px;
+}
+.falcon .accordion-button:focus {
+    z-index: 3;
+    outline-style: none;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+.falcon .accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.falcon .accordion-item  input:focus{
+    outline:0px !important;
+    box-shadow: none !important;
+}
+/* FAQ Ends*/

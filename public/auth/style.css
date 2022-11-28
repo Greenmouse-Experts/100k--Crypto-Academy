@@ -28,23 +28,19 @@ html, body{
 #lent{
     background-color: #003D6C;
 }
-.sign-in .pack img{
-    display: block;
-    margin: auto;
-    width: 100%;
+.sign-in .images{
+    margin-top: 40px;
 }
 .sign-in .images img{
-    width: 100px;
+    width: 20%;
     display: block;
     margin: auto;
-    margin-top: 80px;
 }
 .sign-in .sign .sign-div {
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
-    padding: 30px 40px;
-    margin-top: 40px;
+    padding:20px;
     margin-bottom: 10px;
 }
 .sign-in .sign .sign-div h4{
@@ -105,30 +101,16 @@ html, body{
     color: #fff;
     border-radius: 10px;
 }
-@media (max-width:2000px) {
-    .sign-in .images img{
-        width: 80px;
-        display: block;
-        margin: auto;
-        margin-top: 10px !important;
-    }
-    .sign-in .pack img{
-        display: block;
-        margin: auto;
-        width: 100%;
-        height: 120vh;
-    }
-    .sign-in .sign
-     .sign-div {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-}
 .log .images{
-    margin-top: 100px !important;
+    margin-top: 40px !important;
 }
-.log .sign{
-    margin-top: 70px;
+.log .cap img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+.sign-in .cap img{
+    width: 50%;
+    margin-bottom: 20px;
 }
 @media (max-width:1000px) {
     .sign-in .pack img{
@@ -155,13 +137,8 @@ html, body{
 #lent{
     background-color: #003D6C;
 }
-.log .pack img{
-    display: block;
-    margin: auto;
-    width: 100%;
-}
 .log .images img{
-    width: 100px;
+    width: 20%;
     display: block;
     margin: auto;
 }
@@ -169,8 +146,7 @@ html, body{
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
-    padding: 30px 40px;
-    margin-top: 40px;
+    padding:20px 20px;
     margin-bottom: 10px;
 }
 .log .sign .sign-div h5{
@@ -179,10 +155,6 @@ html, body{
     font-size: 25px;
     font-weight: 600;
 }
-/* .log .sign .sign-div p{
-    margin-top: 0;
-    margin-bottom: 0;
-} */
 .log .sign .sign-div ::placeholder{
     font-size: 12px;
     color: #000;
@@ -226,17 +198,6 @@ html, body{
     border-radius: 10px;
 }
 @media (max-width:2000px) {
-    .log .images img{
-        width: 80px;
-        display: block;
-        margin: auto;
-        margin-top: 10px !important;
-    }
-    .log .pack img{
-        display: block;
-        margin: auto;
-        width: 100%;
-    }
     .log .sign .sign-div {
         margin-top: 20px;
         margin-bottom: 10px;
@@ -246,32 +207,18 @@ html, body{
     .log .pack img{
         display: none;
     }
-    .log .sign .sign-div {
-        background-color: #fff;
-        border-radius: 2px;
-        width: 100%;
-        padding: 20px 70px;
-        margin-top: 20px;
-        border-radius: 7px;
-        margin-bottom: 20px;
-    }
 }
 @media (max-width:520px) {
-    .log .sign .sign-div {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    .log .images{
-        margin-top: 50px !important;
-    }
-    .log .sign{
-        margin-top: 30px;
-    }
     .log .sign .sign-div h5{
         color: #262A4D;
         padding: 15px 0px 0px 0px;
         font-size: 20px;
         font-weight: 700;
+    }
+    .log .sign .sign-div p{
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 10px;
     }
 }
 
