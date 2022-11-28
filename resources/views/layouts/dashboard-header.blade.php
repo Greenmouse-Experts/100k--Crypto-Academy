@@ -8,7 +8,7 @@
                         <img src="{{URL::asset('dash/assets/images/Logo-fav.png')}}" alt="" height="22" />
                     </span>
                     <span class="logo-lg">
-                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668003394/EProd%20Images/log_fltrgb_1_rkhlvs.png" alt="" class="image-div" />
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669630298/EProd%20Images/WhatsApp_Image_2022-11-26_at_10.13.06_AM_ycwms2.jpg" alt="" class="image-div" />
                     </span>
                 </a>
 
@@ -17,7 +17,7 @@
                         <img src="{{URL::asset('dash/assets/images/Logo-fav.png')}}" alt="" height="22" />
                     </span>
                     <span class="logo-lg">
-                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668003394/EProd%20Images/log_fltrgb_1_rkhlvs.png" class="image-div" />
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669630298/EProd%20Images/WhatsApp_Image_2022-11-26_at_10.13.06_AM_ycwms2.jpg" class="image-div" />
                     </span>
                 </a>
             </div>

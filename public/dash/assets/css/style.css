@@ -1771,6 +1771,7 @@ ol, ul {
   color: #fff;
   border: none;
   border-radius: 5px;
+  margin-bottom:10px !important;
 }
 .profile-user{
   width: 40%;
