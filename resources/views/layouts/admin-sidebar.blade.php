@@ -6,41 +6,37 @@
       <!-- Left Menu Start -->
       <ul class="metismenu list-unstyled" id="side-menu">
         <li>
-          <a href="{{route('user.dashboard')}}">
+          <a href="{{route('admin.welcome')}}">
             <i class="bi bi-grid-fill"></i>
             <span key="t-dashboards">Dashboards</span>
           </a>
         </li>
         <li>
-          <a href="{{route('user.subscribe')}}">
+          <a href="#">
+            <i class="bi bi-person-circle"></i>
+            <span key="t-dashboards">Members</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
             <i class="bi bi-journal-check"></i>
-            <span key="t-dashboards">Subscribe</span>
+            <span key="t-dashboards">Subscribers</span>
           </a>
         </li>
         <li>
-          <a href="{{route('user.wallet')}}">
-            <i class="bi bi-credit-card-fill"></i>
-            <span key="t-dashboards">Wallet</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="has-arrow">
-            <i class="bi bi-bank"></i>
+          <a href="#">
+          <i class="bi bi-bank"></i>
             <span key="t-dashboards">Transaction</span>
           </a>
-          <ul class="sub-menu" aria-expanded="false">
-            <li><a href="{{route('user.deposit')}}" key="t-tui-calendar">Deposit</a></li>
-            <li><a href="{{route('user.withdraw')}}" key="t-full-calendar">Withdraw</a></li>
-          </ul>
         </li>
         <li>
-          <a href="{{route('user.training')}}">
+          <a href="#">
             <i class="bi bi-book-half"></i>
             <span key="t-dashboards">Trainings</span>
           </a>
         </li>
         <li>
-          <a href="{{route('user.affiliate')}}">
+          <a href="#">
             <i class="bi bi-graph-up-arrow"></i>
             <span key="t-dashboards">Affiliate</span>
           </a>
@@ -48,7 +44,7 @@
         <li>
           <a href="#">
             <i class="bi bi-reception-4"></i>
-            <span key="t-dashboards">Signals Room</span>
+            <span key="t-dashboards">Signal Room</span>
           </a>
         </li>
         <li>
