@@ -143,7 +143,7 @@
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-danger float-end">1</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i>
                         <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                    <a class="dropdown-item text-danger" href="/logout"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
                         <span key="t-logout">Logout</span></a>
                 </div>
             </div>

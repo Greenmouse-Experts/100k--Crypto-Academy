@@ -60,7 +60,7 @@
                         </a>
                     </p>
                     <p>
-                        <a href="{{route('sign')}}">
+                        <a href="{{route('signIn')}}">
                             Sign In
                         </a>
                     </p>

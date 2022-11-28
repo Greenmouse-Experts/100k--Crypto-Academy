@@ -19,7 +19,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-        <title>100ink Crypto Academy-Home</title>
+        <title>{{config('app.name')}}</title>
     </head>
     <body>        
         <!-- Header -->

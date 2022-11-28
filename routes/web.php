@@ -25,12 +25,25 @@ Route::get('/terms', [App\Http\Controllers\HomePageController::class, 'terms'])-
 Route::get('/policy', [App\Http\Controllers\HomePageController::class, 'policy'])->name('policy');
 
 // Authentications
-Route::get('/sign', [App\Http\Controllers\HomePageController::class, 'sign'])->name('sign');
+Route::get('/signIn', [App\Http\Controllers\HomePageController::class, 'sign'])->name('signIn');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
 
-// User Dashboard
+//User Authentications
+Route::prefix('auth')->group(function () {
+    Route::post('/register', [App\Http\Controllers\HomePageController::class, 'register'])->name('register');
+    Route::get('/verify/account/{email}', [App\Http\Controllers\HomePageController::class, 'verify_account'])->name('verify.account');
+    Route::post('/email/verify/resend/{email}', [App\Http\Controllers\HomePageController::class, 'email_verify_resend'])->name('email.verify.resend');
+    Route::post('/email/confirm/{token}', [App\Http\Controllers\HomePageController::class, 'registerConfirm'])->name('email.confirmation');
+    Route::post('/user/login', [App\Http\Controllers\HomePageController::class, 'user_login'])->name('user.login');
+    Route::post('/password/forget',  [App\Http\Controllers\HomePageController::class, 'forget_password'])->name('user.forget.password');
+    Route::get('/reset/password/email/{email}', [App\Http\Controllers\HomePageController::class, 'password_reset_email'])->name('user.reset.password');
+    Route::post('update/password/reset/', [App\Http\Controllers\HomePageController::class, 'reset_password'])->name('user.update.password');
+});
 
+Route::get('/logout', [App\Http\Controllers\HomePageController::class, 'logout'])->name('logout');
+
+// User Dashboard
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');
     Route::get('/training', [App\Http\Controllers\DashboardController::class, 'training'])->name('user.training');

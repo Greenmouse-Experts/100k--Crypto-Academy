@@ -42,8 +42,8 @@
                         </li>
                     </ul>
                     <div class="nav-auth">
-                        <a href="{{route('sign')}}" class="btn-login">Sign In</a>
-                        <a href="signUp" class="btn-signup">Sign Up</a>
+                        <a href="{{route('signIn')}}" class="btn-login">Sign In</a>
+                        <a href="{{route('signUp')}}" class="btn-signup">Sign Up</a>
                     </div>
                 </div>
             </div>

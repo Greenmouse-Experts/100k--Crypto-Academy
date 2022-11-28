@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+    <head>
     <meta http-equiv="X-UA-Compatible" content="Welcome To EPROD">
     <meta name="viewport" content="Welcome To EPROD">
     <!-- Favocon -->
@@ -20,9 +19,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{{config('app.name')}} - Verify Account</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>{{config('app.name')}} - Signup</title>
-
     <script>
         window.setTimeout(function() {
             $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
@@ -39,7 +37,7 @@
     </div>
     <!-- Alerts End -->
     <!-- Sign-up -->
-    <section class="sign-in">
+    <section class="log">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3"></div>
@@ -49,67 +47,45 @@
                             <a href="{{route('index')}}">
                                 <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669630298/EProd%20Images/WhatsApp_Image_2022-11-26_at_10.13.06_AM_ycwms2.jpg" alt="">
                             </a>
-                        </div>
+                       </div>
                         <div class="sign">
-                            <form class="sign-div" action="{{ route('register')}}" method="post">
+                            <form class="sign-div" method="POST" action="{{ route('user.update.password')}}">
                                 @csrf
-                                <h4>
-                                    Sign up to create an account
-                                </h4>
+                                <h5>Reset Password</h5>
+                                <p> To complete the reset password process, Please enter the code sent to the email address
+                                        <code>{{$email}}</code>
+                                </p>
                                 <div class="row">
-                                    <!--Full Name-->
+                                    <!--Code-->
                                     <div class="col-lg-12">
-                                        <label>First Name</label>
+                                        <label>Code</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <input type="text" placeholder="Enter Your First Name" name="first_name" class="input" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Full Name-->
-                                    <div class="col-lg-12">
-                                        <label>Last Name</label>
-                                        <div class="row">
-                                            <div class="col-md-12 mb-3">
-                                                <input type="text" placeholder="Enter Your Last Name" name="last_name" class="input" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Email-->
-                                    <div class="col-lg-12">
-                                        <label>Email</label>
-                                        <div class="row">
-                                            <div class="col-md-12 mb-3">
-                                                <input type="email" placeholder="Enter Your Email Address" name="email" class="input" required>
+                                                <input type="text" placeholder="Enter Code" name="code" class="input" required>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Password-->
                                     <div class="col-lg-12">
-                                        <label>Create Password</label>
+                                        <label>Create New Password</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <input type="password" placeholder="Enter Your Password" name="password" class="input" required>
+                                                <input type="password" placeholder="Enter Your New Password" name="password" class="input" required>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Password-->
                                     <div class="col-lg-12">
-                                        <label>Confirm Password</label>
+                                        <label>Confirm New Password</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <input type="password" placeholder="Enter Your Confirm Password" name="password_confirmation" class="input" required>
+                                                <input type="password" placeholder="Enter Your Confirm New Password" name="password_confirmation" class="input" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <p>
-                                        By clicking Sign Up, you agree to the terms and conditions
-                                    </p>
                                     <div class="col-md-12 mb-3">
-                                        <button class="form-btn" type="submit"> Sign Up </button>
+                                        <button class="form-btn" type="submit">Verify</button>
                                     </div>
-                                    <!--Message-->
-                                    <p style="text-align: center;margin-top: 20px;">Already have an account ? <a href="{{route('signIn')}}">Login</a> </p>
                                 </div>
                             </form>
                         </div>

@@ -18,10 +18,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <title>100k Crypto Academy-Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>{{config('app.name')}} - SignIn</title>
+    
+    <script>
+        window.setTimeout(function() {
+            $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
+                $(this).remove(); 
+            });
+        }, 8000);
+    </script>
 </head>
 
 <body id="lent">
+    <!-- Alerts  Start-->
+    <div style="z-index: 100000; width: 100%; position: absolute;">
+        @include('layouts.alert')
+    </div>
+    <!-- Alerts End -->
     <!-- Sign-up -->
     <section class="log">
         <div class="container">
@@ -35,13 +50,10 @@
                             </a>
                        </div>
                         <div class="sign">
-                            <form class="sign-div">
-                                <h5>
-                                    Welcome
-                                </h5>
-                                <p>
-                                    Please enter the details below to sign in to your account
-                                </p>
+                            <form class="sign-div" action="{{ route('user.login')}}" method="post">
+                                @csrf
+                                <h5>Welcome</h5>
+                                <p>Please enter the details below to sign in to your account</p>
                                 <div class="row">
                                     <!--Email-->
                                     <div class="col-lg-12">
@@ -58,7 +70,7 @@
                                         <label>Password</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-4">
-                                                <input type="password" placeholder="Enter Your Password" name="phone"
+                                                <input type="password" placeholder="Enter Your Password" name="password"
                                                     class="input" required>
                                             </div>
                                         </div>
@@ -68,18 +80,12 @@
                                             Forgot Password
                                         </a>
                                     </p>
-                                    <div class="cap">
-                                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669284502/EProd%20Images/Group_8852_dqasma.png" draggable="false" alt="">
-                                    </div>
                                     <div class="col-md-12 mb-3">
-                                        <a href="#">
-                                            <button value="">Log in </button>
-                                        </a>
+                                        <button class="form-btn" type="submit">Log in </button>
                                     </div>
                                     <!--Message-->
-                                    <p style="text-align: center;margin-top: 20px;">Don’t have an account ?   <a
+                                    <p style="text-align: center;margin-top: 20px;">Don’t have an account ? <a
                                             href="{{route('signUp')}}">Sign Up</a> </p>
-
                                 </div>
                             </form>
                         </div>
