@@ -1,9 +1,8 @@
 @if($errors->any())
     @foreach($errors->all() as $error)
     <div class="col-12 mb-2">
-        <div class="alert alert-danger alert-timeout alert-border-left text-center" role="alert">
+        <div class="alert alert-danger alert-timeout alert-border-left text-center" style="padding: .6rem !important;" role="alert">
             {{$error}}!
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
         </div>
     </div>
     @endforeach
@@ -11,9 +10,8 @@
 
 @if(session()->has('type'))
 <div class="col-12 mb-2">
-    <div class="alert alert-{{session()->get('type')}} alert-timeout alert-border-left text-center" role="alert">
+    <div class="alert alert-{{session()->get('type')}} alert-timeout alert-border-left text-center" style="padding: .6rem !important;" role="alert">
         {{session()->get('message')}}
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
     </div>
 </div>
 @endif
