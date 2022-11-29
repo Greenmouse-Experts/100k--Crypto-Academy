@@ -26,6 +26,7 @@ Route::get('/policy', [App\Http\Controllers\HomePageController::class, 'policy']
 
 // Authentications
 Route::get('/signIn', [App\Http\Controllers\HomePageController::class, 'sign'])->name('signIn');
+Route::get('/login', [App\Http\Controllers\HomePageController::class, 'sign'])->name('login');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
 
@@ -52,6 +53,9 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
     Route::get('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe'])->name('user.subscribe');
     Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
+    Route::post('/profile/upload/picture', [App\Http\Controllers\DashboardController::class, 'profile_upload_picture'])->name('user.profile.upload.picture');
+    Route::post('/profile/update', [App\Http\Controllers\DashboardController::class, 'profile_update'])->name('user.profile.update');
+    Route::post('/password/update', [App\Http\Controllers\DashboardController::class, 'password_update'])->name('user.password.update');
     Route::get('/affiliate', [App\Http\Controllers\DashboardController::class, 'affiliate'])->name('user.affiliate');
 });
 

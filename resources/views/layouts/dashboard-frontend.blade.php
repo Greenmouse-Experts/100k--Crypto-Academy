@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> 100k Crypto Academy | Dashboard</title>
+    <title> {{config('app.name')}} | Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="100k Crypto Academy |  Dashboard" name="100k Crypto Academy |  Dashboard" />
+    <meta content="{{config('app.name')}} |  Dashboard" name="{{config('app.name')}} |  Dashboard" />
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{URL::asset('dash/assets/images/Logo-fav.png')}}" />
@@ -25,6 +25,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript">
         window.setTimeout(function() {
@@ -37,6 +38,9 @@
 
 <body data-sidebar="dark" data-layout-mode="light">
     <!-- Alerts  Start-->
+    <div style="z-index: 100000; width: 100%; position: absolute;">
+        @include('layouts.alert')
+    </div>
     <!-- Alerts End -->
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -58,93 +62,6 @@
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 
-    <!-- Modal START -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content px-4 py-2">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">
-                        Kindly Create...
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="dropover">
-                                <div class="for-drop">
-                                    <i class="bi bi-1-circle"></i>
-                                </div>
-                                <h3>Create Pages</h3>
-                                <p>
-                                    Design beautiful website, landing page or funnel with our
-                                    page editor.
-                                </p>
-                                <div class="con">
-                                    <a href="#" class="text-purp">
-                                        <b> Continue <i class="bi bi-arrow-right"></i> </b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="dropover">
-                                <div class="for-drop">
-                                    <i class="bi bi-2-circle"></i>
-                                </div>
-                                <h3>Create Shore</h3>
-                                <p>Create shops to sell your digital and physical products</p>
-                                <div class="con">
-                                    <a href="#" class="text-purp">
-                                        <b> Continue <i class="bi bi-arrow-right"></i> </b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="dropover">
-                                <div class="for-drop">
-                                    <i class="bi bi-3-circle"></i>
-                                </div>
-                                <h3>Create Emails</h3>
-                                <p>
-                                    Create emails easily with our drag and drop editors readily
-                                    avaliable for you
-                                </p>
-                                <div class="con">
-                                    <a href="#" class="text-purp">
-                                        <b> Continue <i class="bi bi-arrow-right"></i> </b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="dropover">
-                                <div class="for-drop">
-                                    <i class="bi bi-4-circle"></i>
-                                </div>
-                                <h3>Create Automations</h3>
-                                <p>
-                                    Automate sms, chats and emails to reach subscribers at the
-                                    perfect time.
-                                </p>
-                                <div class="con">
-                                    <a href="#" class="text-purp">
-                                        <b> Continue <i class="bi bi-arrow-right"></i> </b>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
         function myFunction() {
             // Get the text field

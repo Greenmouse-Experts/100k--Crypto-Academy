@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="X-UA-Compatible" content="Welcome To EPROD">
-        <meta name="viewport" content="Welcome To EPROD">
+        <meta http-equiv="X-UA-Compatible" content="Welcome To {{config('app.name')}}">
+        <meta name="viewport" content="Welcome To {{config('app.name')}}">
         <!-- Favocon -->
         <link rel="shortcut icon" href="{{URL::asset('assets/images/fav.png')}}" type="image/x-icon">
         <!-- Google Font -->
