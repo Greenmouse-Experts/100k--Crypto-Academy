@@ -38,6 +38,11 @@ class HomePageController extends Controller
         return view('frontend.contact');
     }
 
+    public function affiliate()
+    {
+        return view('frontend.affiliate');
+    }
+    
     public function blog()
     {
         return view('frontend.blog');

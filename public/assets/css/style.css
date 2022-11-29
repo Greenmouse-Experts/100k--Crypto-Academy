@@ -1885,3 +1885,123 @@ footer .input-group-text img{
     box-shadow: none !important;
 }
 /* FAQ Ends*/
+/* Affliate*/
+.Affliate{
+    padding: 100px 0px;
+}
+.affliata p{
+    font-weight: 500;
+    font-size: 18px;
+}
+.Affliate .text-center{
+    padding: 40px 0 0 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+.Affliate .alt{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+.Affliate .tailor{
+    padding: 0px 0 0 0;
+}
+.Affliate .tailor img{
+    display: block;
+    margin: auto;
+    width: 95%;
+    pointer-events: none;
+}
+.Affliate .tailor .drag img{
+    position: relative;
+    bottom: -80px;
+    width: 30px;
+    pointer-events: none;
+}
+.Affliate .tailor p{
+    margin-top: -120px;
+    padding: 15px 10px 30px 10px;
+    font-weight: 500;
+    text-align: center;
+}
+@media (max-width:1399px) {
+    .Affliate .tailor p{
+        margin-top: -100px;
+        padding: 15px 10px 30px 10px;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+@media (max-width:1199px) {
+    .Affliate .tailor .drag img{
+        position: relative;
+        bottom: -70px;
+        width: 30px;
+        pointer-events: none;
+    }
+    .Affliate .tailor p{
+        margin-top: -90px;
+        padding: 15px 10px 30px 10px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Affliate .tailor img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        pointer-events: none;
+    }
+}
+@media (max-width:767px) {
+    .Affliate .tailor .drag img{
+        position: relative;
+        bottom: -80px;
+        width: 30px;
+        pointer-events: none;
+    }
+    .Affliate .tailor p{
+        margin-top: -110px;
+        padding: 15px 10px 30px 10px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Affliate .tailor img{
+        display: block;
+        margin: auto;
+        width: 60%;
+        pointer-events: none;
+    }
+    .Affliate .alt{
+        display: none;
+    }
+}
+@media (max-width:495px) {
+    .Affliate .text-center{
+        padding: 40px 0 0 0;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .Affliate .tailor .drag img{
+        position: relative;
+        bottom: -80px;
+        width: 30px;
+        pointer-events: none;
+    }
+    .Affliate .tailor p{
+        margin-top: -90px;
+        padding: 15px 10px 30px 10px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .Affliate .tailor img{
+        display: block;
+        margin: auto;
+        width: 70%;
+        pointer-events: none;
+    }
+    .Affliate{
+        padding: 70px 0px;
+    }
+}
+
+/* Affliate Ends*/
