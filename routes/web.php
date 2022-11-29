@@ -60,4 +60,6 @@ Route::prefix('dashboard')->group(function () {
 Route::prefix('adminwelcome')->group(function () {
     Route::get('/', [App\Http\Controllers\AdminController::class, 'welcome'])->name('admin.welcome');
     Route::get('/members', [App\Http\Controllers\AdminController::class, 'members'])->name('admin.members');
+    Route::get('/trainings', [App\Http\Controllers\AdminController::class, 'trainings'])->name('admin.trainings');
+    Route::get('/subscribers', [App\Http\Controllers\AdminController::class, 'subscribers'])->name('admin.subscribers');
 });
