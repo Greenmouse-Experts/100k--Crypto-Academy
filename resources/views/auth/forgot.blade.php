@@ -42,15 +42,15 @@
     <section class="log">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                     <div class="row">
-                        <div class="images" style="margin-top: 40px !important;">
+                        <div class="imagess">
                             <a href="{{route('index')}}">
                                 <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669630298/EProd%20Images/WhatsApp_Image_2022-11-26_at_10.13.06_AM_ycwms2.jpg" alt="">
                             </a>
                         </div>
-                        <div class="sign" style="margin-top: 40px !important;">
+                        <div class="sign">
                             <form class="sign-div" method="POST" action="{{ route('user.forget.password')}}">
                                 @csrf
                                 <h5>Reset your password</h5>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-6"></div>
             </div>
         </div>
     </section>

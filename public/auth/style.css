@@ -29,12 +29,14 @@ html, body{
     background-color: #003D6C;
 }
 .sign-in .images img{
-    width: 40%;
+    margin-top: 30px !important;
+    width: 30%;
     display: block;
     margin: auto;
+    margin-bottom: 10px !important;
 }
 .sign-in .sign .sign-div {
-    margin-top: -40px;
+    margin-top: 10px;
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
@@ -116,7 +118,6 @@ html, body{
         border-radius: 2px;
         width: 100%;
         padding: 20px 20px;
-        margin-top: -35px;
         border-radius: 7px;
         margin-bottom: 20px;
     }
@@ -133,7 +134,14 @@ html, body{
     background-color: #003D6C;
 }
 .log .images img{
-    width: 40%;
+    margin-top: 30px !important;
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+.log .imagess img{
+    margin-top: 30px !important;
+    width: 35%;
     display: block;
     margin: auto;
 }
@@ -141,7 +149,7 @@ html, body{
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
-    margin-top: -50px !important;
+    margin-top: 20px !important;
     padding:20px 20px;
     margin-bottom: 10px;
 }
@@ -201,7 +209,6 @@ html, body{
         background-color: #fff;
         border-radius: 2px;
         width: 100%;
-        margin-top: -35px !important;
         padding:20px 20px;
         margin-bottom: 10px;
     }
