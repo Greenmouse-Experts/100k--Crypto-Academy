@@ -27,11 +27,11 @@ html, body{
 
 /*****Header Navbar*****/
 header .navbar{
-    padding: 0px 0px !important;
+    padding: 5px 5px !important;
     background-color: #003D6C;
 }
 header .navbar .navbar-brand img{
-    width: 100px;
+    width: 110px;
 }
 header .navbar .navbar-nav{
     position: relative;
@@ -122,9 +122,6 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
     header .navbar .offcanvas{
         background-color: #000;
     }
-    header .navbar .navbar-brand img{
-        width: 70px;
-    }
     header .navbar .navbar-nav{
         position: relative;
         left: 20px;
@@ -164,11 +161,11 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
         border: none;
     }
 }
-@media(max-width: 373px){
+/* @media(max-width: 373px){
     header .navbar .navbar-brand img{
         width: 50px;
     }
-}
+} */
 /* Header Ends */
 
 /* Welcome Page */
@@ -927,9 +924,10 @@ footer{
     padding: 80px 0px 0px 0px;
 }
 footer .conting img{
-    width: 100px;
+    width: 110px;
     display: inline-block;
     margin: auto;
+    margin-bottom: 10px !important;
 }
 footer .conting p{
     font-size: 16px;
