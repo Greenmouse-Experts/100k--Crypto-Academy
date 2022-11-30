@@ -18,7 +18,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.subscribers')}}">
             <i class="bi bi-journal-check"></i>
             <span key="t-dashboards">Subscribers</span>
           </a>
@@ -30,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.trainings')}}">
             <i class="bi bi-book-half"></i>
             <span key="t-dashboards">Trainings</span>
           </a>

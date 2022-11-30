@@ -296,6 +296,16 @@
             }
         }
     </script>
+    <!-- bootstrap datepicker -->
+<script src="{{URL::asset('admin/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+
+<!--tinymce js-->
+<script src="{{URL::asset('admin/assets/libs/tinymce/tinymce.min.js')}}"></script>
+
+<!-- form repeater js -->
+<script src="{{URL::asset('admin/assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
+
+<script src="{{URL::asset('admin/assets/js/pages/task-create.init.js')}}"></script>
 </body>
 
 </html>
