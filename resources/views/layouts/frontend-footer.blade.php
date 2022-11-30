@@ -98,7 +98,7 @@
                 <hr class="line">
                 <div class="text-center text-white">
                     <p>
-                        Copyright 2022 100k Crypto Academy | <a href="policy">Privacy Policy</a> | <a href="terms">Terms and Conditions</a>
+                        Copyright {{date("Y")}} {{config('app.name')}} | <a href="/policy">Privacy Policy</a> | <a href="/terms">Terms and Conditions</a>
                     </p>
                 </div>
             </div>

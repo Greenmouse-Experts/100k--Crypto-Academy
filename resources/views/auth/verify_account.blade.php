@@ -72,7 +72,7 @@
                                 @csrf
                                 <div class="text-center text-white">
                                     {{ __('If you did not receive the email') }},
-                                    <button style="border: none; background: transparent; color: #EA5B0C;"type="submit">{{ __('Click here to request another') }}</button>
+                                    <button class="text-white" style="border: none; background: transparent;"type="submit">{{ __('Click here to request another') }}</button>
                                 </div>
                             </form>
                         </div>

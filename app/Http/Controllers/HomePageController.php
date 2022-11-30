@@ -186,7 +186,7 @@ class HomePageController extends Controller
         if(!$user || !Hash::check($request->password, $user->password)) {
             return back()->with([
                 'type' => 'danger',
-                'message' => "Email/Username doesn't exist"
+                'message' => "Email doesn't exist"
             ]);
         }
 

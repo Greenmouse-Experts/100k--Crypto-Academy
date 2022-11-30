@@ -58,7 +58,7 @@
           </a>
         </li>
         <li class="mt-4">
-          <a href="#">
+          <a href="/logout">
             <i class="bi bi-box-arrow-in-left"></i>
             <span key="t-dashboards">Logout</span>
           </a>
