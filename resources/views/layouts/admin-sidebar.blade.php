@@ -36,7 +36,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
             <span key="t-dashboards">Affiliate</span>
           </a>
@@ -48,9 +48,15 @@
           </a>
         </li>
         <li>
-          <a href="{{route('user.profile')}}">
+          <a href="{{route('admin.profile')}}">
             <i class="bi bi-sliders2-vertical"></i>
             <span key="t-tasks">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{route('admin.profile')}}">
+            <i class="bi bi-person-check"></i>
+            <span key="t-tasks">Admin Role</span>
           </a>
         </li>
         <li class="mt-4">

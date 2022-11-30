@@ -5,7 +5,7 @@
                 <div class="conting">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" draggable="false" alt="">
                     <p>
-                        Support@.100kcrypto.com
+                        Support@100kcrypto.com
                     </p>
                     <div class="speacial">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668766054/EProd%20Images/Line_5_zj46r0.png" draggable="false" alt="">
@@ -82,7 +82,7 @@
                         </a>
                     </p>
                     <H1 class="mt-5">
-                        JOIN OUR MAILING LIST
+                        Get Crypto Updates From Us
                     </H1>
                     <form class="search-bar conting">
                         <div class="input-group mb-3">
@@ -98,7 +98,7 @@
                 <hr class="line">
                 <div class="text-center text-white">
                     <p>
-                        Copyright 2022 100k Crypto Academy | <a href="policy">Privacy Policy</a> | <a href="terms">Terms and Conditions</a>
+                        Copyright 2022 100kCrypto Investing | <a href="policy">Privacy Policy</a> | <a href="terms">Terms and Conditions</a>
                     </p>
                 </div>
             </div>

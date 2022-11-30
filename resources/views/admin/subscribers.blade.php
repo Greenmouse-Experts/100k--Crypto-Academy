@@ -65,6 +65,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
+
                                 <div class="table-responsive">
                                     <table class="table table-bordered align-middle nowrap">
                                         <thead>
@@ -99,7 +100,7 @@
                                                             <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
                                                         </li>
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                            <a href="#subscriberdelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -132,28 +133,28 @@
                                 </div>
                                 <div class="row justify-content-between align-items-center">
                                     <ul class="pagination pagination-rounded justify-content-center mt-4">
-                                            <li class="page-item disabled">
-                                                <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript: void(0);" class="page-link">1</a>
-                                            </li>
-                                            <li class="page-item active">
-                                                <a href="javascript: void(0);" class="page-link">2</a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript: void(0);" class="page-link">3</a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript: void(0);" class="page-link">4</a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript: void(0);" class="page-link">5</a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
-                                            </li>
-                                        </ul>
+                                        <li class="page-item disabled">
+                                            <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="javascript: void(0);" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">5</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+                                        </li>
+                                    </ul>
                                     <!--end col-->
                                 </div>
                                 <!--end row-->

@@ -65,6 +65,7 @@ class HomePageController extends Controller
     {
         return view('auth.signUp');
     }
+    
     public function forgot()
     {
         return view('auth.forgot');

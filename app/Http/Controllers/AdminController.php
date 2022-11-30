@@ -28,5 +28,14 @@ class AdminController extends Controller
     {
         return view('admin.subscribers');
     }
-    
+
+    public function profile()
+    {
+        return view('admin.profile');
+    }
+
+    public function affiliate()
+    {
+        return view('admin.affiliate');
+    }
 }

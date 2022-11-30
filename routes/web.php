@@ -66,4 +66,6 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/members', [App\Http\Controllers\AdminController::class, 'members'])->name('admin.members');
     Route::get('/trainings', [App\Http\Controllers\AdminController::class, 'trainings'])->name('admin.trainings');
     Route::get('/subscribers', [App\Http\Controllers\AdminController::class, 'subscribers'])->name('admin.subscribers');
+    Route::get('/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
+    Route::get('/affiliate', [App\Http\Controllers\AdminController::class, 'affiliate'])->name('admin.affiliate');
 });

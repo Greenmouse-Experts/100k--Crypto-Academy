@@ -1301,6 +1301,10 @@ footer .input-group-text img{
     padding: 30px 40px;
     margin-bottom: 10px;
 }
+.sign .sign-div h4{
+    margin-bottom: 35px;
+    font-weight: 700;
+}
 .sign .sign-div ::placeholder{
     font-size: 12px;
     color: #000;
@@ -1821,11 +1825,13 @@ footer .input-group-text img{
     background-color: #fff;
     box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
     padding: 30px;
-    height: 250px;
+    height:auto;
     border-radius: 10px;
 }
 .Clients .colum p{
-    font-size: 20px;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 500;
     color: #4B4B4B;
 }
 .Clients .colum h6{
@@ -1834,7 +1840,7 @@ footer .input-group-text img{
 }
 @media (max-width:1400px) {
     .Clients .colum{
-        height: 270px;
+        height:auto;
         border-radius: 10px;
     }
 }

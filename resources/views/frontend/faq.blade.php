@@ -62,7 +62,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Q: What if I have questions while learning?
+                                    Q: What if I have questions while learning or investing?
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -86,54 +86,32 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Q: Can I get paid by referring others?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">A: Yes. We have an awesome affiliate plan that gives you 40% per referral. We also have in-house marketers you could contract to help you promote your affiliate links with paid and organic ads. Do signup for free and grab your affiliate link and start earning 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Q: What happens if someone visits 100kcrypto.com with my affiliate link but did not sign up? 
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">A.Our cookie lifespan is 90 days. Therefore the person has till 90 days to signup on our website for the referral to count for you. One smart strategy you could apply is to ensure they sign up even if they are not subscribing immediately. That way you will own the referral forever. 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2"></div>
-            <div class="col-lg-12">
-                <h1>
-                    Add a Review
-                </h1>
-                <div class="signn">
-                    <form class="sign-div">
-                        <div class="row">
-                            <!--Nmase-->
-                            <div class="col-lg-6">
-                                <label>Full Name</label>
-                                <div class="row">
-                                    <div class="col-md-12 mb-3">
-                                        <input type="text" placeholder="First Name" name="name" class="input" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <label>Last Name</label>
-                                <div class="row">
-                                    <div class="col-md-12 mb-3">
-                                        <input type="text" placeholder="Last Name" name="name" class="input" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--message-->
-                            <div class="col-lg-12">
-                                <label>Review</label>
-                                <div class="row">
-                                    <div class="col-md-12 mb-4">
-                                        <textarea name="" id="" cols="2" rows="6" placeholder="Enter Your Message"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3"></div>
-                            <div class="col-md-4 mb-3">
-                                <a href="#">
-                                    <button value="">Submit Review</button>
-                                </a>
-                            </div>
-                            <div class="col-md-4 mb-3"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </section>

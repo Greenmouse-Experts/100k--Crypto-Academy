@@ -13,12 +13,6 @@
                     <p>
                         Start recording huge gains with our well researched coin recommendations and investment guides
                     </p>
-                    <!-- <form class="search-bar">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Search your courses">
-                                        <span class="input-group-text" id="basic-addon2">Search</span>
-                                    </div>
-                                </form> -->
                 </div>
             </div>
             <div class="col-lg-5">
@@ -90,7 +84,7 @@
             <div class="col-lg-6">
                 <div class="com">
                     <p>
-                        <b>100kCrypto Academy</b> is a blockchain education platform that focuses on bringing quality and practical crypto education to its subscribers.
+                       <b>100kCrypto Investing</b>  is a blockchain education and investing community that focuses on bringing well researched crypto projects to its subscribers alongside blockchain education.
                     </p>
                     <p>
                         Acknowledging that most people have tight schedules and little time to engage in crypto, we designed a winning strategy called “100x-Positioning” to help busy people achieve greater results than most active crypto traders.
@@ -125,7 +119,7 @@
                 <div class="tailor">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668700910/EProd%20Images/Group_8749_jru7en.png" draggable="false" alt="">
                     <p>
-                        Tailored crypto training and mentorship
+                        Tailored crypto trainings and mentorship
                     </p>
                 </div>
             </div>
@@ -157,7 +151,7 @@
                 <div class="tailor">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668700909/EProd%20Images/Group_8752_aqsxfr.png" draggable="false" alt="">
                     <p>
-                        Long-term Crypto recommendation 10,000% + potential)
+                        Long-term Crypto recommendations (10,000% + potential)
                     </p>
                 </div>
             </div>
@@ -197,7 +191,7 @@
             <div class="col-lg-12">
                 <div class="who text-center">
                     <h1>
-                        What our Clients say
+                        What our Members say
                     </h1>
                 </div>
             </div>
@@ -207,10 +201,10 @@
                 </div>
                 <div class="colum">
                     <p>
-                        “The potential of 100k Crypto is great , they are the best and this platform is suitable for learning from distance.”
+                        “100kCrypto Platform has helped me to manage and grow my portfolio exceedingly. It feels so good to know what to do to remain profitable in the bear and bull market. I love the idea of investing into viable crypto projects without having to interrupt my job and personal life. With 100kCrypto, the moon is a mile above.”
                     </p>
                     <h6>
-                        Chuka Williams
+                        Testimonial 1
                     </h6>
                 </div>
             </div>
@@ -220,11 +214,11 @@
                 </div>
                 <div class="colum">
                     <p>
-                        “I felt like I learned months in a week. I love how Codecademy gives great challenges to help the learner to understand a new concept and subject.
+                        “As a busy business owner who values every penny I have, I was impressed with 100kCrypto Risk Management Model that makes it possible to win and almost impossible to lose. Their highly selective project recommendations, fund allocation and exit strategy are obviously the best risk management model in the space. 
                         ”
                     </p>
                     <h6>
-                        Hamzy Abdul
+                        Testimonial 2
                     </h6>
                 </div>
             </div>
@@ -234,10 +228,10 @@
                 </div>
                 <div class="colum">
                     <p>
-                        “Brilliant learning experience. Very interactive. Literally a game changer if you're learning on your own.”
+                        “I never knew there was more to airdrop than stressing myself. With 100kCrypto selected  One-to-Many Airdrop Winning strategy, I now earn free coins and tokens with just one activity I have done on a few platforms recommended by this amazing crypto community. Applying the strategy, I anticipate growing my profits to $100k in the coming year.”
                     </p>
                     <h6>
-                        Obi Mike
+                        Testimonial 3
                     </h6>
                 </div>
             </div>
@@ -295,7 +289,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Q: What if I have questions while learning?
+                                    Q: What if I have questions while learning or investing?
+
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -316,6 +311,28 @@
                             <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">A: No. We only train and make project recommendations. You are required to do your own due
                                     diligence as well as apply every risk management practices we taught you.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Q: Can I get paid by referring others?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">A: Yes. We have an awesome affiliate plan that gives you 40% per referral. We also have in-house marketers you could contract to help you promote your affiliate links with paid and organic ads. Do signup for free and grab your affiliate link and start earning 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Q: What happens if someone visits 100kcrypto.com with my affiliate link but did not sign up? 
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">A.Our cookie lifespan is 90 days. Therefore the person has till 90 days to signup on our website for the referral to count for you. One smart strategy you could apply is to ensure they sign up even if they are not subscribing immediately. That way you will own the referral forever. 
                                 </div>
                             </div>
                         </div>

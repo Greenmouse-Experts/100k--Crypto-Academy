@@ -23,7 +23,7 @@
                         About Us
                     </h1>
                     <p>
-                        100kcrypto Academy is a blockchain education platform that focuses on bringing quality and practical crypto education to its subscribers.
+                        100kcrypto Investing is a blockchain education and investing community that focuses on bringing well researched crypto projects to its subscribers alongside blockchain education.
 
                     </p>
                     <p>
