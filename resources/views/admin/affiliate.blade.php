@@ -20,6 +20,82 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body border-bottom">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 card-title flex-grow-1">View Recent Affiliate</h5>
+                                    <div class="flex-shrink-0">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="Today" selected>Today</option>
+                                            <option value="1 Monthly">1 Month</option>
+                                            <option value="6 Month">6 Month</option>
+                                            <option value="1 Years">1 Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered align-middle nowrap">
+                                        <table class="table table-bordered align-middle nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 70px;">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Tags</th>
+                                                    <th scope="col">Active</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                D
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Hamzat</a></h5>
+                                                    </td>
+                                                    <td>greenmouse@gmail.com</td>
+                                                    <td>
+                                                        <div>
+                                                            <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">joinlink</a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>
+                                                        <ul class="list-unstyled hstack gap-1 mb-0">
+                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                <a href="job-details.html" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
+                                                            </li>
+                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </table>
+                                </div>
+                                <!--end row-->
+                            </div>
+                        </div>
+                        <!--end card-->
+                    </div>
+                    <!--end col-->
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

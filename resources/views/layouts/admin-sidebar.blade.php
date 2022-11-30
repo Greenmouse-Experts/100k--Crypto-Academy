@@ -24,7 +24,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.transaction')}}">
           <i class="bi bi-bank"></i>
             <span key="t-dashboards">Transaction</span>
           </a>
@@ -53,12 +53,12 @@
             <span key="t-tasks">Profile</span>
           </a>
         </li>
-        <li>
-          <a href="{{route('admin.profile')}}">
+        <!-- <li>
+          <a>
             <i class="bi bi-person-check"></i>
             <span key="t-tasks">Admin Role</span>
           </a>
-        </li>
+        </li> -->
         <li class="mt-4">
           <a href="#">
             <i class="bi bi-box-arrow-in-left"></i>

@@ -38,4 +38,10 @@ class AdminController extends Controller
     {
         return view('admin.affiliate');
     }
+
+    public function transaction()
+    {
+        return view('admin.transaction');
+    }
+    
 }
