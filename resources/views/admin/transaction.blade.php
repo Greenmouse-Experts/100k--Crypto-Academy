@@ -205,7 +205,6 @@
                                                 <th>Amount in USD</th>
                                             </tr>
                                         </thead>
-
                                         <tbody>
                                             <tr>
                                                 <td><a href="javascript: void(0);" class="text-body fw-bold">#100k1</a></td>
