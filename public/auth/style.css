@@ -226,10 +226,14 @@ html, body{
         margin-top: 10px;
     }
 }
-
+.radi{
+   width: 5% !important;
+}
+.remeber{
+    margin-left: 30px;
+    margin-top: -18px !important;
+}
 /**********SIGN IN ENDS*************/
-
-
 .form-btn:focus:before{
     font-size: 15px;
     font-family: "Font Awesome 5 Free";

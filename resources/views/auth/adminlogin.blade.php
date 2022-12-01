@@ -50,10 +50,9 @@
                             </a>
                        </div>
                         <div class="sign">
-                            <form class="sign-div" action="{{ route('user.login')}}" method="post">
-                                @csrf
+                            <form class="sign-div">
                                 <h5 class="text-center">Welcome Admin</h5>
-                                <p>Admin Log In</p>
+                                <p class="text-center">Please enter the details below to sign in to your account</p>
                                 <div class="row">
                                     <!--Email-->
                                     <div class="col-lg-12">
@@ -75,6 +74,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                   <div><input type="checkbox" class="radi"> </div>
+                                   <p class="remeber">
+                                        Remember me
+                                   </p>
                                     <div class="col-md-12 mb-3">
                                         <button class="form-btn" type="submit">Log in </button>
                                     </div>
