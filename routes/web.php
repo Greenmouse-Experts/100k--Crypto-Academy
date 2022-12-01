@@ -61,7 +61,7 @@ Route::prefix('dashboard')->group(function () {
 
 
 // Admin Dashboard
-Route::prefix('adminwelcome')->group(function () {
+Route::prefix('adminwelcome')->middleware('auth:admin')->group(function () {
     Route::get('/', [App\Http\Controllers\AdminController::class, 'welcome'])->name('admin.welcome');
     Route::get('/members', [App\Http\Controllers\AdminController::class, 'members'])->name('admin.members');
     Route::get('/trainings', [App\Http\Controllers\AdminController::class, 'trainings'])->name('admin.trainings');
