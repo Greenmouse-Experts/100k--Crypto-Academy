@@ -61,12 +61,15 @@
                                                     125
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -93,12 +96,15 @@
                                                     132
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -125,12 +131,15 @@
                                                     112
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -159,12 +168,15 @@
                                                     121
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -191,12 +203,15 @@
                                                     145
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -222,12 +237,15 @@
                                                     136
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -256,12 +274,15 @@
                                                     125
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>
@@ -288,12 +309,15 @@
                                                     136
                                                 </td>
                                                 <td>
-                                                    <ul class="list-inline font-size-20 contact-links mb-0">
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Message"><i class="bi bi-trash"></i></a>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                            <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                         </li>
-                                                        <li class="list-inline-item px-2">
-                                                            <a href="javascript: void(0);" title="Profile"><i class="bi bi-pencil-square"></i></a>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
                                                         </li>
                                                     </ul>
                                                 </td>

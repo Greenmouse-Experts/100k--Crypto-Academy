@@ -43,5 +43,10 @@ class AdminController extends Controller
     {
         return view('admin.transaction');
     }
+
+    public function viewmembers()
+    {
+        return view('admin.viewmembers');
+    }
     
 }

@@ -29,6 +29,7 @@ Route::get('/signIn', [App\Http\Controllers\HomePageController::class, 'sign'])-
 Route::get('/login', [App\Http\Controllers\HomePageController::class, 'sign'])->name('login');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
+Route::get('/admin/login', [App\Http\Controllers\HomePageController::class, 'adminlogin'])->name('adminlogin');
 
 //User Authentications
 Route::prefix('auth')->group(function () {
@@ -69,4 +70,6 @@ Route::prefix('adminwelcome')->middleware('auth:admin')->group(function () {
     Route::get('/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/affiliate', [App\Http\Controllers\AdminController::class, 'affiliate'])->name('admin.affiliate');
     Route::get('/transaction', [App\Http\Controllers\AdminController::class, 'transaction'])->name('admin.transaction');
+    Route::get('/viewmembers', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');
+
 });

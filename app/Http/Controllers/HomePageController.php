@@ -76,6 +76,11 @@ class HomePageController extends Controller
         return view('auth.forgot');
     }
 
+    public function adminlogin()
+    {
+        return view('auth.adminlogin');
+    }
+
     public function register(Request $request)
     {
         $this->validate($request, [

@@ -41,29 +41,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body border-bottom">
-                                <div class="row g-3">
-                                    <div class="col-xxl-6 col-lg-6">
-                                        <input type="search" class="form-control" id="searchInput" placeholder="Search for ...">
-                                    </div>
-                                    <div class="col-xxl-2 col-lg-6">
-                                        <select class="form-control select2">
-                                            <option>Status</option>
-                                            <option value="Active">Active</option>
-                                            <option value="New">New</option>
-                                            <option value="Close">Close</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xxl-2 col-lg-4">
-                                        <div id="datepicker1">
-                                            <input type="text" class="form-control" placeholder="Select date" data-date-format="dd M, yyyy" data-date-autoclose="true" data-date-container='#datepicker1' data-provide="datepicker">
-                                        </div><!-- input-group -->
-                                    </div>
-                                    <div class="col-xxl-2 col-lg-4">
-                                        <button type="button" class="btn btn-soft-secondary w-100"><i class="mdi mdi-filter-outline align-middle"></i> Filter</button>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="card-body">
 
                                 <div class="table-responsive">
@@ -93,9 +70,7 @@
                                                 <td><span class="badge bg-success">Active</span></td>
                                                 <td>
                                                     <ul class="list-unstyled hstack gap-1 mb-0">
-                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                            <a href="#subscriberview" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                        </li>
+                                                        
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
                                                             <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
                                                         </li>
@@ -116,9 +91,7 @@
                                                 <td><span class="badge bg-success">Active</span></td>
                                                 <td>
                                                     <ul class="list-unstyled hstack gap-1 mb-0">
-                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                            <a href="#" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                        </li>
+                                                        
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
                                                             <a href="#" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
                                                         </li>
