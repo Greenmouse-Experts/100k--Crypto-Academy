@@ -29,6 +29,7 @@ Route::get('/signIn', [App\Http\Controllers\HomePageController::class, 'sign'])-
 Route::get('/login', [App\Http\Controllers\HomePageController::class, 'sign'])->name('login');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
+Route::get('/admin/login', [App\Http\Controllers\HomePageController::class, 'adminlogin'])->name('adminlogin');
 
 //User Authentications
 Route::prefix('auth')->group(function () {
