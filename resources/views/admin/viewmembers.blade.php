@@ -27,7 +27,6 @@
 
                     <h4 class="card-title">Members Details</h4>
                     <p class="card-title-desc">View information below</p>
-
                     <form>
                         <div class="row">
                             <div class="col-sm-6">
