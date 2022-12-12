@@ -102,17 +102,17 @@
                 <button type="button" style="display: flex; align-items: center;" class="btn header-item" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="d-none d-xl-inline-block ms-1" key="t-henry">
                         <div class="hamzat">
-                            <b>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</b>
+                            <b>{{Auth::user()->name}}</b>
                         </div>
                     </span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                     @if(Auth::user()->photo)
-                     <img class="rounded-circle header-profile-user" src="{{Auth::user()->photo}}" alt="{{Auth::user()->first_name}}" />
+                    @if(Auth::user()->photo)
+                     <img class="rounded-circle header-profile-user" src="{{Auth::user()->photo}}" alt="{{Auth::user()->name}}" />
                     <!-- <img class="rounded-circle header-profile-user" src="}" alt="" width="100%"> -->
                     @else
                     <div class="avatar-xs">
                         <span class="avatar-title rounded-circle">
-                        {{ ucfirst(substr(Auth::user()->first_name, 0, 1)) }} {{ ucfirst(substr(Auth::user()->last_name, 0, 1)) }}
+                        {{ ucfirst(substr(Auth::user()->name, 0, 1)) }}
                         </span>
                     </div>
                     @endif

@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>{{config('app.name')}} - SignIn</title>
-    
+
     <script>
         window.setTimeout(function() {
             $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
-                $(this).remove(); 
+                $(this).remove();
             });
         }, 8000);
     </script>
@@ -50,7 +50,8 @@
                             </a>
                        </div>
                         <div class="sign">
-                            <form class="sign-div">
+                            <form class="sign-div" method="POST" action="{{route('admin.login.post')}}">
+                                @csrf
                                 <h5 class="text-center">Welcome Admin</h5>
                                 <p class="text-center">Please enter the details below to sign in to your account</p>
                                 <div class="row">

@@ -4,6 +4,9 @@
 <!-- ============================================================== -->
 <!-- Start right Content here -->
 <!-- ============================================================== -->
+@php
+    $default = URL::current().'/dash/assets/images/users/avatar-5.jpg';
+@endphp
 <div class="main-content">
     <div class="page-content">
         <!-- container-fluid -->
@@ -28,33 +31,58 @@
                     <h4 class="card-title">Members Details</h4>
                     <p class="card-title-desc">View information below</p>
 
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="mb-3">
-                                    <label >Name</label>
-                                    <input type="text" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Details</label>
-                                    <input type="text" class="form-control" placeholder="Details">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Amount</label>
-                                    <input type="text" class="form-control" placeholder="Amount">
-                                </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <img src="{{($user->photo) ?? $default}}" alt="" class="rounded" width="150px" height="150px">
+                                <h5>{{$user->username}}</h5>
+                                <h6 class="text-secondary font-weight-light">{{$user->email}}</h6>
+                                @if ($user->status != 'disabled')
+                                    <form action="{{route('users.change_type', $user->id)}}" method="post">
+                                    @csrf
+                                        <input type="hidden" name="status" value="disabled">
+                                        <button type="submit" class="btn btn-danger">Disable User</button>
+                                    </form>
+                                @else
+                                    <form action="{{route('users.change_type', $user->id)}}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="status" value="enabled">
+                                        <button type="submit" class="btn btn-success">Enable User</button>
+                                    </form>
+                                @endif
+
                             </div>
                         </div>
+                        <div class="col-md-9">
+                            <legend>
+                                <h4>User Information</h4>
+                            </legend>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <h4> {{$user->name}}</h4>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Email</label>
+                                        <h4> {{$user->email}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    
+                                    <div class="form-group">
+                                        <label for="name">Joined At</label>
+                                        <h4> {{$user->created_at}}</h4>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Wallet Balance</label>
+                                        <h4> ₦0.00</h4>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="d-flex flex-wrap gap-2">
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
-                            <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                         </div>
-                    </form>
+                    </div>
 
                 </div>
             </div>

@@ -26,7 +26,7 @@
     <script>
         window.setTimeout(function() {
             $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
-                $(this).remove(); 
+                $(this).remove();
             });
         }, 8000);
     </script>
@@ -59,19 +59,10 @@
                                 <div class="row">
                                     <!--Full Name-->
                                     <div class="col-lg-12">
-                                        <label>First Name</label>
+                                        <label>Name</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <input type="text" placeholder="Enter Your First Name" name="first_name" class="input" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Full Name-->
-                                    <div class="col-lg-12">
-                                        <label>Last Name</label>
-                                        <div class="row">
-                                            <div class="col-md-12 mb-3">
-                                                <input type="text" placeholder="Enter Your Last Name" name="last_name" class="input" required>
+                                                <input type="text" placeholder="Enter Your First Name" name="name" class="input" required>
                                             </div>
                                         </div>
                                     </div>

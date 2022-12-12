@@ -37,7 +37,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.deposit');
     }
-    
+
     public function withdraw()
     {
         return view('dashboard.withdraw');
@@ -52,7 +52,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.profile');
     }
-    
+
     public function affiliate()
     {
         return view('dashboard.affiliate');
@@ -62,18 +62,15 @@ class DashboardController extends Controller
     {
         //Validate Request
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
         ]);
 
         //Profile
         $profile = User::find(Auth::user()->id);
 
-        if($profile->email == $request->email)
-        {
+        if ($profile->email == $request->email) {
             $profile->update([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
+                'name' => $request->name,
             ]);
 
             return back()->with([
@@ -87,8 +84,7 @@ class DashboardController extends Controller
         ]);
 
         $profile->update([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
+            'name' => $request->name,
             'email' => $request->email
         ]);
 
@@ -105,14 +101,14 @@ class DashboardController extends Controller
         ]);
 
         $user = User::findorfail(Auth::user()->id);
-        
+
         $user->password = Hash::make($request->new_password);
         $user->save();
 
         return back()->with([
             'type' => 'success',
             'message' => 'Password Updated Successfully!'
-        ]); 
+        ]);
     }
 
     public function profile_upload_picture(Request $request)
@@ -126,14 +122,14 @@ class DashboardController extends Controller
 
         $filename = request()->photo->getClientOriginalName();
 
-        if($profile->photo) {
+        if ($profile->photo) {
             Storage::delete(str_replace("storage", "public", $profile->photo));
         }
 
         request()->photo->storeAs('users_photo', $filename, 'public');
-        
+
         $profile->update([
-            'photo' => '/storage/users_photo/'.$filename,
+            'photo' => '/storage/users_photo/' . $filename,
         ]);
 
         return back()->with([

@@ -17,11 +17,6 @@ use Illuminate\Support\Facades\Session;
 class HomePageController extends Controller
 {
     //
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-        $this->middleware('guest:admin')->except('logout');
-    }
     public function index()
     {
         return view('frontend.index');
@@ -76,25 +71,17 @@ class HomePageController extends Controller
         return view('auth.forgot');
     }
 
-    public function adminlogin()
-    {
-        return view('auth.adminlogin');
-    }
-
     public function register(Request $request)
     {
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:100', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
 
         $user = User::create([
-            'user_type' => 'User',
-            'first_name' => ucfirst($request->first_name),
-            'last_name' => ucfirst($request->last_name),
+            'name' => ucfirst($request->name),
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -157,8 +144,7 @@ class HomePageController extends Controller
             'code' => ['required', 'numeric']
         ]);
 
-        if($user->code == $request->code)
-        {
+        if ($user->code == $request->code) {
             $user->email_verified_at = now();
             $user->code = null;
             $user->save();
@@ -181,20 +167,21 @@ class HomePageController extends Controller
             'email' => ['required', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
             // 'g-recaptcha-response' => 'required|captcha',
+
         ]);
 
         $input = $request->only(['email', 'password']);
 
         $user = User::query()->where('email', $request->email)->first();
 
-        if ($user && !Hash::check($request->password, $user->password)){
+        if ($user && !Hash::check($request->password, $user->password)) {
             return back()->with([
                 'type' => 'danger',
                 'message' => 'Incorrect Password!'
             ]);
         }
 
-        if(!$user || !Hash::check($request->password, $user->password)) {
+        if (!$user || !Hash::check($request->password, $user->password)) {
             return back()->with([
                 'type' => 'danger',
                 'message' => "Email doesn't exist"
@@ -202,9 +189,9 @@ class HomePageController extends Controller
         }
 
         // authentication attempt
-        if(auth()->attempt($input)) {
+        if (auth()->attempt($input)) {
 
-            if(!$user->email_verified_at){
+            if (!$user->email_verified_at) {
                 // Send email to user
                 $user->notify(new SendVerificationCode($user));
 
@@ -216,7 +203,7 @@ class HomePageController extends Controller
 
 
 
-            if($user->status == 'inactive'){
+            if ($user->status == 'inactive') {
 
                 Auth::logout();
 
@@ -326,7 +313,7 @@ class HomePageController extends Controller
 
     public function admin_login()
     {
-        return view('auth.admin_login', ['url' => route('admin.login-view'), 'title'=>'Admin']);
+        return view('auth.admin_login', ['url' => route('admin.login-view'), 'title' => 'Admin']);
     }
 
     public function post_admin_login(Request $request)
@@ -340,18 +327,18 @@ class HomePageController extends Controller
 
         $user = User::query()->where('email', $request->email)->first();
 
-        if ($user && !Hash::check($request->password, $user->password)){
+        if ($user && !Hash::check($request->password, $user->password)) {
             return back()->with('failure_report', 'Incorrect Password!');
         }
 
-        if(!$user || !Hash::check($request->password, $user->password)) {
+        if (!$user || !Hash::check($request->password, $user->password)) {
             return back()->with('failure_report', 'Email does\'nt exist');
         }
 
         // authentication attempt
         if (\Auth::guard('admin')->attempt($input, $request->get('remember'))) {
-            if($user->user_type == 'Administrator'){
-                return redirect()->route('admin.dashboard');
+            if ($user->user_type == 'Administrator') {
+                return redirect()->route('admin.welcome');
             }
 
             return back()->with('failure_report', 'You are not an Administrator');

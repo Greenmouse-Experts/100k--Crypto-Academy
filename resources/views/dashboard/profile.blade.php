@@ -29,18 +29,13 @@
                             <form class="custom-validation" method="POST" action="{{ route('user.profile.update')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" name="first_name" required placeholder="Enter Your First Name" value="{{Auth::user()->first_name}}"/>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" name="last_name" required placeholder="Enter Your Last Name" value="{{Auth::user()->last_name}}"/>
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" required placeholder="Enter Your First Name" value="{{Auth::user()->name}}"/>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control" name="email" required placeholder="Enter Your Email" value="{{Auth::user()->email}}" />
+                                    <input type="text" readonly class="form-control" name="email" required placeholder="Enter Your Email" value="{{Auth::user()->email}}" />
                                 </div>
                                 <div class="d-flex flex-wrap gap-2">
                                     <button type="submit" class="form-btn btn btn-primary waves-effect waves-light">
