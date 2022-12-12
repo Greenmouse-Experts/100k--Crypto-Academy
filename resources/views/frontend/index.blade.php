@@ -41,7 +41,7 @@
                             5+
                         </h1>
                         <p>
-                            Tailored Trainings
+                            Total Analyst
                         </p>
                     </div>
                 </div>
@@ -66,10 +66,10 @@
                     <div class="perfect">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669045649/EProd%20Images/icons8-personal-trainer-50_1_dta78u.png" draggable="false" alt="">
                         <h1>
-                            10+
+                            40%
                         </h1>
                         <p>
-                            Expert Trainers
+                            Affiliate Bonus
                         </p>
                     </div>
                 </div>

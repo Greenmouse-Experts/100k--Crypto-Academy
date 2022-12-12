@@ -29,8 +29,6 @@
                 <div class="card-body">
 
                     <h4 class="card-title">Members Details</h4>
-                    <p class="card-title-desc">View information below</p>
-
                     <div class="row">
                         <div class="col-md-3">
                             <div class="text-center">

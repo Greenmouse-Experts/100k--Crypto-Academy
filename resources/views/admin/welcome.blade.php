@@ -26,7 +26,7 @@
                     <div class="runtime">
                         <h1>Total number of Members</h1>
                         <p>
-                            1000+
+                            1k+
                         </p>
                         <h4>Members</h4>
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119633/EProd%20Images/Iconn_t4lpdx.png" draggable="false" alt="">
