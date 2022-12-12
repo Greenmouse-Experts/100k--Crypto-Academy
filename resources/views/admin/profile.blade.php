@@ -27,20 +27,15 @@
                             <h4 class="card-title">Edit Your Personal Settings</h4>
                             <p class="card-title-desc"></p>
                             <form class="custom-validation" method="POST" enctype="multipart/form-data">
-                              
-                                <div class="mb-3">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" name="first_name" required placeholder="Enter Your First Name" />
-                                </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" name="last_name" required placeholder="Enter Your Last Name"  />
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" value="{{Auth::guard('admin')->user()->name}}" placeholder=""  />
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control" name="email" required placeholder="Enter Your Email" />
+                                    <input type="text" class="form-control" value="{{Auth::guard('admin')->user()->email}}" name="email" readonly placeholder="Enter Your Email" />
                                 </div>
                                 <div class="d-flex flex-wrap gap-2">
                                     <button type="submit" class="form-btn btn btn-primary waves-effect waves-light">

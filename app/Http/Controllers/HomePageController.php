@@ -42,7 +42,7 @@ class HomePageController extends Controller
     {
         return view('frontend.affiliate');
     }
-    
+
     public function blog()
     {
         return view('frontend.blog');
@@ -65,35 +65,27 @@ class HomePageController extends Controller
     {
         return view('auth.signUp');
     }
-    
+
     public function forgot()
     {
         return view('auth.forgot');
     }
 
-    public function adminlogin()
-    {
-        return view('auth.adminlogin');
-    }
-
-    public function register(Request $request) 
+    public function register(Request $request)
     {
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:100', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
 
         $user = User::create([
-            'user_type' => 'User',
-            'first_name' => ucfirst($request->first_name),
-            'last_name' => ucfirst($request->last_name),
+            'name' => ucfirst($request->name),
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        
+
 
         $code = mt_rand(100000, 999999);
 
@@ -107,7 +99,7 @@ class HomePageController extends Controller
         return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
             'type' => 'success',
             'message' => 'Registration Successful, Please verify your account!'
-        ]); 
+        ]);
     }
 
     public function verify_account($email)
@@ -152,8 +144,7 @@ class HomePageController extends Controller
             'code' => ['required', 'numeric']
         ]);
 
-        if($user->code == $request->code)
-        {
+        if ($user->code == $request->code) {
             $user->email_verified_at = now();
             $user->code = null;
             $user->save();
@@ -176,20 +167,21 @@ class HomePageController extends Controller
             'email' => ['required', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
             // 'g-recaptcha-response' => 'required|captcha',
+
         ]);
-      
+
         $input = $request->only(['email', 'password']);
 
         $user = User::query()->where('email', $request->email)->first();
-        
-        if ($user && !Hash::check($request->password, $user->password)){
+
+        if ($user && !Hash::check($request->password, $user->password)) {
             return back()->with([
                 'type' => 'danger',
                 'message' => 'Incorrect Password!'
             ]);
         }
-        
-        if(!$user || !Hash::check($request->password, $user->password)) {
+
+        if (!$user || !Hash::check($request->password, $user->password)) {
             return back()->with([
                 'type' => 'danger',
                 'message' => "Email doesn't exist"
@@ -197,28 +189,33 @@ class HomePageController extends Controller
         }
 
         // authentication attempt
-        if(auth()->attempt($input)) {
+        if (auth()->attempt($input)) {
 
-            if(!$user->email_verified_at){
+            if (!$user->email_verified_at) {
                 // Send email to user
                 $user->notify(new SendVerificationCode($user));
 
                 return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
                     'type' => 'success',
                     'message' => 'Registration Successful, Please verify your account!'
-                ]); 
+                ]);
             }
 
-            if($user->user_type == 'User'){
-                return redirect()->route('user.dashboard');
-            }
-            
-            Auth::logout();
 
-            return back()->with([
-                'type' => 'danger',
-                'message' => 'You are not a User.'
-            ]);
+
+            if ($user->status == 'inactive') {
+
+                Auth::logout();
+
+                return back()->with([
+                    'type' => 'danger',
+                    'message' => 'You account has been blocked.'
+                ]);
+            }
+
+            return redirect()->route('user.dashboard');
+
+
         } else {
             return back()->with([
                 'type' => 'danger',
@@ -261,7 +258,7 @@ class HomePageController extends Controller
         ]);
     }
 
-    public function password_reset_email($email) 
+    public function password_reset_email($email)
     {
         $email = Crypt::decrypt($email);
 
@@ -291,7 +288,7 @@ class HomePageController extends Controller
                 ]);
             }
 
-            // find user's email 
+            // find user's email
             $user = User::firstWhere('email', $passwordReset->email);
 
             // update user password
@@ -299,7 +296,7 @@ class HomePageController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
-            // delete current code 
+            // delete current code
             $passwordReset->delete();
 
             return redirect()->route('signIn')->with([
@@ -316,7 +313,7 @@ class HomePageController extends Controller
 
     public function admin_login()
     {
-        return view('auth.admin_login');
+        return view('auth.admin_login', ['url' => route('admin.login-view'), 'title' => 'Admin']);
     }
 
     public function post_admin_login(Request $request)
@@ -325,27 +322,27 @@ class HomePageController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
         ]);
-        
+
         $input = $request->only(['email', 'password']);
-        
+
         $user = User::query()->where('email', $request->email)->first();
 
-        if ($user && !Hash::check($request->password, $user->password)){
+        if ($user && !Hash::check($request->password, $user->password)) {
             return back()->with('failure_report', 'Incorrect Password!');
         }
 
-        if(!$user || !Hash::check($request->password, $user->password)) {
+        if (!$user || !Hash::check($request->password, $user->password)) {
             return back()->with('failure_report', 'Email does\'nt exist');
         }
 
         // authentication attempt
-        if (auth()->attempt($input)) {
-            if($user->user_type == 'Administrator'){
-                return redirect()->route('admin.dashboard');
+        if (\Auth::guard('admin')->attempt($input, $request->get('remember'))) {
+            if ($user->user_type == 'Administrator') {
+                return redirect()->route('admin.welcome');
             }
-           
+
             return back()->with('failure_report', 'You are not an Administrator');
-                    
+
         } else {
             return back()->with('failure_report', 'User authentication failed.');
         }
@@ -359,5 +356,5 @@ class HomePageController extends Controller
 
         return redirect('/');
     }
-    
+
 }
