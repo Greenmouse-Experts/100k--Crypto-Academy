@@ -35,7 +35,6 @@
                         <div class="col-md-3">
                             <div class="text-center">
                                 <img src="{{($user->photo) ?? $default}}" alt="" class="rounded" width="150px" height="150px">
-                                <h5>{{$user->username}}</h5>
                                 <h6 class="text-secondary font-weight-light">{{$user->email}}</h6>
                                 @if ($user->status != 'disabled')
                                     <form action="{{route('users.change_type', $user->id)}}" method="post">
