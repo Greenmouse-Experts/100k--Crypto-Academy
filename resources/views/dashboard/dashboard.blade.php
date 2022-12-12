@@ -203,119 +203,6 @@
                                                 </button>
                                             </td>
                                         </tr>
-
-                                        <tr>
-                                            <td>
-                                                <div class="form-check font-size-16">
-                                                    <input class="form-check-input" type="checkbox" id="transactionCheck04">
-                                                    <label class="form-check-label" for="transactionCheck04"></label>
-                                                </div>
-                                            </td>
-                                            <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2542</a> </td>
-                                            <td>Juan Mitchell</td>
-                                            <td>
-                                                06 Oct, 2019
-                                            </td>
-                                            <td>
-                                                $384
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
-                                            </td>
-                                            <td>
-                                                <i class="fab fa-cc-paypal me-1"></i> Paypal
-                                            </td>
-                                            <td>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                    View Details
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check font-size-16">
-                                                    <input class="form-check-input" type="checkbox" id="transactionCheck05">
-                                                    <label class="form-check-label" for="transactionCheck05"></label>
-                                                </div>
-                                            </td>
-                                            <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2543</a> </td>
-                                            <td>Barry Dick</td>
-                                            <td>
-                                                05 Oct, 2019
-                                            </td>
-                                            <td>
-                                                $412
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
-                                            </td>
-                                            <td>
-                                                <i class="fab fa-cc-mastercard me-1"></i> Mastercard
-                                            </td>
-                                            <td>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                    View Details
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check font-size-16">
-                                                    <input class="form-check-input" type="checkbox" id="transactionCheck06">
-                                                    <label class="form-check-label" for="transactionCheck06"></label>
-                                                </div>
-                                            </td>
-                                            <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2544</a> </td>
-                                            <td>Ronald Taylor</td>
-                                            <td>
-                                                04 Oct, 2019
-                                            </td>
-                                            <td>
-                                                $404
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-pill badge-soft-warning font-size-11">Refund</span>
-                                            </td>
-                                            <td>
-                                                <i class="fab fa-cc-visa me-1"></i> Visa
-                                            </td>
-                                            <td>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                    View Details
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check font-size-16">
-                                                    <input class="form-check-input" type="checkbox" id="transactionCheck07">
-                                                    <label class="form-check-label" for="transactionCheck07"></label>
-                                                </div>
-                                            </td>
-                                            <td><a href="javascript: void(0);" class="text-body fw-bold">#SK2545</a> </td>
-                                            <td>Jacob Hunter</td>
-                                            <td>
-                                                04 Oct, 2019
-                                            </td>
-                                            <td>
-                                                $392
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
-                                            </td>
-                                            <td>
-                                                <i class="fab fa-cc-paypal me-1"></i> Paypal
-                                            </td>
-                                            <td>
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                    View Details
-                                                </button>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -329,90 +216,109 @@
     <!-- End Page-content -->
     <!-- Transaction Modal -->
     <div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
-                                <p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
+                    <p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
 
-                                <div class="table-responsive">
-                                    <table class="table align-middle table-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Product</th>
-                                                <th scope="col">Product Name</th>
-                                                <th scope="col">Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div>
-                                                        <img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <div>
-                                                        <h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
-                                                        <p class="text-muted mb-0">$ 225 x 1</p>
-                                                    </div>
-                                                </td>
-                                                <td>$ 255</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div>
-                                                        <img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <div>
-                                                        <h5 class="text-truncate font-size-14">Phone patterned cases</h5>
-                                                        <p class="text-muted mb-0">$ 145 x 1</p>
-                                                    </div>
-                                                </td>
-                                                <td>$ 145</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <h6 class="m-0 text-right">Sub Total:</h6>
-                                                </td>
-                                                <td>
-                                                    $ 400
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <h6 class="m-0 text-right">Shipping:</h6>
-                                                </td>
-                                                <td>
-                                                    Free
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <h6 class="m-0 text-right">Total:</h6>
-                                                </td>
-                                                <td>
-                                                    $ 400
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <img src="assets/images/product/img-7.png" alt="" class="avatar-sm">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>
+                                            <h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
+                                            <p class="text-muted mb-0">$ 225 x 1</p>
+                                        </div>
+                                    </td>
+                                    <td>$ 255</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <img src="assets/images/product/img-4.png" alt="" class="avatar-sm">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div>
+                                            <h5 class="text-truncate font-size-14">Phone patterned cases</h5>
+                                            <p class="text-muted mb-0">$ 145 x 1</p>
+                                        </div>
+                                    </td>
+                                    <td>$ 145</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h6 class="m-0 text-right">Sub Total:</h6>
+                                    </td>
+                                    <td>
+                                        $ 400
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h6 class="m-0 text-right">Shipping:</h6>
+                                    </td>
+                                    <td>
+                                        Free
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h6 class="m-0 text-right">Total:</h6>
+                                    </td>
+                                    <td>
+                                        $ 400
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- end modal -->
+    <!-- subscribeModal -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-1">
+                    <h4>Video Guide</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 all">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/9xwazD5SyVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <!-- end modal -->
-
+            </div>
+        </div>
+    </div>
     <!-- end modal -->
 </div>
 <!-- end main content-->

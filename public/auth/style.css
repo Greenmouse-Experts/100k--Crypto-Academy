@@ -1,9 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     font-family: 'Montserrat', sans-serif !important;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -11,64 +13,75 @@ html, body{
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 /* ===== Scrollbar CSS ===== */
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 10px;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: #000;
     border-radius: 2px;
 }
+
 *::-moz-scrollbar-thumb {
     background-color: #000;
     border-radius: 2px;
 }
+
 /**********SIGN IN ************/
-#lent{
+#lent {
     background-color: #003D6C;
 }
-.sign-in .images img{
+
+.sign-in .images img {
     margin-top: 30px !important;
     width: 30%;
     display: block;
     margin: auto;
     margin-bottom: 10px !important;
 }
+
 .sign-in .sign .sign-div {
     margin-top: 10px;
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
-    padding:20px;
+    padding: 20px;
     margin-bottom: 10px;
 }
-.sign-in .sign .sign-div h4{
+
+.sign-in .sign .sign-div h4 {
     color: #262A4D;
     padding: 15px 0px 30px 0px;
     font-size: 25px;
     font-weight: 600;
 }
-.sign-in .sign .sign-div h5{
+
+.sign-in .sign .sign-div h5 {
     color: #262A4D;
     padding: 15px 0px 0px 0px;
     font-size: 25px;
     font-weight: 600;
 }
+
 /* .sign-in .sign .sign-div p{
     margin-top: 0;
     margin-bottom: 0;
 } */
-.sign-in .sign .sign-div ::placeholder{
+.sign-in .sign .sign-div ::placeholder {
     font-size: 12px;
     color: #000;
 }
-.sign-in .sign .sign-div label{
+
+.sign-in .sign .sign-div label {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.sign-in .sign .sign-div input{
+
+.sign-in .sign .sign-div input {
     display: block;
     width: 100%;
     padding: 10px 5px 10px 20px;
@@ -79,20 +92,24 @@ html, body{
     font-size: 15px;
     transition: 0.6s;
 }
-.sign-in .sign a{
+
+.sign-in .sign a {
     color: #000;
 }
-.sign-in .sign .sign-div a{
+
+.sign-in .sign .sign-div a {
     text-decoration: none;
     color: #000;
     font-weight: 700;
 }
-.sign-in .sign .sign-div p{
+
+.sign-in .sign .sign-div p {
     font-size: 14px;
     font-weight: 500;
     margin-top: 10px;
 }
-.sign-in .sign .sign-div button{
+
+.sign-in .sign .sign-div button {
     width: 100%;
     padding: 12px;
     text-align: center;
@@ -101,18 +118,22 @@ html, body{
     color: #fff;
     border-radius: 10px;
 }
-.log .cap img{
+
+.log .cap img {
     width: 50%;
     margin-bottom: 20px;
 }
-.sign-in .cap img{
+
+.sign-in .cap img {
     width: 50%;
     margin-bottom: 20px;
 }
+
 @media (max-width:1000px) {
-    .sign-in .pack img{
+    .sign-in .pack img {
         display: none;
     }
+
     .sign-in .sign .sign-div {
         background-color: #fff;
         border-radius: 2px;
@@ -121,54 +142,63 @@ html, body{
         border-radius: 7px;
         margin-bottom: 20px;
     }
-    .sign-in .sign .sign-div h4{
+
+    .sign-in .sign .sign-div h4 {
         color: #262A4D;
         padding: 15px 0px 15px 0px;
         font-size: 20px;
         font-weight: 700;
     }
 }
+
 /**********SIGN IN ENDS*************/
 /**********SIGN IN ************/
-#lent{
+#lent {
     background-color: #003D6C;
 }
-.log .images img{
+
+.log .images img {
     margin-top: 30px !important;
     width: 25%;
     display: block;
     margin: auto;
 }
-.log .imagess img{
+
+.log .imagess img {
     margin-top: 30px !important;
     width: 35%;
     display: block;
     margin: auto;
 }
+
 .log .sign .sign-div {
     background-color: #fff;
     border-radius: 2px;
     width: 100%;
     margin-top: 20px !important;
-    padding:20px 20px;
+    padding: 20px 20px;
     margin-bottom: 10px;
 }
-.log .sign .sign-div h5{
+
+.log .sign .sign-div h5 {
     color: #262A4D;
     padding: 15px 0px 0px 0px;
     font-size: 25px;
     font-weight: 600;
 }
-.log .sign .sign-div ::placeholder{
+
+.log .sign .sign-div ::placeholder {
     font-size: 12px;
     color: #000;
 }
-.log .sign .sign-div label{
+
+.log .sign .sign-div label {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.log .sign .sign-div input{
+
+.log .sign .sign-div input {
     display: block;
     width: 100%;
     padding: 10px 5px 10px 20px;
@@ -179,20 +209,24 @@ html, body{
     font-size: 15px;
     transition: 0.6s;
 }
-.log .sign a{
+
+.log .sign a {
     color: #000;
 }
-.log .sign .sign-div a{
+
+.log .sign .sign-div a {
     text-decoration: none;
     color: #000;
     font-weight: 700;
 }
-.log .sign .sign-div p{
+
+.log .sign .sign-div p {
     font-size: 14px;
     font-weight: 500;
     margin-top: 10px;
 }
-.log .sign .sign-div button{
+
+.log .sign .sign-div button {
     width: 100%;
     padding: 12px;
     text-align: center;
@@ -201,50 +235,62 @@ html, body{
     color: #fff;
     border-radius: 10px;
 }
+
 @media (max-width:1000px) {
-    .log .pack img{
+    .log .pack img {
         display: none;
     }
+
     .log .sign .sign-div {
         background-color: #fff;
         border-radius: 2px;
         width: 100%;
-        padding:20px 20px;
+        padding: 20px 20px;
         margin-bottom: 10px;
     }
 }
+
 @media (max-width:520px) {
-    .log .sign .sign-div h5{
+    .log .sign .sign-div h5 {
         color: #262A4D;
         padding: 15px 0px 0px 0px;
         font-size: 20px;
         font-weight: 700;
     }
-    .log .sign .sign-div p{
+
+    .log .sign .sign-div p {
         font-size: 15px;
         font-weight: 400;
         margin-top: 10px;
     }
 }
-.radi{
-   width: 5% !important;
+
+.radi {
+    width: 5% !important;
 }
-.remeber{
+
+.remeber {
     margin-left: 30px;
     margin-top: -18px !important;
 }
+
 /**********SIGN IN ENDS*************/
-.form-btn:focus:before{
+.form-btn:focus:before {
     font-size: 15px;
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-variant-caps: normal;
     font-variant-ligatures: normal;
     font-weight: 900;
-    margin-right:5px;
+    margin-right: 5px;
     content: "\f110";
     animation: spin 1s infinite;
-    display:inline-block;
-   }
-   
-   @keyframes spin { 100% { -webkit-transform: rotate(360deg);transform-origin:5px 5px } }  
+    display: inline-block;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform-origin: 5px 5px
+    }
+}

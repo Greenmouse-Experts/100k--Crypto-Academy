@@ -65,23 +65,16 @@
             </div>
             <div class="modal-body">
                 <form class="custom-validation call" action="#">
-                <div class="mb-3">
-                        <label class="form-label">Names</label>
-                        <div>
-                            <input type="text" class="form-control" required parsley-type="email" placeholder="Enter your name" />
-                        </div>
-                    </div>
                     <div class="mb-3">
-                        <label class="form-label">Select Symbol</label>
-                        <select class="form-select" id="validationCustom03" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>USDT</option>
-                        </select>
+                        <label class="form-label">Accepted Currency</label>
+                        <div>
+                            <input type="text" class="form-control" required parsley-type="email" readonly value="USDT" />
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Chain Name</label>
                         <div>
-                            <input type="text" class="form-control" required parsley-type="email" placeholder="TRC-20" />
+                            <input type="text" class="form-control" required parsley-type="email" value="TRC-20" readonly />
                         </div>
                     </div>
                     <div class="mb-3">
@@ -90,22 +83,10 @@
                             <input type="text" class="form-control" required parsley-type="email" value="$100" />
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Add Wallet</label>
-                        <div>
-                            <input type="text" class="form-control" required parsley-type="email" />
-                        </div>
-                    </div>
-                    <!-- <div class="mb-3">
-                            <label class="form-label">Textarea</label>
-                            <div>
-                                <textarea required class="form-control" rows="3"></textarea>
-                            </div>
-                        </div> -->
                     <div class="row">
                         <div class="col-md-8">
                             <button type="submit">
-                               Subscribe Now
+                                Subscribe Now
                             </button>
                         </div>
                         <div class="col-md-4">

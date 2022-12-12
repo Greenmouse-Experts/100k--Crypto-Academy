@@ -1792,4 +1792,14 @@ ol, ul {
   display:inline-block;
  }
  
- @keyframes spin { 100% { -webkit-transform: rotate(360deg);transform-origin:5px 5px } }  
+ @keyframes spin { 100% { -webkit-transform: rotate(360deg);transform-origin:5px 5px } } 
+
+ .modal-header h4{
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  text-align: center !important;
+ }
+ .all iframe{
+  border-radius: 5px !important;
+ }

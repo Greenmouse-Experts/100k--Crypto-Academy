@@ -12,11 +12,9 @@
             <div class="card mt-2">
                 <div class="card-body">
                     <div class="d-flex align-items-start">
-
                         <div class="flex-grow-1 align-self-center">
                             <div class="text-muted">
                                 <h5>Withdraw</h5>
-
                             </div>
                         </div>
                         <div class="dropdown">
@@ -49,24 +47,6 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <label>Withdrawal name</label>
-                                    <input type="text" class="form-control" placeholder="TRC-20">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Chain name</label>
-                                    <input type="text" class="form-control" placeholder="TRC-20">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Number of withdrawals</label>
-                                    <input type="number" class="form-control" placeholder="1">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Address where withdraw</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="mb-3">
                                     <label>Email</label>
                                     <input type="email" class="form-control">
                                 </div>
@@ -75,19 +55,24 @@
                                     <input type="tel" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label>Phone number</label>
-                                    <input type="tel" class="form-control">
+                                    <label>Address where withdraw</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-3">
+                                    <label>Chain name</label>
+                                    <input type="text" class="form-control" readonly value="TRC-20">
                                 </div>
                                 <div class="mb-3">
                                     <label>Password</label>
                                     <input type="password" class="form-control">
                                 </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
+                                    <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="d-flex flex-wrap gap-2">
-                            <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
-                            <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                         </div>
                     </form>
 

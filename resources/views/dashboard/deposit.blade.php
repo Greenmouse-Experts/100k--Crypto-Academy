@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-xl-4">
+                <div class="col-xl-6">
                     <div class="card">
                         <div class="card-body border-bottom">
                             <div class="float-end dropdown ms-2">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-8">
+                <div class="col-xl-6">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Deposits</h4>
@@ -121,7 +121,7 @@
                                                 <th>Date</th>
                                                 <th>Type</th>
                                                 <th>Chain Name</th>
-                                                <th>Amount in USDT</th>
+                                                <th>USDT Amount</th>
                                                 <th>Deposit address</th>
                                             </tr>
                                         </thead>
@@ -130,10 +130,10 @@
                                             <tr>
                                                 <td><a href="javascript: void(0);" class="text-body fw-bold">215</a></td>
 
-                                                <td>21 November, 2022</td>
+                                                <td>21 Dec, 2022</td>
                                                 <td>Deposit</td>
-                                                <td>TRC20</td>
-                                                <td>$ 00952</td>
+                                                <td>TRC 20</td>
+                                                <td>$ 1000</td>
                                                 <td>tqyngq9Ls...</td>
                                             </tr>
                                         </tbody>
@@ -162,16 +162,15 @@
                 <div class="card-body">
                     <form class="custom-validation call" action="#">
                         <div class="mb-3">
-                            <label class="form-label">Select Symbol</label>
-                            <select class="form-select" id="validationCustom03" required>
-                                <option selected disabled value="">Choose...</option>
-                                <option>USDT</option>
-                            </select>
+                            <label class="form-label">Accepted Currency</label>
+                            <div>
+                                <input type="text" class="form-control" required parsley-type="email" readonly value="USDT" />
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Chain Name</label>
                             <div>
-                                <input type="text" class="form-control" required parsley-type="email" placeholder="TRC-20" />
+                                <input type="text" class="form-control" required parsley-type="email" readonly value="TRC-20" />
                             </div>
                         </div>
                         <div class="mb-3">
