@@ -32,13 +32,13 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="text-center">
-                                <img src="{{($user->photo) ?? $default}}" alt="" class="rounded" width="150px" height="150px">
-                                <h6 class="text-secondary font-weight-light">{{$user->email}}</h6>
+                                <img src="{{($user->photo) ?? $default}}" alt="" class="rounded" width="150px" class="mb-4" height="150px">
+                                <h6 class="text-secondary font-weight-light mb-4">{{$user->email}}</h6>
                                 @if ($user->status != 'disabled')
                                     <form action="{{route('users.change_type', $user->id)}}" method="post">
                                     @csrf
                                         <input type="hidden" name="status" value="disabled">
-                                        <button type="submit" class="btn btn-danger">Disable User</button>
+                                        <button type="submit" class="btn btn-danger ">Disable User</button>
                                     </form>
                                 @else
                                     <form action="{{route('users.change_type', $user->id)}}" method="post">

@@ -29,12 +29,12 @@
             <span key="t-dashboards">Transaction</span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="{{route('admin.trainings')}}">
             <i class="bi bi-book-half"></i>
             <span key="t-dashboards">Trainings</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="{{route('admin.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
@@ -42,7 +42,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('admin.signal')}}">
             <i class="bi bi-reception-4"></i>
             <span key="t-dashboards">Signal Room</span>
           </a>

@@ -299,6 +299,12 @@
     <!-- bootstrap datepicker -->
 <script src="{{URL::asset('admin/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
 
+  <!-- echarts js -->
+  <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
+  <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script>
+        <!-- echarts init -->
+        <script src="assets/js/pages/echarts.init.js"></script>
+        
 <!--tinymce js-->
 <script src="{{URL::asset('admin/assets/libs/tinymce/tinymce.min.js')}}"></script>
 

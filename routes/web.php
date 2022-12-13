@@ -51,7 +51,7 @@ Route::get('/logout', [App\Http\Controllers\HomePageController::class, 'logout']
 // User Dashboard
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');
-    Route::get('/training', [App\Http\Controllers\DashboardController::class, 'training'])->name('user.training');
+    Route::get('/guide', [App\Http\Controllers\DashboardController::class, 'guide'])->name('user.guide');
     Route::get('/wallet', [App\Http\Controllers\DashboardController::class, 'wallet'])->name('user.wallet');
     Route::get('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit'])->name('user.deposit');
     Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
@@ -73,11 +73,13 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/affiliate', [App\Http\Controllers\AdminController::class, 'affiliate'])->name('admin.affiliate');
     Route::get('/transaction', [App\Http\Controllers\AdminController::class, 'transaction'])->name('admin.transaction');
+    Route::get('/viewdetails', [App\Http\Controllers\AdminController::class, 'viewdetails'])->name('admin.viewdetails');
+    Route::get('/signal', [App\Http\Controllers\AdminController::class, 'signal'])->name('admin.signal');
     Route::get('/viewmember/{id}', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');
     Route::post('users/change_type/{id}', [App\Http\Controllers\AdminController::class, 'change_type'])->name('users.change_type');
 
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

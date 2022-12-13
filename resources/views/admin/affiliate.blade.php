@@ -27,14 +27,6 @@
                             <div class="card-body border-bottom">
                                 <div class="d-flex align-items-center">
                                     <h5 class="mb-0 card-title flex-grow-1">View Recent Affiliate</h5>
-                                    <div class="flex-shrink-0">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option value="Today" selected>Today</option>
-                                            <option value="1 Monthly">1 Month</option>
-                                            <option value="6 Month">6 Month</option>
-                                            <option value="1 Years">1 Year</option>
-                                        </select>
-                                    </div>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -73,14 +65,15 @@
                                                         1
                                                     </td>
                                                     <td>
-                                                        <ul class="list-unstyled hstack gap-1 mb-0">
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                                <a href="job-details.html" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                            </li>
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
-                                                            </li>
-                                                        </ul>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Activate">
+                                                            <a class="btn btn-sm    btn-soft-success"><i class="bi bi-check2"></i></i>
+                                                            </a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Deactivate">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="bi bi-eye-slash"></i></a>
+                                                        </li>
+                                                    </ul>
                                                     </td>
                                                 </tr>
                                             </tbody>

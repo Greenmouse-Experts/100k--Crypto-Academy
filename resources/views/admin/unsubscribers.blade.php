@@ -15,7 +15,7 @@
                         <div class="d-flex align-items-start">
                             <div class="flex-grow-1 align-self-center">
                                 <div class="text-muted">
-                                    <h5>View Subscribers</h5>
+                                    <h5>View Unsubscribers</h5>
                                 </div>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body border-bottom">
                                 <div class="d-flex align-items-center">
-                                    <h5 class="mb-0 card-title flex-grow-1">Subscriber Lists</h5>
+                                    <h5 class="mb-0 card-title flex-grow-1">Unsubscriber Lists</h5>
                                     <div class="col-xxl-2 col-lg-4 me-2">
                                         <input type="search" class="form-control " id="searchInput" placeholder="Search for ...">
                                     </div>

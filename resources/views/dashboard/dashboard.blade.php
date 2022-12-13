@@ -27,16 +27,6 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="runtime">
-                        <h1>Total Trainings</h1>
-                        <p>
-                            5
-                        </p>
-                        <h4>Trainings</h4>
-                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119626/EProd%20Images/Group_8833_xn6qme.png" draggable="false" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="runtime">
                         <h1>Total Members</h1>
                         <p>
                             100+
@@ -65,7 +55,17 @@
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Iconnn_zk4z7z.png" draggable="false" alt="">
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-3">
+                    <div class="runtime">
+                        <h1>Video Guide</h1>
+                        <p>
+                            1
+                        </p>
+                        <h4>Guide Tutorial</h4>
+                        <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119626/EProd%20Images/Group_8833_xn6qme.png" draggable="false" alt="">
+                    </div>
+                </div>
+                <!-- <div class="col-lg-12">
                     <div class="runtown">
                         <h1>
                             Trainings
@@ -119,7 +119,7 @@
                             <span>10 Lessons (8h 6m)</span> <span class="paint">$200</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -312,7 +312,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-12 all">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/9xwazD5SyVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

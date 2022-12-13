@@ -34,9 +34,9 @@
           </ul>
         </li>
         <li>
-          <a href="{{route('user.training')}}">
-            <i class="bi bi-book-half"></i>
-            <span key="t-dashboards">Trainings</span>
+          <a href="{{route('user.guide')}}">
+            <i class="bi bi-play-btn"></i>
+            <span key="t-dashboards">Video guide</span>
           </a>
         </li>
         <li>
