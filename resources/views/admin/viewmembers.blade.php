@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    
+
                                     <div class="form-group">
                                         <label for="name">Joined At</label>
                                         <h4> {{$user->created_at}}</h4>

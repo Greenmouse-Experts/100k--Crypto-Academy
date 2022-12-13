@@ -26,7 +26,7 @@ Route::get('/policy', [App\Http\Controllers\HomePageController::class, 'policy']
 
 // Authentications
 Route::get('/signIn', [App\Http\Controllers\HomePageController::class, 'sign'])->name('signIn');
-Route::get('/login', [App\Http\Controllers\HomePageController::class, 'sign'])->name('login');
+Route::get('/login-user', [App\Http\Controllers\HomePageController::class, 'sign'])->name('login');
 Route::get('/signUp', [App\Http\Controllers\HomePageController::class, 'signUp'])->name('signUp');
 Route::get('/forgot', [App\Http\Controllers\HomePageController::class, 'forgot'])->name('forgot');
 Route::get('/admin/login', [App\Http\Controllers\HomePageController::class, 'admin_login'])->name('admin.login-view');
