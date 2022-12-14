@@ -57,49 +57,63 @@
     </div>
 </div>
 <!-- subscribeModal -->
-<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form class="custom-validation call" action="#">
-                    <div class="mb-3">
-                        <label class="form-label">Accepted Currency</label>
-                        <div>
-                            <input type="text" class="form-control" required parsley-type="email" readonly value="USDT" />
+@if (Auth::user()->subscribe == 0)
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="custom-validation call" method="POST" action="{{route('user.subscribe.post')}}">
+                        @csrf
+                        <div class="mb-3">
+                            <label class="form-label">Accepted Currency</label>
+                            <div>
+                                <input type="text" class="form-control" required parsley-type="email" readonly value="USDT" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Chain Name</label>
-                        <div>
-                            <input type="text" class="form-control" required parsley-type="email" value="TRC-20" readonly />
+                        <div class="mb-3">
+                            <label class="form-label">Chain Name</label>
+                            <div>
+                                <input type="text" class="form-control" required parsley-type="email" value="TRC-20" readonly />
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Amount</label>
-                        <div>
-                            <input type="text" class="form-control" required parsley-type="email"readonly value="$100" />
+                        <div class="mb-3">
+                            <label class="form-label">Amount (USDT)</label>
+                            <div>
+                                <input type="text" class="form-control" readonly name="amount" parsley-type="amount" value="100" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <button type="submit">
-                                Subscribe Now
-                            </button>
+                        <div class="mb-3">
+                            <label class="form-label">Select Wallet</label>
+                            <div>
+                                <select name="wallet_type" id="" class="form-control">
+                                    <option value="">Select Wallet</option>
+                                    <option value="main_wallet">Main Wallet Balance</option>
+                                    <option value="ref_bonus">Referral Bonus</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <button type="reset" style="background-color:red ;" class="btn btn-danger">
-                                Cancel
-                            </button>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <button type="submit">
+                                    Subscribe Now
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="reset" style="background-color:red ;" class="btn btn-danger">
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+@endif
+
 <!-- end modal -->
 <!-- ============================================================== -->
 <!-- Start right Content here -->
