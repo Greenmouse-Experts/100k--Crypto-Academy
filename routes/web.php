@@ -75,7 +75,7 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/affiliate', [App\Http\Controllers\AdminController::class, 'affiliate'])->name('admin.affiliate');
     Route::get('/transaction', [App\Http\Controllers\AdminController::class, 'transaction'])->name('admin.transaction');
-    Route::get('/viewdetails/{id}', [App\Http\Controllers\AdminController::class, 'viewdetails'])->name('admin.viewdetails');
+    Route::get('/viewdetails', [App\Http\Controllers\AdminController::class, 'viewdetails'])->name('admin.viewdetails');
     Route::get('/signal', [App\Http\Controllers\AdminController::class, 'signal'])->name('admin.signal');
     Route::get('/role', [App\Http\Controllers\AdminController::class, 'role'])->name('admin.role');
     Route::get('/viewmember/{id}', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');

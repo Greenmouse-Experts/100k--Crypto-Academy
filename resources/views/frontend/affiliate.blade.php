@@ -3,7 +3,7 @@
 @section('page-content')
 
 <!-- Assets -->
-<section class="assets" style="background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1669720798/EProd%20Images/Rectangle_19422_pkwull.png); background-repeat: no-repeat; background-size: cover; ">
+<section class="assets" style="background-image: url(https://res.cloudinary.com/greenmouse-tech/image/upload/v1671033429/EProd%20Images/isaac-smith-6EnTPvPPL6I-unsplash_to1tej.jpg); background-repeat: no-repeat; background-size: cover; ">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

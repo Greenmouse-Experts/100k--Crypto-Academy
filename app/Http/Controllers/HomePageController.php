@@ -193,41 +193,41 @@ class HomePageController extends Controller
     //         ]);
     //     }
 
-        // authentication attempt
-        // if (auth()->attempt($input)) {
+    // authentication attempt
+    // if (auth()->attempt($input)) {
 
-        //     if (!$user->email_verified_at) {
-        //         // Send email to user
-        //         $user->notify(new SendVerificationCode($user));
+    //     if (!$user->email_verified_at) {
+    //         // Send email to user
+    //         $user->notify(new SendVerificationCode($user));
 
-        //         return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
-        //             'type' => 'success',
-        //             'message' => 'Registration Successful, Please verify your account!'
-        //         ]);
-        //     }
-
-
-
-        //     if ($user->status == 'inactive') {
-
-        //         Auth::logout();
-
-        //         return back()->with([
-        //             'type' => 'danger',
-        //             'message' => 'You account has been blocked.'
-        //         ]);
-        //     }
-
-        //     return redirect()->route('user.dashboard');
+    //         return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
+    //             'type' => 'success',
+    //             'message' => 'Registration Successful, Please verify your account!'
+    //         ]);
+    //     }
 
 
-        // } else {
-        //     return back()->with([
-        //         'type' => 'danger',
-        //         'message' => 'User authentication failed.'
-        //     ]);
-        // }
-        
+
+    //     if ($user->status == 'inactive') {
+
+    //         Auth::logout();
+
+    //         return back()->with([
+    //             'type' => 'danger',
+    //             'message' => 'You account has been blocked.'
+    //         ]);
+    //     }
+
+    //     return redirect()->route('user.dashboard');
+
+
+    // } else {
+    //     return back()->with([
+    //         'type' => 'danger',
+    //         'message' => 'User authentication failed.'
+    //     ]);
+    // }
+
 
     public function forget()
     {

@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-4">Signal link</h5>
@@ -32,8 +32,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                </div> -->
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-4">Create Signal Room</h5>
@@ -46,15 +46,108 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-lg-12">
                         <div class="card">
+                            <div class="card-body border-bottom">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 card-title flex-grow-1">View Recent Link</h5>
+                                    <div class="col-xxl-2 col-lg-4 me-2">
+                                        <input type="search" class="form-control " id="searchInput" placeholder="Search for ...">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="card-body">
-                            <h4 class="card-title mb-4">Signal Strength</h4>
-                                <div id="gauge-chart" data-colors='["--bs-success","--bs-primary","--bs-danger"]' class="e-charts"></div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered align-middle nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Link Created</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>29-11-2022</td>
+                                                <td>#100k/link29</td>
+                                                <td><span class="badge bg-success">active</span></td>
+                                                <td>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Activate">
+                                                            <a class="btn btn-sm    btn-soft-success"><i class="bi bi-check2"></i></i>
+                                                            </a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Deactivate">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="bi bi-eye-slash"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>29-21-2022</td>
+                                                <td>#100k/link29</td>
+                                                <td><span class="badge bg-success">active</span></td>
+                                                <td>
+                                                    <ul class="list-unstyled hstack gap-1 mb-0">
+                                                        
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                            <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Activate">
+                                                            <a class="btn btn-sm    btn-soft-success"><i class="bi bi-check2"></i></i>
+                                                            </a>
+                                                        </li>
+                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="Deactivate">
+                                                            <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="bi bi-eye-slash"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row justify-content-between align-items-center">
+                                    <ul class="pagination pagination-rounded justify-content-center mt-4">
+                                        <li class="page-item disabled">
+                                            <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="javascript: void(0);" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link">5</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+                                        </li>
+                                    </ul>
+                                    <!--end col-->
+                                </div>
+                                <!--end row-->
                             </div>
                         </div>
                         <!--end card-->
                     </div>
+                    <!--end col-->
+
                 </div>
                 <!-- <div class="row">
                     <div class="col-lg-12">

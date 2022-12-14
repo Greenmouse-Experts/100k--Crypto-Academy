@@ -55,10 +55,10 @@
                                                 <td>Hamzat Developer</td>
                                                 <td>29-11-2022</td>
                                                 <td>$5000</td>
-                                                <td>Approved</td>
+                                                <td>Pending</td>
                                                 <td>USDT</td>
-                                                <td><span class="badge bg-info">Paid</span></td>
-                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td><span class="badge bg-info">Fail</span></td>
+                                                <td><span class="badge bg-danger">Not Paid</span></td>
                                                 <td>
                                                     <ul class="list-unstyled hstack gap-1 mb-0">
                                                         
@@ -80,10 +80,10 @@
                                                 <td>Greenmouse Technology</td>
                                                 <td>29-11-2022</td>
                                                 <td>$1000</td>
-                                                <td>Approved</td>
+                                                <td>Pending</td>
                                                 <td>USDT</td>
-                                                <td><span class="badge bg-info">Paid</span></td>
-                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td><span class="badge bg-info">Fail</span></td>
+                                                <td><span class="badge bg-danger">Not Paid</span></td>
                                                 <td>
                                                     <ul class="list-unstyled hstack gap-1 mb-0">
                                                         
@@ -155,7 +155,7 @@
                         <i class="mdi mdi-trash-can-outline"></i>
                     </div>
                 </div>
-                <p class="text-muted font-size-16 mb-4">Are you sure you want to permanently deactivate this Subscriber.</p>
+                <p class="text-muted font-size-16 mb-4">Are you sure you want to permanently deactivate this User.</p>
 
                 <div class="hstack gap-2 justify-content-center mb-0">
                     <button type="button" class="btn btn-danger">Deactivate Now</button>

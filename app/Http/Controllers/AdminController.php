@@ -50,11 +50,6 @@ class AdminController extends Controller
         return view('admin.view-details');
     }
 
-    public function unsubscribers()
-    {
-        return view('admin.unsubscribers');
-    }
-
     public function signal()
     {
         return view('admin.signal');
@@ -63,6 +58,11 @@ class AdminController extends Controller
     public function role()
     {
         return view('admin.role');
+    }
+
+    public function unsubscribers()
+    {
+        return view('admin.unsubscribers');
     }
 
 

@@ -178,7 +178,7 @@
                                                     <td>
                                                         <ul class="list-unstyled hstack gap-1 mb-0">
                                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
-                                                                <a href="{{route('admin.viewdetails')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
+                                                                <a href="{{route ('admin.viewdetails')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
                                                             </li>
                                                         </ul>
                                                     </td>
