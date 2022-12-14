@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Transaction;
+use App\Models\UserWallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardController extends Controller
 {
@@ -23,7 +26,53 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        return view('dashboard.dashboard');
+        $users = User::all();
+        $trans = Transaction::where('user_id', Auth::user()->id)->orderBy('id', 'Desc')->paginate(7);
+        $subscribe = User::where('subscribe', '1')->get();
+        return view('dashboard.dashboard', compact('users', 'trans', 'subscribe'));
+    }
+
+    public function subscribe_now(Request $request)
+    {
+        $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
+        if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
+            Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+            return back();
+        } else {
+            $oldbal = $userwallet->bal;
+            $userwallet->bal = $oldbal - $request->amount;
+            $userwallet->update();
+            $user = User::findOrFail(Auth::user()->id);
+            $user->subscribe = '1';
+            $user->update();
+            $trans = new Transaction();
+            $trans->type = 'Subscription';
+            $trans->user_id = Auth::user()->id;
+            $trans->amount = $request->amount;
+            $trans->status = 1;
+            $trans->save();
+            Alert::success('Success', "You have successfully subscribe to our platform");
+            return back();
+        }
+        if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
+            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+            return back();
+        } else {
+            $oldbal = $userwallet->ref_bonus;
+            $userwallet->ref_bonus = $oldbal - $request->amount;
+            $userwallet->update();
+            $user = User::findOrFail(Auth::user()->id);
+            $user->subscribe = '1';
+            $user->update();
+            $trans = new Transaction();
+            $trans->type = 'Subscription';
+            $trans->user_id = Auth::user()->id;
+            $trans->amount = $request->amount;
+            $trans->status = 1;
+            $trans->save();
+            Alert::success('Success', "You have successfully subscribe to our platform");
+            return back();
+        }
     }
     public function guide()
     {
@@ -39,12 +88,14 @@ class DashboardController extends Controller
     }
     public function deposit()
     {
-        return view('dashboard.deposit');
+        $deposit = Transaction::where('user_id', Auth::user()->id)->where('type', "Deposit")->paginate(5);
+        return view('dashboard.deposit', compact('deposit'));
     }
 
     public function withdraw()
     {
-        return view('dashboard.withdraw');
+        $with = Transaction::where('user_id', Auth::user()->id)->where('type', "Withdraw")->paginate(5);
+        return view('dashboard.withdraw', compact('with'));
     }
 
     public function subscribe()

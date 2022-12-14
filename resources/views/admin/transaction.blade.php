@@ -149,7 +149,6 @@
                                                         <td><a href="javascript: void(0);" class="text-body fw-bold">#100k{{$item->id}}</a></td>
                                                         <td>{{$item->created_at->format('D M, Y')}}</td>
                                                         <td>{{$item->type}}</td>
-                                                        <td>{{$item->type}}</td>
                                                         <td>{{number_format($item->amount, 2)}}</td>
                                                         <td>
                                                             @if ($item->status == 1)
