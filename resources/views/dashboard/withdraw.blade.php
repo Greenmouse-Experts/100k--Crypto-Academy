@@ -46,17 +46,21 @@
                     <form>
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="mb-3">
+                                <!-- <div class="mb-3">
                                     <label>Email</label>
                                     <input type="email" class="form-control">
-                                </div>
+                                </div> -->
                                 <div class="mb-3">
                                     <label>Amount to withdraw</label>
                                     <input type="tel" class="form-control">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-4">
                                     <label>Address where withdraw</label>
                                     <input type="text" class="form-control">
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
+                                    <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -67,10 +71,6 @@
                                 <div class="mb-3">
                                     <label>Password</label>
                                     <input type="password" class="form-control">
-                                </div>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
-                                    <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                                 </div>
                             </div>
                         </div>

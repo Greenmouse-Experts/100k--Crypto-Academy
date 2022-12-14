@@ -24,6 +24,12 @@
           </a>
         </li>
         <li>
+          <a href="{{route('admin.unsubscribers')}}">
+            <i class="bi bi-journal-check"></i>
+            <span key="t-dashboards">Unsubscribers</span>
+          </a>
+        </li>
+        <li>
           <a href="{{route('admin.transaction')}}">
           <i class="bi bi-bank"></i>
             <span key="t-dashboards">Transaction</span>
@@ -39,6 +45,12 @@
           <a href="{{route('admin.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
             <span key="t-dashboards">Affiliate</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{route('admin.role')}}">
+          <i class="bi bi-people"></i>
+            <span key="t-dashboards">Admin Role</span>
           </a>
         </li>
         <li>

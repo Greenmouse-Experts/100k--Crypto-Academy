@@ -37,11 +37,11 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="runtime">
-                        <h1>Total Subscribers</h1>
+                        <h1>Total Subscriber</h1>
                         <p>
                             1
                         </p>
-                        <h4>Subscribers</h4>
+                        <h4>Subscriber</h4>
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Icon_pvw92p.png" draggable="false" alt="">
                     </div>
                 </div>
@@ -219,23 +219,23 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+                    <h5 class="modal-title" id="transaction-detailModalLabel">Transaction Details</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="mb-2">Product id: <span class="text-primary">#SK2540</span></p>
-                    <p class="mb-4">Billing Name: <span class="text-primary">Neal Matthews</span></p>
+                    <p class="mb-2">Payment id: <span class="text-primary">#100k2022</span></p>
+                    <p class="mb-4">Billing Name: <span class="text-primary">Hamzat</span></p>
 
                     <div class="table-responsive">
                         <table class="table align-middle table-nowrap">
                             <thead>
                                 <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Product Name</th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Payment Status</th>
+                                    <th scope="col">Total</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <!-- <tbody>
                                 <tr>
                                     <th scope="row">
                                         <div>
@@ -288,7 +288,7 @@
                                         $ 400
                                     </td>
                                 </tr>
-                            </tbody>
+                            </tbody> -->
                         </table>
                     </div>
                 </div>
@@ -302,24 +302,23 @@
 
     <!-- end modal -->
     <!-- subscribeModal -->
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-bottom-1">
-                    <h4>Video Guide</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-12 all">
-                            <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-1">
+                        <h4>Video Guide</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12 all">
+                                <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- end modal -->
 </div>
-<!-- end main content-->
 @endsection

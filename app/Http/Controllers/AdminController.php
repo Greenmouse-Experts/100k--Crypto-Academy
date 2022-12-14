@@ -50,9 +50,19 @@ class AdminController extends Controller
         return view('admin.view-details');
     }
 
+    public function unsubscribers()
+    {
+        return view('admin.unsubscribers');
+    }
+
     public function signal()
     {
         return view('admin.signal');
+    }
+
+    public function role()
+    {
+        return view('admin.role');
     }
 
 
@@ -69,7 +79,7 @@ class AdminController extends Controller
         $user = User::findOrFail($id);
         return view('admin.viewmembers', compact('user'));
     }
-
+    
     public function change_type(Request $request, $id)
     {
         $user = User::where('id', $id)->first();

@@ -92,7 +92,7 @@
                         And what is more? We do not just go into projects blindly. Our team of analysts queries every crypto project for strong fundamentals and strong backings. We recommend it for you, if it checks out. If not, we discard it and move to the next one!
                     </p>
                     <p>
-                        We have simplified crypto investing. We have made it easy for busy people to take a few targeted shots at crypto and generate massive returns. We are good at what we do! We are the formidable community of 100kCrypto Academy on a mission to empower 100,000 people through crypto by 2025.
+                        We have simplified crypto investing. We have made it easy for busy people to take a few targeted shots at crypto and generate massive returns. We are good at what we do! We are the formidable community of 100kCrypto Investing on a mission to empower 100,000 people through crypto by 2025.
                     </p>
                     <p>
                         We look forward to helping you succeed with crypto.

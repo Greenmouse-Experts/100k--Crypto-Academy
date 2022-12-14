@@ -93,7 +93,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="colum">
-                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668698654/EProd%20Images/undraw_reading_time_re_phf7_2_qyzokx.png" draggable="false" alt="">
+                    <!-- <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668698654/EProd%20Images/undraw_reading_time_re_phf7_2_qyzokx.png" draggable="false" alt=""> -->
+                    <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -204,7 +205,7 @@
                         “100kCrypto Platform has helped me to manage and grow my portfolio exceedingly. It feels so good to know what to do to remain profitable in the bear and bull market. I love the idea of investing into viable crypto projects without having to interrupt my job and personal life. With 100kCrypto, the moon is a mile above.”
                     </p>
                     <h6>
-                        Testimonial 1
+                        Hamzat
                     </h6>
                 </div>
             </div>
@@ -218,7 +219,7 @@
                         ”
                     </p>
                     <h6>
-                        Testimonial 2
+                        Abdul 
                     </h6>
                 </div>
             </div>
@@ -231,7 +232,7 @@
                         “I never knew there was more to airdrop than stressing myself. With 100kCrypto selected  One-to-Many Airdrop Winning strategy, I now earn free coins and tokens with just one activity I have done on a few platforms recommended by this amazing crypto community. Applying the strategy, I anticipate growing my profits to $100k in the coming year.”
                     </p>
                     <h6>
-                        Testimonial 3
+                        Daniel
                     </h6>
                 </div>
             </div>
@@ -261,12 +262,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Q: What does 100kCrypto Academy do?
+                                    Q: What does 100kCrypto Investing do?
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-                                    A: 100kCrypto Academy offers guided crypto trainings from beginning to advance as well as
+                                    A: 100kCrypto Investing offers guided crypto trainings from beginning to advance as well as
                                     crypto call recommendations for its subscribers
                                 </div>
                             </div>

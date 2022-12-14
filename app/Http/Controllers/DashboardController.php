@@ -29,6 +29,10 @@ class DashboardController extends Controller
     {
         return view('dashboard.guide');
     }
+    public function signal()
+    {
+        return view('dashboard.signal');
+    }
     public function wallet()
     {
         return view('dashboard.wallet');

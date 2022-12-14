@@ -46,7 +46,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{route('user.signal')}}">
             <i class="bi bi-reception-4"></i>
             <span key="t-dashboards">Signals Room</span>
           </a>

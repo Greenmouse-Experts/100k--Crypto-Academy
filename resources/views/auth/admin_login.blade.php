@@ -55,7 +55,6 @@
                                 <h5 class="text-center">Welcome Admin</h5>
                                 <p class="text-center">Please enter the details below to sign in to your account</p>
                                 <div class="row">
-                                    <!--Email-->
                                     <div class="col-lg-12">
                                         <label>Email</label>
                                         <div class="row">
@@ -65,7 +64,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--Password-->
                                     <div class="col-lg-12">
                                         <label>Password</label>
                                         <div class="row">

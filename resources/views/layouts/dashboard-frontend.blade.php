@@ -198,6 +198,10 @@
 
     <script src="https://kit.fontawesome.com/997b229808.js" crossorigin="anonymous"></script>
 
+    <!-- echarts js -->
+  <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
+  <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script>
+  
     <!-- dashboard init -->
     <script src="{{URL::asset('dash/assets/js/pages/dashboard.init.js')}}"></script>
 

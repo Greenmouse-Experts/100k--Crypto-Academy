@@ -166,68 +166,68 @@ class HomePageController extends Controller
         ]);
     }
 
-    public function user_login(Request $request)
-    {
-        $this->validate($request, [
-            'email' => ['required', 'email', 'max:255'],
-            'password' => ['required', 'string', 'min:8'],
-            // 'g-recaptcha-response' => 'required|captcha',
+    // public function user_login(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'email' => ['required', 'email', 'max:255'],
+    //         'password' => ['required', 'string', 'min:8'],
+    //         // 'g-recaptcha-response' => 'required|captcha',
 
-        ]);
+    //     ]);
 
-        $input = $request->only(['email', 'password']);
+    //     $input = $request->only(['email', 'password']);
 
-        $user = User::query()->where('email', $request->email)->first();
+    //     $user = User::query()->where('email', $request->email)->first();
 
-        if ($user && !Hash::check($request->password, $user->password)) {
-            return back()->with([
-                'type' => 'danger',
-                'message' => 'Incorrect Password!'
-            ]);
-        }
+    //     if ($user && !Hash::check($request->password, $user->password)) {
+    //         return back()->with([
+    //             'type' => 'danger',
+    //             'message' => 'Incorrect Password!'
+    //         ]);
+    //     }
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            return back()->with([
-                'type' => 'danger',
-                'message' => "Email doesn't exist"
-            ]);
-        }
+    //     if (!$user || !Hash::check($request->password, $user->password)) {
+    //         return back()->with([
+    //             'type' => 'danger',
+    //             'message' => "Email doesn't exist"
+    //         ]);
+    //     }
 
         // authentication attempt
-        if (auth()->attempt($input)) {
+        // if (auth()->attempt($input)) {
 
-            if (!$user->email_verified_at) {
-                // Send email to user
-                $user->notify(new SendVerificationCode($user));
+        //     if (!$user->email_verified_at) {
+        //         // Send email to user
+        //         $user->notify(new SendVerificationCode($user));
 
-                return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
-                    'type' => 'success',
-                    'message' => 'Registration Successful, Please verify your account!'
-                ]);
-            }
-
-
-
-            if ($user->status == 'inactive') {
-
-                Auth::logout();
-
-                return back()->with([
-                    'type' => 'danger',
-                    'message' => 'You account has been blocked.'
-                ]);
-            }
-
-            return redirect()->route('user.dashboard');
+        //         return redirect()->route('verify.account', Crypt::encrypt($user->email))->with([
+        //             'type' => 'success',
+        //             'message' => 'Registration Successful, Please verify your account!'
+        //         ]);
+        //     }
 
 
-        } else {
-            return back()->with([
-                'type' => 'danger',
-                'message' => 'User authentication failed.'
-            ]);
-        }
-    }
+
+        //     if ($user->status == 'inactive') {
+
+        //         Auth::logout();
+
+        //         return back()->with([
+        //             'type' => 'danger',
+        //             'message' => 'You account has been blocked.'
+        //         ]);
+        //     }
+
+        //     return redirect()->route('user.dashboard');
+
+
+        // } else {
+        //     return back()->with([
+        //         'type' => 'danger',
+        //         'message' => 'User authentication failed.'
+        //     ]);
+        // }
+        
 
     public function forget()
     {

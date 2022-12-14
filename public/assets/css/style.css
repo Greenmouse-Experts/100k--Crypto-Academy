@@ -1691,6 +1691,9 @@ footer .input-group-text img{
     font-weight: 600;
     color: #4B4B4B;
 }
+.Special .colum{
+    padding: 50px 0 0 0;
+}
 .Special .colum img{
     width: 70%;
     display:block;

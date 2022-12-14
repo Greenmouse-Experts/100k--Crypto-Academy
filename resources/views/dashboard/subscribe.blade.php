@@ -80,7 +80,7 @@
                     <div class="mb-3">
                         <label class="form-label">Amount</label>
                         <div>
-                            <input type="text" class="form-control" required parsley-type="email" value="$100" />
+                            <input type="text" class="form-control" required parsley-type="email"readonly value="$100" />
                         </div>
                     </div>
                     <div class="row">
