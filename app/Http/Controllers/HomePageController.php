@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\SendCodeResetPassword;
 use App\Models\ResetCodePassword;
 use App\Models\User;
+use App\Models\UserWallet;
 use App\Notifications\SendVerificationCode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -85,6 +86,10 @@ class HomePageController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        $wal = new UserWallet();
+        $wal->user_id = $user->id;
+        $wal->save();
 
 
         $code = mt_rand(100000, 999999);
