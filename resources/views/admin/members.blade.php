@@ -117,7 +117,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="row">
+                                <div class="row justify-content-between align-items-center pag">
                                     {{ $users->links('layouts.custom-paginate') }}
                                 </div>
                             </div>
@@ -130,4 +130,8 @@
     </div>
     <!-- end main content-->
 </div>
+<script>
+    var el = document.querySelector('.pag');
+    el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+</script>
 @endsection

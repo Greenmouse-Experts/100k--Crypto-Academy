@@ -34,16 +34,16 @@
                             <div class="text-center">
                                 <img src="{{($user->photo) ?? $default}}" alt="" class="rounded" width="150px" class="mb-4" height="150px">
                                 <h6 class="text-secondary font-weight-light mb-4">{{$user->email}}</h6>
-                                @if ($user->status != 'disabled')
+                                @if ($user->status != 'inactive')
                                     <form action="{{route('users.change_type', $user->id)}}" method="post">
                                     @csrf
-                                        <input type="hidden" name="status" value="disabled">
+                                        <input type="hidden" name="status" value="inactive">
                                         <button type="submit" class="btn btn-danger ">Disable User</button>
                                     </form>
                                 @else
                                     <form action="{{route('users.change_type', $user->id)}}" method="post">
                                         @csrf
-                                        <input type="hidden" name="status" value="enabled">
+                                        <input type="hidden" name="status" value="active">
                                         <button type="submit" class="btn btn-success">Enable User</button>
                                     </form>
                                 @endif
@@ -58,22 +58,25 @@
                                 <div class="col-md-7">
                                     <div class="form-group">
                                         <label for="name">Name</label>
-                                        <h4> {{$user->name}}</h4>
+                                        <h5> {{$user->name}}</h5>
                                     </div>
                                     <div class="form-group">
                                         <label for="name">Email</label>
-                                        <h4> {{$user->email}}</h4>
+                                        <h5> {{$user->email}}</h5>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Joined At</label>
+                                        <h5> {{$user->created_at->format('D M Y')}} at {{$user->created_at->format('h:m a')}}</h5>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    
-                                    <div class="form-group">
-                                        <label for="name">Joined At</label>
-                                        <h4> {{$user->created_at}}</h4>
-                                    </div>
                                     <div class="form-group">
                                         <label for="name">Wallet Balance</label>
-                                        <h4> ₦0.00</h4>
+                                        <h5> ₦{{number_format(\App\Models\UserWallet::where('user_id', $user->id)->first()->bal, 2)}}</h5>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Wallet Bonus</label>
+                                        <h5> ₦{{number_format(\App\Models\UserWallet::where('user_id', $user->id)->first()->ref_bonus, 2)}}</h5>
                                     </div>
                                 </div>
                             </div>

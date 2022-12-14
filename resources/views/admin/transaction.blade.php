@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-xl-6">
+                    {{-- <div class="col-xl-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex">
@@ -58,36 +58,49 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6">
+                    </div> --}}
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-body border-top">
                                 <p class="text-muted mb-3"></p>
                                 <div class="text-center">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div>
                                                 <div class="font-size-24 text-primary mb-2">
                                                     <i class="bx bx-import"></i>
                                                 </div>
 
                                                 <h5>Deposit</h5>
-                                                <p class="text-muted mb-2">$500</p>
+                                                <p class="text-muted mb-2">${{$tcredit}}</p>
                                                 <div class="mt-3">
-                                                    <a href="{{route('user.deposit')}}" class="btn btn-primary btn-sm w-md">Total Deposit</a>
+                                                    <a href="javascript: void(0);" class="btn btn-primary btn-sm w-md">Total Deposit</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
+                                            <div>
+                                                <div class="font-size-24 text-primary mb-2">
+                                                    <i class="bx bx-import"></i>
+                                                </div>
+
+                                                <h5>Balance</h5>
+                                                <p class="text-muted mb-2">${{$tcredit - $tdebit}}</p>
+                                                <div class="mt-3">
+                                                    <a href="javascript: void(0);" class="btn btn-primary btn-sm w-md">Total Balance</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
                                             <div class="mt-4 mt-sm-0">
                                                 <div class="font-size-24 text-primary mb-2">
                                                     <i class="bx bx-wallet"></i>
                                                 </div>
                                                 <h5>Withdraw</h5>
-                                                <p class="text-muted mb-2">$1500</p>
+                                                <p class="text-muted mb-2">${{$tdebit}}</p>
 
                                                 <div class="mt-3">
-                                                    <a href="{{route('user.withdraw')}}" class="btn btn-primary btn-sm w-md">Total Withdraw</a>
+                                                    <a href="javascript: void(0);" class="btn btn-primary btn-sm w-md">Total Withdraw</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,46 +137,62 @@
                                                 <th>Date</th>
                                                 <th>Type</th>
                                                 <th>Currency</th>
-                                                <th>Amount</th>
-                                                <th>USDT Amount</th>
+                                                <th>Amount (USDT)</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td><a href="javascript: void(0);" class="text-body fw-bold">#100k1</a></td>
-                                                <td>01 Dec, 2021</td>
-                                                <td>Deposit</td>
-                                                <td>USDT</td>
-                                                <td>1.00952</td>
-                                                <td>$ 9067.62</td>
-                                                <td>
-                                                    <ul class="list-unstyled hstack gap-1 mb-0">
-                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
-                                                            <a href="{{route('admin.viewdetails')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript: void(0);" class="text-body fw-bold">#100k2</a></td>
-                                                <td>30 Nov, 2022</td>
-                                                <td>Withdraw</td>
-                                                <td>USDT</td>
-                                                <td>0.00413</td>
-                                                <td>$ 2123.01</td>
-                                                <td>
-                                                <ul class="list-unstyled hstack gap-1 mb-0">
-                                                        <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
-                                                            <a href="#" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                            @if ($trans->count() > 0)
+                                                @foreach ($trans as $item)
+                                                    <tr>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">#100k{{$item->id}}</a></td>
+                                                        <td>{{$item->created_at->format('D M, Y')}}</td>
+                                                        <td>{{$item->type}}</td>
+                                                        <td>{{$item->type}}</td>
+                                                        <td>{{number_format($item->amount, 2)}}</td>
+                                                        <td>
+                                                            @if ($item->status == 1)
+                                                                <span class="badge bg-info">Paid</span>
+                                                            @else
+                                                                <span class="badge bg-danger">Unpaid</span>
+                                                            @endif
+                                                        </td>
+                                                        <td>
+                                                            <ul class="list-unstyled hstack gap-1 mb-0">
+                                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                                                    <a href="{{route('admin.viewdetails', $item->id)}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            @else
+                                                <tr>
+                                                    <td><a href="javascript: void(0);" class="text-body fw-bold">#100k1</a></td>
+                                                    <td>01 Dec, 2021</td>
+                                                    <td>Deposit</td>
+                                                    <td>USDT</td>
+                                                    <td>1.00952</td>
+                                                    <td>$ 9067.62</td>
+                                                    <td>
+                                                        <ul class="list-unstyled hstack gap-1 mb-0">
+                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                                                <a href="{{route('admin.viewdetails')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            @endif
+
                                         </tbody>
                                     </table>
                                 </div>
 
+                                <div class="row justify-content-between align-items-center pag">
+                                    {!! $trans->links('layouts.custom-paginate') !!}
+                                    <!--end col-->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -175,4 +204,9 @@
     </div>
     <!-- end main content-->
 </div>
+
+<script>
+    var el = document.querySelector('.pag');
+    el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+</script>
 @endsection
