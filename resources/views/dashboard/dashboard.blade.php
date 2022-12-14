@@ -37,11 +37,11 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="runtime">
-                        <h1>Total Expert Trainings</h1>
+                        <h1>Total Subscribers</h1>
                         <p>
-                            5
+                            1
                         </p>
-                        <h4>Expert Trainings</h4>
+                        <h4>Subscribers</h4>
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Icon_pvw92p.png" draggable="false" alt="">
                     </div>
                 </div>
