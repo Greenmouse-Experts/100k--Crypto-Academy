@@ -49,6 +49,7 @@ class DashboardController extends Controller
             $trans->type = 'Subscription';
             $trans->user_id = Auth::user()->id;
             $trans->amount = $request->amount;
+            $trans->method = 'Main Wallet';
             $trans->status = 1;
             $trans->save();
             Alert::success('Success', "You have successfully subscribe to our platform");
@@ -67,6 +68,7 @@ class DashboardController extends Controller
             $trans = new Transaction();
             $trans->type = 'Subscription';
             $trans->user_id = Auth::user()->id;
+            $trans->method = 'Bonus Balance';
             $trans->amount = $request->amount;
             $trans->status = 1;
             $trans->save();
