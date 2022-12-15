@@ -1692,7 +1692,7 @@ footer .input-group-text img{
     color: #4B4B4B;
 }
 .Special .colum{
-    padding: 50px 0 0 0;
+    padding: 80px 0 0 0;
 }
 .Special .colum img{
     width: 70%;
@@ -2014,3 +2014,12 @@ footer .input-group-text img{
 }
 
 /* Affliate Ends*/
+
+.modal-dialog {
+    padding: 100px 0 0 0;
+    max-width: 80% !important;
+    margin: auto !important;
+}
+.all iframe{
+    height: 400px;
+}
