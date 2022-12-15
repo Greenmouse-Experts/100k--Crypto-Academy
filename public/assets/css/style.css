@@ -302,24 +302,25 @@ header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
 @media (max-width:520px) {
     .welcome .bet p{
         font-size: 20px !important;
+        font-weight: 500;
         color: #fff;
         text-align: center;
     }
     .welcome .bet h1{
         font-size: 30px !important;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.5;
         text-align: center;
     }
 }
 @media (max-width:400px) {
     .welcome .bet p{
-        font-size: 15px !important;
+        font-size: 16px !important;
         color: #fff;
     }
     .welcome .bet h1{
-        font-size: 25px !important;
-        font-weight: 600 !important;
+        font-size: 23px !important;
+        font-weight: 700 !important;
         line-height: 1.5;
         text-align: center;
         margin-bottom: 10px;
@@ -1731,7 +1732,7 @@ footer .input-group-text img{
         margin: auto;
     }
     .Special .com{
-        padding: 30px 0 0 0;
+        padding: 15px 0 0 0;
     }
 }
 @media (max-width:767px) {
@@ -1746,16 +1747,74 @@ footer .input-group-text img{
         padding: 80px 10px 50px 10px;
         background-color: #fff;
     }
+    .Special .front .perfect img{
+        display: block;
+        margin: auto;
+        width: 12%;
+        margin-bottom: 10px;
+    }
+    .Special .front .perfect h1{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    .Special .front .perfect p{
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
 }
 @media (max-width:450px) {
     .Special .front .perfect{
         position: relative;
-        top: -150px;
+        top: -165px;
         text-align: center;
+    }
+    .Special .who h1{
+        font-size: 30px;
+        font-weight: 700;
+        color: #000;
     }
     .Special .com p{
         font-size: 18px;
         line-height: 2;
+    }
+    .Special  p{
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: 500;
+    }
+    .Choose .who h1{
+        font-size: 30px;
+        color: #000 !important;
+        font-weight: 700 !important;
+    }
+    .Choose .who p{
+        font-size: 20px !important;
+        line-height: 1.8 !important;
+        font-weight: 500 !important;
+    }
+    .Clients .who h1{
+        font-size: 30px;
+        color: #000 !important;
+        font-weight: 700;
+    }
+    .Clients .colum p{
+        font-size: 17px !important;
+        line-height: 1.8;
+        font-weight: 500 !important;
+        color: #000 !important;
+    }
+    .falcon .who h1{
+        font-size: 30px;
+        color: #000 !important;
+        font-weight: 700;
+    }
+    .falcon .who p{
+        font-size: 17px !important;
+        line-height: 1.8;
+        font-weight: 500 !important;
+        color: #000 !important;
     }
 }
 /* Special  Ends*/
@@ -2022,4 +2081,12 @@ footer .input-group-text img{
 }
 .all iframe{
     height: 400px;
+}
+
+@media (max-width:991px) {
+    .modal-dialog {
+        padding: 100px 0 0 0;
+        max-width: 100% !important;
+        margin: auto !important;
+    }
 }
