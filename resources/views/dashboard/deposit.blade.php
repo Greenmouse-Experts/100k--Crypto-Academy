@@ -151,7 +151,7 @@
 
                                                     </td>
                                                     <td>
-                                                        <i class="fab fa-cc-mastercard me-1"></i> Crypto
+                                                        Crypto
                                                     </td>
                                                     <td>
                                                         <!-- Button trigger modal -->
@@ -170,7 +170,7 @@
                                                                         @if ($item->type == 'Subscription')
                                                                             <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
                                                                         @else
-                                                                            <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            <p class="mb-4">Deposit Address: <span class="text-primary">{{$item->address}}</span></p>
                                                                         @endif
 
 
@@ -224,7 +224,7 @@
                                                 <td> </td>
                                                 <td></td>
                                                 <td>
-                                                    Noo Data Yet
+                                                    No Data Yet
                                                 </td>
                                                 <td>
 
