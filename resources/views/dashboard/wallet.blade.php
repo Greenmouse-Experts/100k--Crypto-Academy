@@ -28,16 +28,16 @@
                                         <div class="dropdown-item-text">
                                             <div>
                                                 <p class="text-muted mb-2">Available Balance</p>
-                                                <h5 class="mb-0">$ 9148.23</h5>
+                                                <h5 class="mb-0">${{number_format(Auth::user()->wallet->bal, 2)}}</h5>
                                             </div>
                                         </div>
 
                                         <div class="dropdown-divider"></div>
 
                                         <a class="dropdown-item" href="#">
-                                            BTC : <span class="float-end">1.02356</span>
+                                            Ref Bonus : <span class="float-end">${{number_format(Auth::user()->wallet->ref_bonus, 2)}}</span>
                                         </a>
-                                        <a class="dropdown-item" href="#">
+                                        <!--<a class="dropdown-item" href="#">
                                             ETH : <span class="float-end">0.04121</span>
                                         </a>
                                         <a class="dropdown-item" href="#">
@@ -48,7 +48,7 @@
 
                                         <a class="dropdown-item text-primary text-center" href="#">
                                             Learn more
-                                        </a>
+                                        </a>-->
                                     </div>
                                 </div>
                             </div>
@@ -179,14 +179,14 @@
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
                                                         @else
-                                                            <span class="badge bg-danger">Unpaid</span>
+                                                            <span class="badge bg-danger">Failed</span>
                                                         @endif
 
                                                     </td>
                                                     <td>
-                                                        <i class="fab fa-cc-mastercard me-1"></i> Crypto
+                                                        Crypto
                                                     </td>
                                                     <td>
                                                         <!-- Button trigger modal -->
@@ -259,7 +259,7 @@
                                                 <td> </td>
                                                 <td></td>
                                                 <td>
-                                                    Noo Data Yet
+                                                    No Data Yet
                                                 </td>
                                                 <td>
 

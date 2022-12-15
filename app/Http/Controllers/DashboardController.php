@@ -36,10 +36,11 @@ class DashboardController extends Controller
     public function subscribe_now(Request $request)
     {
         $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
-        if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
-            Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+        if ($request->wallet_type == "main_wallet" AND $request->amount > $userwallet->bal) {
+            Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or deposit to your wallet to subscribe');
             return back();
-        } else {
+        } 
+        if($request->wallet_type == "main_wallet" AND $request->amount < $userwallet->bal){
             $oldbal = $userwallet->bal;
             $userwallet->bal = $oldbal - $request->amount;
             $userwallet->update();
@@ -62,10 +63,12 @@ class DashboardController extends Controller
             Alert::success('Success', "You have successfully subscribe to our platform");
             return back();
         }
-        if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
-            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+        //dd($request->wallet_type, $request->amount, $userwallet->ref_bonus);
+        if ($request->wallet_type == "ref_bonus" AND $request->amount > $userwallet->ref_bonus) {
+            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose main wallet type to subscribe');
             return back();
-        } else {
+        } 
+        if($request->wallet_type == "ref_bonus" AND $request->amount < $userwallet->ref_bonus){
             $oldbal = $userwallet->ref_bonus;
             $userwallet->ref_bonus = $oldbal - $request->amount;
             $userwallet->update();
@@ -147,9 +150,10 @@ class DashboardController extends Controller
         }
         $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
         if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
-            Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+            Alert::error('Error', 'You don\'t have sufficient Main Balance to withdraw!');
             return back();
-        } else {
+        } 
+        if($request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal){
             $oldbal = $userwallet->bal;
             $userwallet->bal = $oldbal - $request->amount;
             $userwallet->update();
@@ -171,9 +175,10 @@ class DashboardController extends Controller
             return back();
         }
         if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
-            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose another wallet type or you deposit to yor wallet too subscribe');
+            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to withdraw. Please choose main wallet type!');
             return back();
-        } else {
+        } 
+        if($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus){
             $oldbal = $userwallet->ref_bonus;
             $userwallet->ref_bonus = $oldbal - $request->amount;
             $userwallet->update();
@@ -198,8 +203,15 @@ class DashboardController extends Controller
 
     public function subscribe()
     {
-        $sub = Transaction::where('user_id', Auth::user()->id)->where('type', "Subscription")->paginate(2);
-        return view('dashboard.subscribe', compact('sub'));
+        $subscribe = User::findOrFail(Auth::user()->id);
+        $sub = Transaction::where('user_id', Auth::user()->id)->where('type', "Subscription")->paginate(5);
+        if($subscribe->subscribe == '1'){
+            Alert::success('Success', "You are already a 100k Crypto Investing Subscriber");
+            return view('dashboard.subscribe', compact('sub'));
+        }
+        else{
+            return view('dashboard.subscribe', compact('sub'));
+        }
     }
 
     public function profile()

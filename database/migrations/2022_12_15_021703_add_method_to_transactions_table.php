@@ -13,8 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('transactions', function (Blueprint $table) {
-            $table->string('method')->nullable();
-            $table->string('address')->nullable();
+            
         });
     }
 

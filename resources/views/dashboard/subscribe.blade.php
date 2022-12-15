@@ -210,7 +210,7 @@
                         <div class="mb-3">
                             <label class="form-label">Select Wallet</label>
                             <div>
-                                <select name="wallet_type" id="" class="form-control">
+                                <select name="wallet_type" parsley-type="wallet_type" id="" class="form-control">
                                     <option value="">Select Wallet</option>
                                     <option value="main_wallet">Main Wallet Balance</option>
                                     <option value="ref_bonus">Referral Bonus</option>

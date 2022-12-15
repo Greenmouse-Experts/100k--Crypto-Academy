@@ -85,37 +85,19 @@
                                             @else
                                                 <tr>
                                                     <td>
-                                                        <div>
-                                                            <img class="rounded-circle avatar-xs" src="{{URL::asset('dash/assets/images/users/avatar-2.jpg')}}" alt="">
-                                                        </div>
+                                                        
                                                     </td>
                                                     <td>
-                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Frank Kirk</a></h5>
-                                                        {{-- <p class="text-muted mb-0">Frontend Developer</p> --}}
+                                                        
                                                     </td>
-                                                    <td>frank@skote.com</td>
+                                                    <td>No Data Yet</td>
                                                     <td>
-                                                        <div>
-                                                            <a href="javascript: void(0);" class="badge badge-soft-danger font-size-11 m-1">Not Subscribe</a>
-                                                        </div>
+                                                       
                                                     </td>
                                                     <td>
-                                                        <div>
-                                                            <a href="javascript: void(0);" class="font-size-11 m-1">22 oct 2022 at 12:00am</a>
-                                                        </div>
+                                                        
                                                     </td>
                                                     <td>
-                                                        <ul class="list-unstyled hstack gap-1 mb-0">
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                                <a href="{{route('admin.viewmembers')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                            </li>
-                                                            {{-- <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
-                                                            </li>
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
-                                                            </li> --}}
-                                                        </ul>
                                                     </td>
                                                 </tr>
                                             @endif
