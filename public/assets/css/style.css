@@ -9,6 +9,7 @@ html, body{
     overflow-x: hidden;
     background-size: cover;
     background-position: center center;
+    width: 100% !important;
     background-repeat: no-repeat;
 }
 /* ===== Scrollbar CSS ===== */
@@ -61,13 +62,6 @@ header .navbar .nav-item .nav-link:after {
     content: '';
     padding: 2px 0 0 0;
     border-radius: 1px;
-    -webkit-transform: scaleX(0);  
-            transform: scaleX(0);  
-    -webkit-transition: -webkit-transform 250ms ease-in-out;  
-    transition: -webkit-transform 250ms ease-in-out;  
-    transition: transform 250ms ease-in-out;  
-    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-    visibility: hidden;
 }
 header .navbar .nav-item .nav-link:hover::after{
     visibility: visible;

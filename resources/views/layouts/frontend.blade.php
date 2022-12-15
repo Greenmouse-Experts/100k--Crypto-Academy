@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="X-UA-Compatible" content="Welcome To {{config('app.name')}}">
-        <meta name="viewport" content="Welcome To {{config('app.name')}}">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!-- Favocon -->
         <link rel="shortcut icon" href="{{URL::asset('assets/images/fav.png')}}" type="image/x-icon">
         <!-- Google Font -->
@@ -16,8 +16,7 @@
         <link rel="stylesheet" href="{{URL::asset('auth/style.css')}}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <script src="{{URL::asset('assets/js/jquery.min.js')}}"></script>
-        <script src="{{URL::asset('assets/js/bundle.min.js')}}"></script>
-        <!-- bundle.min.js -->
+       
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <title>{{config('app.name')}}</title>
     </head>
@@ -44,7 +43,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 all">
-                        <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview"  width="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -57,10 +56,7 @@
         $("#subscribeModal").modal('show');
     });
 </script>
-        <!-- Footer Ends -->  
-        <script>
-            AOS.init();
-        </script>
+
         <script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
         <script src="{{URL::asset('assets/js/main.js')}}"></script>
     </body>
