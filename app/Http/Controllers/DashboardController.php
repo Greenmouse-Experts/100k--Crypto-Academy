@@ -36,11 +36,11 @@ class DashboardController extends Controller
     public function subscribe_now(Request $request)
     {
         $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
-        if ($request->wallet_type == "main_wallet" AND $request->amount > $userwallet->bal) {
+        if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
             Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or deposit to your wallet to subscribe');
             return back();
-        } 
-        if($request->wallet_type == "main_wallet" AND $request->amount < $userwallet->bal){
+        }
+        if ($request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal) {
             $oldbal = $userwallet->bal;
             $userwallet->bal = $oldbal - $request->amount;
             $userwallet->update();
@@ -64,11 +64,11 @@ class DashboardController extends Controller
             return back();
         }
         //dd($request->wallet_type, $request->amount, $userwallet->ref_bonus);
-        if ($request->wallet_type == "ref_bonus" AND $request->amount > $userwallet->ref_bonus) {
+        if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
             Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose main wallet type to subscribe');
             return back();
-        } 
-        if($request->wallet_type == "ref_bonus" AND $request->amount < $userwallet->ref_bonus){
+        }
+        if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
             $oldbal = $userwallet->ref_bonus;
             $userwallet->ref_bonus = $oldbal - $request->amount;
             $userwallet->update();
@@ -107,8 +107,66 @@ class DashboardController extends Controller
     }
     public function deposit()
     {
+        $ticker = "trc20/usdt";
+        $query = array(
+            "apikey" => "rOWmQBizA3GZGD3djgVLHwX6aUfPsawroA9JhSCUWb4asbD3DkfcLn0TOIz5eWoC",
+            "callback" => "http://localhost:8002/dashboard/deposit",
+            "address" => "TDkhX7qGoGvz7VQ2wgYrG6qmKgciYBzEEQ",
+            "pending" => "1",
+            "confirmations" => "2",
+            "email" => "morshudlhgmo@gmail.com",
+            "post" => "0",
+            "multi_token" => "0",
+            "multi_chain" => "0",
+            "convert" => "1"
+        );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, [
+        CURLOPT_URL => "https://api.blockbee.io/" . $ticker . "/create/?" . http_build_query($query),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        ]);
+
+        $response = curl_exec($curl);
+        $error = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($error) {
+            dd("cURL Error #:" . $error);
+        } else {
+            $response;
+        }
+        // $ticker = "trc20/usdt";
+        // $query = array(
+        //     "apikey" => "rOWmQBizA3GZGD3djgVLHwX6aUfPsawroA9JhSCUWb4asbD3DkfcLn0TOIz5eWoC",
+        //     "address" => "TDkhX7qGoGvz7VQ2wgYrG6qmKgciYBzEEQ",
+        //     "value" => "100",
+        //     "size" => "200"
+        // );
+
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, [
+        // CURLOPT_URL => "https://api.blockbee.io/" . $ticker . "/qrcode/?" . http_build_query($query),
+        // CURLOPT_RETURNTRANSFER => true,
+        // CURLOPT_CUSTOMREQUEST => "GET",
+        // ]);
+
+        // $response = curl_exec($curl);
+        // $error = curl_error($curl);
+
+        // curl_close($curl);
+
+        // if ($error) {
+        //     dd("cURL Error #:" . $error);
+        // } else {
+        //     $response;
+        // }
         $deposit = Transaction::where('user_id', Auth::user()->id)->where('type', "Deposit")->orderBy('id', "Desc")->paginate(5);
-        return view('dashboard.deposit', compact('deposit'));
+        return view('dashboard.deposit', compact('deposit', 'response'));
     }
 
     public function deposit_post(Request $request)
@@ -152,8 +210,8 @@ class DashboardController extends Controller
         if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
             Alert::error('Error', 'You don\'t have sufficient Main Balance to withdraw!');
             return back();
-        } 
-        if($request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal){
+        }
+        if ($request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal) {
             $oldbal = $userwallet->bal;
             $userwallet->bal = $oldbal - $request->amount;
             $userwallet->update();
@@ -177,8 +235,8 @@ class DashboardController extends Controller
         if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
             Alert::error('Error', 'You don\'t have sufficient Bonus Balance to withdraw. Please choose main wallet type!');
             return back();
-        } 
-        if($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus){
+        }
+        if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
             $oldbal = $userwallet->ref_bonus;
             $userwallet->ref_bonus = $oldbal - $request->amount;
             $userwallet->update();
@@ -205,11 +263,10 @@ class DashboardController extends Controller
     {
         $subscribe = User::findOrFail(Auth::user()->id);
         $sub = Transaction::where('user_id', Auth::user()->id)->where('type', "Subscription")->paginate(5);
-        if($subscribe->subscribe == '1'){
+        if ($subscribe->subscribe == '1') {
             Alert::success('Success', "You are already a 100k Crypto Investing Subscriber");
             return view('dashboard.subscribe', compact('sub'));
-        }
-        else{
+        } else {
             return view('dashboard.subscribe', compact('sub'));
         }
     }

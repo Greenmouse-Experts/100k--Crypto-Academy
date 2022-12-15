@@ -291,11 +291,15 @@
                         <div class="mb-3">
                             <label class="form-label">Deposit Address</label>
                             <div>
-                                <input type="text" class="form-control" name="address" required parsley-type="address" placeholder="Enter Your Deposit Address" />
+                                <input type="text" class="form-control" name="address" readonly parsley-type="address" value="{{json_decode($response)->address_in}}" placeholder="Enter Your Deposit Address" />
                             </div>
                         </div>
                         <div class="col-lg-12 mb-5">
-                            <img class="srt" src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669306824/EProd%20Images/image_1_ywbvl5.png">
+                            {{-- <img class="srt" src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669306824/EProd%20Images/image_1_ywbvl5.png"> --}}
+                            <img class="srt" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=usdt%3A{{ json_decode($response)->address_in }}"
+                                                        style="" title="Scan Me"
+                                                        alt="{{ json_decode($response)->address_in }}">
+                            {{-- <img src='data:image/png;base64,{{ json_decode($response)->qr_code }}' alt='Payment QR Code'/> --}}
                         </div>
                         <!-- <div class="mb-3">
                             <label class="form-label">Textarea</label>
