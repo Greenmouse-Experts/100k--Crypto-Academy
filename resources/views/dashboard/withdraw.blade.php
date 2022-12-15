@@ -78,7 +78,7 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
-                                <button type="button" class="btn btn-secondary waves-effect waves-light">Cancel</button>
+                                <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                             </div>
                         </div>
                     </form>
@@ -101,7 +101,7 @@
                                                 <th class="align-middle">Type</th>
                                                 <th class="align-middle">Amount (USDT)</th>
                                                 <th class="align-middle">Payment Status</th>
-                                                <th class="align-middle">Currency</th>
+                                                <th class="align-middle">Method</th>
                                                 <th class="align-middle">Action</th>
                                             </tr>
                                         </thead>
@@ -134,7 +134,7 @@
 
                                                     </td>
                                                     <td>
-                                                        <i class="fab fa-cc-mastercard me-1"></i> Crypto
+                                                        {{$item->method}}
                                                     </td>
                                                     <td>
                                                         <!-- Button trigger modal -->
@@ -153,7 +153,7 @@
                                                                         @if ($item->type == 'Subscription')
                                                                             <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
                                                                         @else
-                                                                            <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            <p class="mb-4">Withdrawal Address: <span class="text-primary">{{$item->address}}</span></p>
                                                                         @endif
 
 
@@ -207,7 +207,7 @@
                                                 <td> </td>
                                                 <td></td>
                                                 <td>
-                                                    Noo Data Yet
+                                                    No Data Yet
                                                 </td>
                                                 <td>
 

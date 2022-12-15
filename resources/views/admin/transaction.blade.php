@@ -175,8 +175,12 @@
                                                                             <p class="mb-2">Transaction id: <span class="text-primary">#100k{{$item->id}}</span></p>
                                                                             @if ($item->type == 'Subscription')
                                                                                 <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
-                                                                            @else
-                                                                                <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            @endif
+                                                                            @if ($item->type == 'Deposit')
+                                                                                <p class="mb-4">Deposit Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            @endif
+                                                                            @if ($item->type == 'Withdraw')
+                                                                                <p class="mb-4">Withdrawal Address: <span class="text-primary">{{$item->address}}</span></p>
                                                                             @endif
 
                                                                             <div class="table-responsive">

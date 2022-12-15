@@ -89,7 +89,7 @@
                                                     <td>
                                                         {{$item->created_at->format('d M Y')}} at {{$item->created_at->format('h:m:s a')}}
                                                     </td>
-                                                    <td>{{\App\Models\User::where('id', $item->user_id)->first()->name}}</td>
+                                                    <td>{{\App\Models\User::where('id', $item->user_id)->first()->name ?? ''}}</td>
 
                                                     <td>
                                                         {{number_format($item->amount, 2)}} USDT
@@ -118,7 +118,15 @@
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <p class="mb-2">Transaction id: <span class="text-primary">#100k{{$item->id}}</span></p>
-                                                                        <p class="mb-4">Billing Address: <span class="text-primary">47hdnhdyyeyeyyeyeyeyee</span></p>
+                                                                        @if ($item->type == 'Subscription')
+                                                                            <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
+                                                                        @endif
+                                                                        @if ($item->type == 'Deposit')
+                                                                            <p class="mb-4">Deposit Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                        @endif
+                                                                        @if ($item->type == 'Withdraw')
+                                                                            <p class="mb-4">Withdrawal Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                        @endif
 
                                                                         <div class="table-responsive">
                                                                             <table class="table align-middle table-nowrap">
@@ -170,7 +178,7 @@
                                                 <td> </td>
                                                 <td></td>
                                                 <td>
-                                                    Noo Data Yet
+                                                    No Data Yet
                                                 </td>
                                                 <td>
 

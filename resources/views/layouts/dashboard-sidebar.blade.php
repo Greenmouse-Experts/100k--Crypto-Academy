@@ -36,7 +36,7 @@
         <li>
           <a href="{{route('user.guide')}}">
             <i class="bi bi-play-btn"></i>
-            <span key="t-dashboards">Video guide</span>
+            <span key="t-dashboards">User guide</span>
           </a>
         </li>
         <li>
