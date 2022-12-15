@@ -49,7 +49,7 @@
                     <div class="runtime">
                         <h1>Total Balance</h1>
                         <p>
-                            {{Auth::user()->wallet->bal}}
+                            ${{number_format(Auth::user()->wallet->bal, 2)}}
                         </p>
                         <h4>wallet</h4>
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Iconnn_zk4z7z.png" draggable="false" alt="">
@@ -65,26 +65,23 @@
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119626/EProd%20Images/Group_8833_xn6qme.png" draggable="false" alt="">
                     </div>
                 </div>
-                <!-- <div class="col-lg-12">
+                <div class="col-lg-12">
                     <div class="runtown">
                         <h1>
-                            Trainings
+                            User Guide
                         </h1>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="calling">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122219/EProd%20Images/Image_fczwzs.png" draggable="false" alt="">
-                        <p>
-                            Training
-                        </p>
-                        <div class="die">
-                            <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122591/EProd%20Images/Combined_Shape_jnlms8.png" draggable="false" alt="">
-                            <span>15 Lessons (10h 5m)</span> <span class="paint">$140</span>
+
+                        <div class="die mt-4">
+                            <span>Guide</span> <span class="paint"><a href="{{route('user.guide')}}">View Guide</a></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                {{-- <div class="col-lg-3">
                     <div class="calling">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669122592/EProd%20Images/Imagge_o56jat.png" draggable="false" alt="">
                         <p>
@@ -119,7 +116,7 @@
                             <span>10 Lessons (8h 6m)</span> <span class="paint">$200</span>
                         </div>
                     </div>
-                </div> -->
+                </div> --}}
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -158,16 +155,16 @@
                                                     <td><a href="javascript: void(0);" class="text-body fw-bold">#100k{{$item->id}}</a> </td>
                                                     <td>{{$item->type}}</td>
                                                     <td>
-                                                        {{$item->created_at->format('d M, Y')}}
+                                                        {{$item->created_at->format('d M Y')}} at {{$item->created_at->format('h:m:s a')}}
                                                     </td>
                                                     <td>
                                                         ${{number_format($item->amount, 2)}}
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
                                                         @else
-                                                            <span class="badge bg-danger">Unpaid</span>
+                                                            <span class="badge bg-danger">Failed</span>
                                                         @endif
 
                                                     </td>
@@ -188,7 +185,11 @@
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <p class="mb-2">Transaction id: <span class="text-primary">#100k{{$item->id}}</span></p>
-                                                                        <p class="mb-4">Billing Address: <span class="text-primary">47hdnhdyyeyeyyeyeyeyee</span></p>
+                                                                        @if ($item->type == 'Subscription')
+                                                                            <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
+                                                                        @else
+                                                                            <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                        @endif
 
                                                                         <div class="table-responsive">
                                                                             <table class="table align-middle table-nowrap">
@@ -263,6 +264,10 @@
             </div>
         </div>
     </div>
+    <script>
+        var el = document.querySelector('.pag');
+        el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+    </script>
     <!-- End Page-content -->
     <!-- Transaction Modal -->
     <!-- end modal -->

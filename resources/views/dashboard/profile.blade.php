@@ -56,7 +56,7 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Old Password</label>
-                                    <input type="password" class="form-control" value="{{Auth::user()->password}}" readonly/>
+                                    <input type="password" name="old_password" class="form-control" placeholder="************" required/>
                                 </div>
 
                                 <div class="mb-3">

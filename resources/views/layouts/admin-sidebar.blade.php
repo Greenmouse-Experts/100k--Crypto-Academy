@@ -29,18 +29,18 @@
             <span key="t-dashboards">Transaction</span>
           </a>
         </li>
-        <li>
+        {{-- <li>
           <a href="{{route('admin.unsubscribers')}}">
             <i class="bi bi-journal-x"></i>
             <span key="t-dashboards">Unsubscribers</span>
           </a>
         </li>
-        <!-- <li>
+         <li>
           <a href="{{route('admin.trainings')}}">
             <i class="bi bi-book-half"></i>
             <span key="t-dashboards">Trainings</span>
           </a>
-        </li> -->
+        </li> --}}
         <li>
           <a href="{{route('admin.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
@@ -48,7 +48,7 @@
           </a>
         </li>
         <li>
-          <a href="{{route('admin.signal')}}">
+          <a href="#">
             <i class="bi bi-reception-4"></i>
             <span key="t-dashboards">Signal Room</span>
           </a>
@@ -62,7 +62,7 @@
         <li>
           <a href="{{route('admin.role')}}">
             <i class="bi bi-people"></i>
-            <span key="t-dashboards">Admin Role</span>
+            <span key="t-dashboards">Admin User</span>
           </a>
         </li>
         <!-- <li>
@@ -72,7 +72,7 @@
           </a>
         </li> -->
         <li class="mt-4">
-          <a href="#">
+          <a href="{{route('admin.logout')}}">
             <i class="bi bi-box-arrow-in-left"></i>
             <span key="t-dashboards">Logout</span>
           </a>
