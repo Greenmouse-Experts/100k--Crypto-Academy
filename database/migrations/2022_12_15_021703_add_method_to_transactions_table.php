@@ -12,8 +12,9 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::table('user_wallets', function (Blueprint $table) {
-
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->string('method')->nullable();
+            $table->string('address')->nullable();
         });
     }
 
@@ -24,7 +25,7 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::table('user_wallets', function (Blueprint $table) {
+        Schema::table('transactions', function (Blueprint $table) {
             //
         });
     }

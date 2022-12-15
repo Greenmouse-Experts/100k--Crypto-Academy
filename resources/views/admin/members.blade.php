@@ -44,7 +44,7 @@
                                                         <td>
                                                             <div class="avatar-xs">
                                                                 <span class="avatar-title rounded-circle">
-                                                                    D
+                                                                    {{$item->name[0]}}
                                                                 </span>
                                                             </div>
                                                         </td>
@@ -54,7 +54,12 @@
                                                         </td>
                                                         <td>{{$item->email}}</td>
                                                         <td>
-                                                            <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Subscribed</a>
+                                                            @if ($item->subscribe == '1')
+                                                                <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Subscribed</a>
+                                                            @else
+                                                                <a href="javascript: void(0);" class="badge badge-soft-primary text-danger font-size-11 m-1">Not Subscribe</a>
+                                                            @endif
+
                                                         </td>
                                                         <td>
                                                             <div>

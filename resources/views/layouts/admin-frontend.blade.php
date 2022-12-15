@@ -37,6 +37,7 @@
 
 <body data-sidebar="dark" data-layout-mode="light">
     <!-- Alerts  Start-->
+    @include('sweetalert::alert')
     <!-- Alerts End -->
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -302,7 +303,7 @@
   <!-- echarts js -->
   <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
   <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script>
-        
+
 <!--tinymce js-->
 <script src="{{URL::asset('admin/assets/libs/tinymce/tinymce.min.js')}}"></script>
 

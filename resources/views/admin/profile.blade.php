@@ -26,16 +26,16 @@
                         <div class="card-body">
                             <h4 class="card-title">Edit Your Personal Settings</h4>
                             <p class="card-title-desc"></p>
-                            <form class="custom-validation" method="POST" enctype="multipart/form-data">
-
+                            <form class="custom-validation" method="POST" action="{{ route('admin.profile.update')}}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" name="name" value="{{Auth::guard('admin')->user()->name}}" placeholder=""  />
+                                    <input type="text" class="form-control" name="name" required placeholder="Enter Your First Name" value="{{Auth::guard('admin')->user()->name}}"/>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control" value="{{Auth::guard('admin')->user()->email}}" name="email" readonly placeholder="Enter Your Email" />
+                                    <input type="text" readonly class="form-control" name="email" required placeholder="Enter Your Email" value="{{Auth::guard('admin')->user()->email}}" />
                                 </div>
                                 <div class="d-flex flex-wrap gap-2">
                                     <button type="submit" class="form-btn btn btn-primary waves-effect waves-light">
@@ -52,18 +52,21 @@
                         <div class="card-body">
                             <h4 class="card-title">Reset Your Password</h4>
                             <p class="card-title-desc"></p>
-                            <form class="custom-validation" enctype="multipart/form-data">
+                            <form class="custom-validation" method="POST" action="{{ route('admin.password.update')}}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Old Password</label>
-                                    <input type="password" class="form-control" placeholder="Enter Your Old Password"  />
+                                    <input type="password" name="old_password" class="form-control" placeholder="***********" required/>
                                 </div>
+
                                 <div class="mb-3">
                                     <label class="form-label">New Password</label>
                                     <input type="password" class="form-control" name="new_password" required placeholder="Enter Your New Password" />
                                 </div>
+
                                 <div class="mb-3">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" name="new_password_confirmation" required placeholder="Enter Your Confirm Password" />
+                                    <input type="password" class="form-control" name="new_password_confirmation"required placeholder="Enter Your Confirm Password" />
                                 </div>
                                 <div class="d-flex flex-wrap gap-2">
                                     <button type="submit" class="form-btn btn btn-primary waves-effect waves-light">
@@ -75,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                {{-- <div class="col-xl-4">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Upload Profile</h4>
@@ -85,7 +88,7 @@
                                     <div class="bg-img m-auto">
                                         <img class="rounded-circle "width="200"  />
                                         <span class="rounded-circle profile-user" style="font-size: 3rem; width: 140px; height: 140px; vertical-align: middle; align-items: center; background: #556ee6; color: #fff; display: flex; justify-content: center;"></span>
-                                        
+
                                     </div>
                                     <div class="profile pt-2 mb-2">
                                         <h4 class="mb-3"></h4>
@@ -100,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- end col -->
+                </div> <!-- end col --> --}}
             </div>
         </div>
     </div>

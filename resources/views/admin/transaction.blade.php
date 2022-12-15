@@ -117,10 +117,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-2">Activities</h4>
-                            <div class="col-xxl-2 col-lg-4 float-end">
+                            {{-- <div class="col-xxl-2 col-lg-4 float-end">
                                 <input type="search" class="form-control" id="searchInput" placeholder="Search for ...">
 
-                            </div>
+                            </div> --}}
                             <ul class="nav nav-tabs nav-tabs-custom">
                                 <div class="mt-1"></div>
                                 <li class="nav-item">
@@ -149,38 +149,87 @@
                                                         <td><a href="javascript: void(0);" class="text-body fw-bold">#100k{{$item->id}}</a></td>
                                                         <td>{{$item->created_at->format('D M, Y')}}</td>
                                                         <td>{{$item->type}}</td>
-                                                        <td>{{number_format($item->amount, 2)}}</td>
+                                                        <td>Crypto</td>
+                                                        <td>
+                                                            {{number_format($item->amount, 2)}}
+                                                        </td>
                                                         <td>
                                                             @if ($item->status == 1)
-                                                                <span class="badge bg-info">Paid</span>
+                                                                <span class="badge bg-success">Successful</span>
                                                             @else
-                                                                <span class="badge bg-danger">Unpaid</span>
+                                                                <span class="badge bg-danger">Failed</span>
                                                             @endif
                                                         </td>
                                                         <td>
-                                                            <ul class="list-unstyled hstack gap-1 mb-0">
-                                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
-                                                                    <a href="{{route('admin.viewdetails', $item->id)}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                                </li>
-                                                            </ul>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal-{{$item->id}}">
+                                                                <i class="mdi mdi-eye-outline"></i>
+                                                            </button>
+                                                            <div class="modal fade transaction-detailModal-{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="transaction-detailModalLabel">Order Details</h5>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p class="mb-2">Transaction id: <span class="text-primary">#100k{{$item->id}}</span></p>
+                                                                            @if ($item->type == 'Subscription')
+                                                                                <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
+                                                                            @else
+                                                                                <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            @endif
+
+                                                                            <div class="table-responsive">
+                                                                                <table class="table align-middle table-nowrap">
+
+                                                                                    <tbody>
+
+                                                                                        <tr>
+                                                                                            <td colspan="2">
+                                                                                                <h6 class="m-0 text-right">Chain:</h6>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                TRC20
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td colspan="2">
+                                                                                                <h6 class="m-0 text-right">Type:</h6>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                {{$item->type}}
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td colspan="2">
+                                                                                                <h6 class="m-0 text-right">Amount:</h6>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                ${{number_format($item->amount, 2)}}
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 @endforeach
                                             @else
                                                 <tr>
-                                                    <td><a href="javascript: void(0);" class="text-body fw-bold">#100k1</a></td>
-                                                    <td>01 Dec, 2021</td>
-                                                    <td>Deposit</td>
-                                                    <td>USDT</td>
-                                                    <td>1.00952</td>
-                                                    <td>$ 9067.62</td>
-                                                    <td>
-                                                        <ul class="list-unstyled hstack gap-1 mb-0">
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
-                                                                <a href="{{route ('admin.viewdetails')}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>No Data Yet</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                             @endif
 
