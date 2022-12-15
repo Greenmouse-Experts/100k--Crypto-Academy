@@ -51,33 +51,69 @@
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="bell">
                         <i class="bx bx-bell bx-tada"></i>
-                        <span class="badge bg-danger rounded-pill">2</span>
+                        <span class="badge bg-danger rounded-pill">{{\App\Models\Notification::where('user_id', Auth::user()->id)->where('status', 'unread')->get()->count()}}</span>
                     </div>
                 </button>
+                @php
+                    $not = \App\Models\Notification::where('user_id', Auth::user()->id)->where('status', 'unread')->get();
+                @endphp
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
                                 <h6 class="m-0" key="t-notifications">Notifications</h6>
                             </div>
-                            <div class="col-auto">
+                            {{-- <div class="col-auto">
                                 <a href="#!" class="small" key="t-view-all"> View All</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div data-simplebar style="max-height: 230px">
-                        <a href="javascript: void(0);" class="text-reset notification-item">
+                        @if ($not->count() > 0)
+                            @foreach ($not as $item)
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">
+                                                {{$item->title}}
+                                            </h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">
+                                                    {{$item->description}}
+                                                </p>
+                                                <p class="mb-0">
+                                                    <i class="mdi mdi-clock-outline"></i>
+                                                    <span key="t-min-ago">{{\Carbon\Carbon::parse($item->created_at)->diffForHumans()}}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                {{-- <div class="p-2 border-top d-grid">
+                                    <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                        <i class="mdi mdi-arrow-right-circle me-1"></i>
+                                        <span key="t-view-more">View More..</span>
+                                    </a>
+                                </div> --}}
+                            @endforeach
+                        @else
+                        <a href="javascript: void(0);" class="notification-item">
                             <div class="d-flex">
                                 <div class="avatar-xs me-3">
                                     <span class="avatar-title bg-success rounded-circle font-size-16">
-                                        <i class="bx bx-badge-check"></i>
+                                        <i class="bx bx-badge-uncheck"></i>
                                     </span>
                                 </div>
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1" key="t-shipped">
-                                        Your item is shipped
+                                        No New Notifications
                                     </h6>
-                                    <div class="font-size-12 text-muted">
+                                    {{-- <div class="font-size-12 text-muted">
                                         <p class="mb-1" key="t-grammer">
                                             If several languages coalesce the grammar
                                         </p>
@@ -85,16 +121,11 @@
                                             <i class="mdi mdi-clock-outline"></i>
                                             <span key="t-min-ago">3 min ago</span>
                                         </p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </a>
-                    </div>
-                    <div class="p-2 border-top d-grid">
-                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                            <i class="mdi mdi-arrow-right-circle me-1"></i>
-                            <span key="t-view-more">View More..</span>
-                        </a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -119,10 +150,8 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href=""><i class="bx bx-user font-size-16 align-middle me-1"></i>
+                    <a class="dropdown-item" href="{{route('user.profile')}}"><i class="bx bx-user font-size-16 align-middle me-1"></i>
                         <span key="t-profile">Profile</span></a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge bg-danger float-end">1</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i>
-                        <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="/logout"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
                         <span key="t-logout">Logout</span></a>

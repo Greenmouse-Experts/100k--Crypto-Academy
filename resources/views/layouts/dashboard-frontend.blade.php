@@ -41,6 +41,8 @@
     <div style="z-index: 100000; width: 100%; position: absolute;">
         @include('layouts.alert')
     </div>
+
+    @include('sweetalert::alert')
     <!-- Alerts End -->
     <!-- Begin page -->
     <div id="layout-wrapper">

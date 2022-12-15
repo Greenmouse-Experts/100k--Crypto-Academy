@@ -45,12 +45,14 @@
             <span key="t-dashboards">Affiliate</span>
           </a>
         </li>
-        <li>
-          <a href="{{route('user.signal')}}">
-            <i class="bi bi-reception-4"></i>
-            <span key="t-dashboards">Signals Room</span>
-          </a>
-        </li>
+        @if (Auth::user()->subscribe == 1)
+            <li>
+                <a href="#">
+                    <i class="bi bi-reception-4"></i>
+                    <span key="t-dashboards">Signals Room</span>
+                </a>
+            </li>
+        @endif
         <li>
           <a href="{{route('user.profile')}}">
             <i class="bi bi-sliders2-vertical"></i>

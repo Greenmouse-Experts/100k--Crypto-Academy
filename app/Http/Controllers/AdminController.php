@@ -16,7 +16,11 @@ class AdminController extends Controller
 
     public function welcome()
     {
-        return view('admin.welcome');
+        $users = User::all();
+        $subscriber = User::where('subscribe', '1')->get();
+        $unSubscriber = User::where('subscribe', '0')->get();
+        $trans = Transaction::orderBy('id', 'Desc')->paginate(10);
+        return view('admin.welcome', compact('users', 'subscriber', 'trans', 'unSubscriber'));
     }
 
     public function members()
@@ -32,7 +36,8 @@ class AdminController extends Controller
 
     public function subscribers()
     {
-        return view('admin.subscribers');
+        $users = User::orderBy('id', 'Desc')->where('subscribe', '1')->paginate(10);
+        return view('admin.subscribers', compact('users'));
     }
 
     public function profile()
@@ -68,7 +73,7 @@ class AdminController extends Controller
 
     public function transaction()
     {
-        $trans = Transaction::orderBy('id', 'Desc')->paginate(4);
+        $trans = Transaction::orderBy('id', 'Desc')->paginate(10);
         $tcredit = Transaction::where('type', 'Deposit')->sum('amount');
         $tdebit = Transaction::where('type', 'Withdraw')->sum('amount');
         return view('admin.transaction', compact('trans', 'tcredit', 'tdebit'));
@@ -79,7 +84,7 @@ class AdminController extends Controller
         $user = User::findOrFail($id);
         return view('admin.viewmembers', compact('user'));
     }
-    
+
     public function change_type(Request $request, $id)
     {
         $user = User::where('id', $id)->first();
@@ -138,5 +143,59 @@ class AdminController extends Controller
         } else {
             return back()->with('failure_report', 'User authentication failed.');
         }
+    }
+
+    public function profile_update(Request $request)
+    {
+        //Validate Request
+        $this->validate($request, [
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+
+        //Profile
+        $profile = Admin::find(Auth::guard('admin')->user()->id);
+
+        $this->validate($request, [
+            'email' => ['string', 'email', 'max:255', 'unique:users'],
+        ]);
+
+        $profile->update([
+            'name' => $request->name,
+            'email' => $request->email
+        ]);
+
+        Alert::success('Success', 'Profile Updated Successfully!');
+        return back();
+    }
+
+    public function password_update(Request $request)
+    {
+        $this->validate($request, [
+            'old_password' => 'required',
+            'new_password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+        #Match The Old Password
+        if (!Hash::check($request->old_password, Auth::guard('admin')->user()->password)) {
+            Alert::error('Error', 'Old Password Doesn\'t match!');
+            return back();
+        }
+
+        #Update the new Password
+        Admin::whereId(Auth::guard('admin')->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        Alert::success('Success', 'Password Updated Successfully!');
+        return back();
+    }
+
+    public function logout()
+    {
+        Session::flush();
+
+        Auth::guard('admin')->logout();
+
+        return redirect('/admin/login');
     }
 }

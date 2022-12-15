@@ -54,9 +54,11 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/guide', [App\Http\Controllers\DashboardController::class, 'guide'])->name('user.guide');
     Route::get('/wallet', [App\Http\Controllers\DashboardController::class, 'wallet'])->name('user.wallet');
     Route::get('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit'])->name('user.deposit');
+    Route::post('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit_post'])->name('user.deposit.post');
     Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
+    Route::post('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw_post'])->name('user.withdraw.post');
     Route::get('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe'])->name('user.subscribe');
-    Route::get('/signal', [App\Http\Controllers\DashboardController::class, 'signal'])->name('user.signal');
+    Route::post('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe_now'])->name('user.subscribe.post');
     Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
     Route::post('/profile/upload/picture', [App\Http\Controllers\DashboardController::class, 'profile_upload_picture'])->name('user.profile.upload.picture');
     Route::post('/profile/update', [App\Http\Controllers\DashboardController::class, 'profile_update'])->name('user.profile.update');
@@ -80,7 +82,9 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/role', [App\Http\Controllers\AdminController::class, 'role'])->name('admin.role');
     Route::get('/viewmember/{id}', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');
     Route::post('users/change_type/{id}', [App\Http\Controllers\AdminController::class, 'change_type'])->name('users.change_type');
-
+    Route::get('/logout-admin', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin.logout');
+    Route::post('/profile/update', [App\Http\Controllers\AdminController::class, 'profile_update'])->name('admin.profile.update');
+    Route::post('/password/update', [App\Http\Controllers\AdminController::class, 'password_update'])->name('admin.password.update');
 });
 
 // Auth::routes();
