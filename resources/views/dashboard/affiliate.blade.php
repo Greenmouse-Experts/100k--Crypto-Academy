@@ -45,7 +45,7 @@
                         <div class="card-body">
                             <h5 class="card-title mb-4">My Affiliate Link</h5>
                             <div class="hstack gap-3">
-                                <input class="form-control me-auto" type="text" value="{{URL::to('').'/ref/'.Auth::user()->affiliate_id}}" id="myInput"">
+                                <input class="form-control me-auto" type="text" value="{{URL::to('').'/ref/'.Auth::user()->affiliate_id}}" id="myInput">
                                 <button type=" button" class="btn btn-secondary" onclick="myFunction()">copyText</button>
                                 <div class="vr"></div>
                             </div>
@@ -60,7 +60,7 @@
                                 <div class="table-responsive">
                                     <h4 class="card-title mb-3">My Affiliates</h4>
                                     <div class="col-xxl-4 col-lg-6 float-end mb-3">
-                                        <input type="search" class="form-control" id="myInpuAA2" placeholder="Search for datas in table...">
+                                        <input type="search" class="form-control" id="myInpuAA2" placeholder="Search...">
                                     </div>
                                     <table id="sampleTableA" class="table paginated align-middle table-nowrap table-hover">
                                         <thead class="table-light">
