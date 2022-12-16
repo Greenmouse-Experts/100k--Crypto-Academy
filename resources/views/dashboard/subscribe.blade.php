@@ -207,7 +207,8 @@
                                 <input type="text" class="form-control" readonly name="amount" parsley-type="amount" value="100" />
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <input type="hidden" name="wallet_type" value="main_wallet">
+                        <!--<div class="mb-3">
                             <label class="form-label">Select Wallet</label>
                             <div>
                                 <select name="wallet_type" parsley-type="wallet_type" id="" class="form-control">
@@ -216,7 +217,7 @@
                                     <option value="ref_bonus">Referral Bonus</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row">
                             <div class="col-md-8">
                                 <button type="submit">

@@ -23,15 +23,15 @@
                                 <div class="dropdown-item-text">
                                     <div>
                                         <p class="text-muted mb-2">Available Balance</p>
-                                        <h5 class="mb-0">$ 1483</h5>
+                                        <h5 class="mb-0">${{Auth::user()->wallet->bal}}</h5>
                                     </div>
                                 </div>
 
                                 <div class="dropdown-divider"></div>
 
-                                <a class="dropdown-item" href="#">
+                                <!--<a class="dropdown-item" href="#">
                                     USDT : <span class="float-end">1.02356</span>
-                                </a>
+                                </a>-->
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,8 @@
                         @csrf
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="mb-3">
+                                <input type="hidden" name="wallet_type" value="main_wallet">
+                                <!--<div class="mb-3">
                                     <label class="form-label">Select Wallet</label>
                                     <div>
                                         <select required name="wallet_type" id="" class="form-control">
@@ -56,7 +57,7 @@
                                             <option value="ref_bonus">Referral Bonus</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="mb-3">
                                     <label>Amount to withdraw</label>
                                     <input type="tel" required name="amount" class="form-control">

@@ -34,9 +34,9 @@
 
                                         <div class="dropdown-divider"></div>
 
-                                        <a class="dropdown-item" href="#">
+                                        <!--<a class="dropdown-item" href="#">
                                             Ref Bonus : <span class="float-end">${{number_format(Auth::user()->wallet->ref_bonus, 2)}}</span>
-                                        </a>
+                                        </a>-->
                                         <!--<a class="dropdown-item" href="#">
                                             ETH : <span class="float-end">0.04121</span>
                                         </a>
@@ -85,12 +85,12 @@
                                         <h5>${{number_format(Auth::user()->wallet->bal, 2)}}</h5>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <!--<div class="col-sm-6">
                                     <div class="text-sm-end mt-4 mt-sm-0">
                                         <p class="text-muted mb-2">Refferal Bonus</p>
                                         <h5> ${{number_format(Auth::user()->wallet->ref_bonus, 2)}}</h5>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -142,8 +142,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Recent Transcation</h4>
-
-                            <div class="mt-4">
+                            <div class=" mb-3">
+                                <input type="search" class="form-control myInpuAA2" placeholder="Search...">
+                            </div>
+                            <div class="mt-4 col-md-12">
                                 <div class="table-responsive">
                                     <table id="datatable" class="table table-hover dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
@@ -158,7 +160,7 @@
                                             </tr>
                                         </thead>
 
-                                        <tbody>
+                                        <tbody class="myTable">
 
                                         @if ($trans->count() > 0)
                                             @foreach ($trans as $item)
@@ -285,11 +287,22 @@
                     </div>
                 </div>
             </div>
+            <script>
+                $(document).ready(function(){
+                    $(".myInpuAA2").on("keyup", function() {
+                        var value = $(this).val().toLowerCase();
+                        $(".myTable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                });
+        </script>
             <!-- end row -->
         </div>
     </div>
     <!-- End Page-content -->
     <script>
+    
         var el = document.querySelector('.pag');
         el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
     </script>

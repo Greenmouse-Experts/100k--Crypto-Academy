@@ -39,13 +39,13 @@
             <span key="t-dashboards">User guide</span>
           </a>
         </li>
-        <li>
-          <a href="{{route('user.affiliate')}}">
-            <i class="bi bi-graph-up-arrow"></i>
-            <span key="t-dashboards">Affiliate</span>
-          </a>
-        </li>
         @if (Auth::user()->subscribe == 1)
+            <li>
+              <a href="{{route('user.affiliate')}}">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span key="t-dashboards">Affiliate</span>
+              </a>
+            </li>
             <li>
                 <a href="#">
                     <i class="bi bi-reception-4"></i>
