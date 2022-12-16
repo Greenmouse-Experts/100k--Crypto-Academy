@@ -80,11 +80,24 @@ class HomePageController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
+        if (session('ref_by')) {
+            $ref_by = session('ref_by');
+            $user = User::where('affiliate_id', $ref_by)->first();
+            $ref_by_id = $user->id;
+        } else {
+            if (!empty($input['ref_by'])) {
+                $sponsor = User::where('affiliate_id', $request->ref_by)->first();
+                $ref_by_id = $sponsor->id;
+            } else {
+                $ref_by_id = NULL;
+            }
+        }
 
         $user = User::create([
             'name' => ucfirst($request->name),
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'reffered_by' => $ref_by_id
         ]);
 
         $wal = new UserWallet();

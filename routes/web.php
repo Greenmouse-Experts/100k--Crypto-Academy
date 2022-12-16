@@ -48,6 +48,8 @@ Route::prefix('auth')->group(function () {
 
 Route::get('/logout', [App\Http\Controllers\HomePageController::class, 'logout'])->name('logout');
 
+Route::get('/ref/{id}', [App\Http\Controllers\Controller::class, 'ref'])->name('ref');
+
 // User Dashboard
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('user.dashboard');

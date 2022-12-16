@@ -24,17 +24,18 @@
           </a>
         </li>
         <li>
+            <a href="{{route('admin.unsubscribers')}}">
+              <i class="bi bi-journal-x"></i>
+              <span key="t-dashboards">Unsubscribers</span>
+            </a>
+        </li>
+        <li>
           <a href="{{route('admin.transaction')}}">
             <i class="bi bi-bank"></i>
             <span key="t-dashboards">Transaction</span>
           </a>
         </li>
-        {{-- <li>
-          <a href="{{route('admin.unsubscribers')}}">
-            <i class="bi bi-journal-x"></i>
-            <span key="t-dashboards">Unsubscribers</span>
-          </a>
-        </li>
+        {{--
          <li>
           <a href="{{route('admin.trainings')}}">
             <i class="bi bi-book-half"></i>

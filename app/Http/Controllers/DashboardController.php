@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\Tp_Transactioon;
 
 class DashboardController extends Controller
 {
@@ -36,6 +38,8 @@ class DashboardController extends Controller
     public function subscribe_now(Request $request)
     {
         $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
+
+
         if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
             Alert::error('Error', 'You don\'t have sufficient Balance to subscribe. Please choose another wallet type or deposit to your wallet to subscribe');
             return back();
@@ -46,7 +50,13 @@ class DashboardController extends Controller
             $userwallet->update();
             $user = User::findOrFail(Auth::user()->id);
             $user->subscribe = '1';
+            $user->affiliate_id = Str::random(4);
             $user->update();
+            //$user = User::findOrFail(Auth::user()->id);
+            $subscribe_amount = $request->amount;
+            $array = User::all();
+            $parent = $user->id;
+            $this->getAncestors($array, $subscribe_amount, $parent);
             $trans = new Transaction();
             $trans->type = 'Subscription';
             $trans->user_id = Auth::user()->id;
@@ -64,33 +74,132 @@ class DashboardController extends Controller
             return back();
         }
         //dd($request->wallet_type, $request->amount, $userwallet->ref_bonus);
-        if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
-            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose main wallet type to subscribe');
-            return back();
+        // if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
+        //     Alert::error('Error', 'You don\'t have sufficient Bonus Balance to subscribe. Please choose main wallet type to subscribe');
+        //     return back();
+        // }
+        // if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
+        //     $oldbal = $userwallet->ref_bonus;
+        //     $userwallet->ref_bonus = $oldbal - $request->amount;
+        //     $userwallet->update();
+        //     $user = User::findOrFail(Auth::user()->id);
+        //     $user->subscribe = '1';
+        //     $user->update();
+        //     $trans = new Transaction();
+        //     $trans->type = 'Subscription';
+        //     $trans->user_id = Auth::user()->id;
+        //     $trans->method = 'Bonus Balance';
+        //     $trans->amount = $request->amount;
+        //     $trans->status = 1;
+        //     $trans->save();
+        //     $notice = new Notification();
+        //     $notice->user_id = Auth::user()->id;
+        //     $notice->title = 'You just subscribe';
+        //     $notice->admin_title = 'Someone just subscribed';
+        //     $notice->description = 'You have successfully subscribe to our 100k Crypo Investing';
+        //     $notice->save();
+        //     Alert::success('Success', "You have successfully subscribe to our platform");
+        //     return back();
+        // }
+    }
+
+    function getAncestors($array, $deposit_amount, $parent = 0, $level = 1)
+    {
+
+        $referedMembers = '';
+        $parent = User::where('id', $parent)->first();
+        foreach ($array as $entry) {
+            //dd($entry->id);
+            if ($entry->id == $parent->reffered_by) {
+
+                //get settings
+                //$settings = Settings::where('id', '=', '1')->first();
+                //dd($entry);
+                if ($level == 1) {
+                    $earnings = 30 * $deposit_amount / 100;
+                    //add earnings to ancestor balance
+                    $user_wallet = UserWallet::where('user_id', $entry->id)->first();
+                    UserWallet::where('user_id', $entry->id)
+                        ->update([
+                            'bal' => $user_wallet->bal + $earnings,
+                            'ref_bonus' => $user_wallet->ref_bonus + $earnings,
+                        ]);
+
+                    //create history
+                    Tp_Transactioon::create([
+                        'user_id' => $entry->id,
+                        'plan' => "Credit",
+                        'amount' => $earnings,
+                        'type' => "Ref_bonus",
+                    ]);
+
+                } elseif ($level == 2) {
+                    $earnings = 10 * $deposit_amount / 100;
+                    //add earnings to ancestor balance
+                    $user_wallet = UserWallet::where('user_id', $entry->id)->first();
+                    UserWallet::where('user_id', $entry->id)
+                        ->update([
+                            'bal' => $user_wallet->bal + $earnings,
+                            'ref_bonus' => $user_wallet->ref_bonus + $earnings,
+                        ]);
+
+                    //create history
+                    Tp_Transactioon::create([
+                        'user_id' => $entry->id,
+                        'plan' => "Credit",
+                        'amount' => $earnings,
+                        'type' => "Ref_bonus",
+                    ]);
+
+                } elseif ($level == 3) {
+                    $earnings = 5 * $deposit_amount / 100;
+                    //add earnings to ancestor balance
+                    $user_wallet = UserWallet::where('user_id', $entry->id)->first();
+                    UserWallet::where('user_id', $entry->id)
+                        ->update([
+                            'bal' => $user_wallet->bal + $earnings,
+                            'ref_bonus' => $user_wallet->ref_bonus + $earnings,
+                        ]);
+
+                    //create history
+                    Tp_Transactioon::create([
+                        'user_id' => $entry->id,
+                        'plan' => "Credit",
+                        'amount' => $earnings,
+                        'type' => "Ref_bonus",
+                    ]);
+
+                } elseif ($level == 4) {
+                    //dd('here4');
+                    $earnings = 5 * $deposit_amount / 100;
+                    //add earnings to ancestor balance
+                    $user_wallet = UserWallet::where('user_id', $entry->id)->first();
+                    UserWallet::where('user_id', $entry->id)
+                        ->update([
+                            'bal' => $user_wallet->bal + $earnings,
+                            'ref_bonus' => $user_wallet->ref_bonus + $earnings,
+                        ]);
+
+                    //create history
+                    Tp_Transactioon::create([
+                        'user_id' => $entry->id,
+                        'plan' => "Credit",
+                        'amount' => $earnings,
+                        'type' => "Ref_bonus",
+                    ]);
+
+                }
+
+                if ($level == 5) {
+                    break;
+                }
+
+                //$referedMembers .= '- ' . $entry->name . '- Level: '. $level. '- Commission: '.$earnings.'<br/>';
+                $referedMembers .= $this->getAncestors($array, $deposit_amount, $entry->id, $level + 1);
+
+            }
         }
-        if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
-            $oldbal = $userwallet->ref_bonus;
-            $userwallet->ref_bonus = $oldbal - $request->amount;
-            $userwallet->update();
-            $user = User::findOrFail(Auth::user()->id);
-            $user->subscribe = '1';
-            $user->update();
-            $trans = new Transaction();
-            $trans->type = 'Subscription';
-            $trans->user_id = Auth::user()->id;
-            $trans->method = 'Bonus Balance';
-            $trans->amount = $request->amount;
-            $trans->status = 1;
-            $trans->save();
-            $notice = new Notification();
-            $notice->user_id = Auth::user()->id;
-            $notice->title = 'You just subscribe';
-            $notice->admin_title = 'Someone just subscribed';
-            $notice->description = 'You have successfully subscribe to our 100k Crypo Investing';
-            $notice->save();
-            Alert::success('Success', "You have successfully subscribe to our platform");
-            return back();
-        }
+        return $referedMembers;
     }
     public function guide()
     {
@@ -364,5 +473,71 @@ class DashboardController extends Controller
             'type' => 'success',
             'message' => 'Profile Updated Successfully!'
         ]);
+    }
+
+    public function getdownlines($array, $parent = 0, $level = 1)
+    {
+        $referedMembers = '';
+        foreach ($array as $entry) {
+            if ($entry->reffered_by == $parent) {
+
+                if ($level == 1) {
+                    $levelQuote = "Direct Referral";
+                } else {
+                    $levelQuote = "Indirect Referral";
+                }
+
+                $referedMembers .= "
+              <tr>
+              <td> $entry->name </td>
+              <td> $levelQuote </td>" .
+                    '<td><a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">' . "Level " . $level . "</a></td>" .
+                    '<td>' . $this->getUserParent($entry->id) . '</td>' .
+                    '<td>' . $this->getUserStatus($entry->id) . '</td>
+              <td>' . $this->getUserRegDate($entry->id) . '</td>
+              </tr>';
+
+                $referedMembers .= $this->getdownlines($array, $entry->id, $level + 1);
+            }
+
+            if ($level == 5) {
+                break;
+            }
+        }
+        return $referedMembers;
+    }
+
+    public function getdownCount($array, $parent = 0, $level = 1)
+    {
+        //$referedMembers = $array->reffered_by == $parent;
+        $referedMembers = User::where('reffered_by', $parent)->get();
+
+        return $referedMembers->count();
+    }
+
+    //Get user Parent
+    function getUserParent($id)
+    {
+        $user = User::where('id', $id)->first();
+        $parent = User::where('id', $user->reffered_by)->first();
+        if ($parent) {
+            return "$parent->name $parent->l_name";
+        } else {
+            return "null";
+        }
+    }
+
+    function getUserStatus($id)
+    {
+        $user = User::where('id', $id)->first();
+
+        return $user->status;
+    }
+
+    function getUserRegDate($id)
+    {
+        $user = User::where('id', $id)->first();
+
+        return $user->created_at;
     }
 }

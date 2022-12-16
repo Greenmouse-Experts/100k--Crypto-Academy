@@ -67,7 +67,8 @@ class AdminController extends Controller
 
     public function unsubscribers()
     {
-        return view('admin.unsubscribers');
+        $users = User::orderBy('id', 'Desc')->where('subscribe', '0')->paginate(10);
+        return view('admin.unsubscribers', compact('users'));
     }
 
 

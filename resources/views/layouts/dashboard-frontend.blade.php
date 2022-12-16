@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+
     <script type="text/javascript">
         window.setTimeout(function() {
             $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function() {
@@ -86,7 +88,7 @@
     <script src="{{URL::asset('dash/assets/libs/metismenu/metisMenu.min.js')}}"></script>
     <script src="{{URL::asset('dash/assets/libs/simplebar/simplebar.min.js')}}"></script>
     <script src="{{URL::asset('dash/assets/libs/node-waves/waves.min.js')}}"></script>
-
+    <script src="{{URL::asset('assets/js/fancyTable.min.js')}}"></script>
     <!-- apexcharts -->
     <script src="{{URL::asset('dash/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
     <!-- crypto-wallet init -->
@@ -203,7 +205,7 @@
     <!-- echarts js -->
   <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
   <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script>
-  
+
     <!-- dashboard init -->
     <script src="{{URL::asset('dash/assets/js/pages/dashboard.init.js')}}"></script>
 

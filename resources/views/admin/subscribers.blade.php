@@ -27,9 +27,9 @@
                             <div class="card-body border-bottom">
                                 <div class="d-flex align-items-center">
                                     <h5 class="mb-0 card-title flex-grow-1">Subscriber Lists</h5>
-                                    {{-- <div class="col-xxl-2 col-lg-4 me-2">
+                                    <div class="col-xxl-2 col-lg-4 me-2">
                                         <input type="search" class="form-control " id="searchInput" placeholder="Search for ...">
-                                    </div> --}}
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -49,7 +49,7 @@
                                                 <th scope="col">Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody class="myTable">
                                             @if ($users->count() > 0)
                                                 @foreach ($users as $item)
                                                     <tr>
@@ -136,7 +136,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="row justify-content-between align-items-center">
+                                <div class="row justify-content-between align-items-center pag">
                                     {{ $users->links('layouts.custom-paginate') }}
                                 </div>
                                 <!--end row-->
@@ -151,7 +151,21 @@
             </div>
         </div>
         <!-- End Page-content -->
+        <script>
+            $(document).ready(function(){
+                $(".searchInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
     </div>
+    <script>
+        var el = document.querySelector('.pag');
+        el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+    </script>
     <!-- end main content-->
 </div>
 <!-- Modal -->

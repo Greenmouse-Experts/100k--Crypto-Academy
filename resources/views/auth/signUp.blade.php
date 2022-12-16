@@ -93,6 +93,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @if(Session::has('ref_by'))
+                                        <div class="col-lg-12">
+                                            <label>Referral ID <span class="text-danger">*</span></label>
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <input type="text" placeholder="optional referral id" value="{{session('ref_by')}}" name="ref_by" class="input" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="col-lg-12">
+                                            <label>Referral ID <span class="text-danger">*</span></label>
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <input type="text" placeholder="optional referral id"  name="ref_by" class="input" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
                                     <p>
                                         By clicking Sign Up, you agree to the terms and conditions
                                     </p>

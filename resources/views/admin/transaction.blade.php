@@ -255,10 +255,11 @@
         <!-- End Page-content -->
     </div>
     <!-- end main content-->
+    <script>
+        var el = document.querySelector('.pag');
+        el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+    </script>
 </div>
 
-<script>
-    var el = document.querySelector('.pag');
-    el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
-</script>
+
 @endsection
