@@ -43,7 +43,7 @@
                                     <div class="col-sm-6">
                                         <div>
                                             <p class="text-muted mb-2">Available Balance</p>
-                                            <h5>$ {{Auth::user()->wallet->bal}}</h5>
+                                            <h5>${{number_format(Auth::user()->wallet->bal, 2)}}</h5>
                                         </div>
                                     </div>
                                     {{-- <div class="col-sm-6">
@@ -144,11 +144,14 @@
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Approved</span>
+                                                        @elseif($item->status == 2)
+                                                            <span class="badge badge-pill badge-soft-warning font-size-11">Pending</span>
+                                                        @elseif($item->status == 3)
+                                                            <span class="badge badge-pill badge-soft-danger font-size-11">Declined</span>
                                                         @else
                                                             <span class="badge bg-danger">Failed</span>
                                                         @endif
-
                                                     </td>
                                                     <td>
                                                         Crypto
@@ -171,6 +174,7 @@
                                                                             <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
                                                                         @else
                                                                             <p class="mb-4">Deposit Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            <p class="mb-4">Deposit Trans Hash: <span class="text-primary">{{$item->trans_hash}}</span></p>
                                                                         @endif
 
 
@@ -292,6 +296,12 @@
                             <label class="form-label">Deposit Address</label>
                             <div>
                                 <input type="text" class="form-control" name="address" readonly parsley-type="address" value="{{json_decode($response)->address_in}}" placeholder="Enter Your Deposit Address" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Transaction Hash/ID</label>
+                            <div>
+                                <input type="text" class="form-control" name="trans_hash" required parsley-type="trans_hash" placeholder="Enter Your Deposit Transaction Hash" />
                             </div>
                         </div>
                         <div class="col-lg-12 mb-5">

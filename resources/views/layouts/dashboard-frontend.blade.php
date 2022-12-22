@@ -26,7 +26,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 
     <script type="text/javascript">
@@ -89,122 +89,14 @@
     <script src="{{URL::asset('dash/assets/libs/simplebar/simplebar.min.js')}}"></script>
     <script src="{{URL::asset('dash/assets/libs/node-waves/waves.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/fancyTable.min.js')}}"></script>
-    <!-- apexcharts -->
-    <script src="{{URL::asset('dash/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
-    <!-- crypto-wallet init -->
-    <script src="{{URL::asset('dash/assets/js/pages/crypto-wallet.init.js')}}"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-    <!-- email automation chart -->
-    <script>
-        var options = {
-            series: [{
-                    name: "open",
-                    data: [76, 85, 101, 98, 87, 105, 91],
-                },
-                {
-                    name: "click",
-                    data: [35, 41, 36, 26, 45, 48, 52],
-                },
-            ],
-            chart: {
-                type: "bar",
-                height: 380,
-            },
-            colors: ["#F1972E", "#5FBF4F"],
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: "65%",
-                },
-            },
-            dataLabels: {
-                enabled: false,
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ["transparent"],
-            },
-            xaxis: {
-                categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-            },
-            yaxis: {
-                title: {},
-            },
-            fill: {
-                opacity: 1,
-            },
-        };
-
-        var chart = new ApexCharts(document.querySelector("#emailAuto"), options);
-        chart.render();
-    </script>
-
-    <!-- sales analysis chart -->
-    <script>
-        var options = {
-            series: [{
-                name: "Desktops",
-                data: [10, 26, 50, 70, 20, 40, 60]
-            }],
-            chart: {
-                height: 300,
-                type: "area",
-                zoom: {
-                    enabled: false
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                curve: "straight"
-            },
-            colors: ["#DD0EFF"],
-            fill: {
-                type: "gradient",
-                gradient: {
-                    shadeIntensity: 1,
-                    opacityFrom: 0.7,
-                    opacityTo: 0.9,
-                    stops: [0, 90, 100],
-                },
-            },
-            // grid: {
-            //   row: {
-            //     colors: ["transparent"],
-            //     opacity: 0,
-            //   },
-            //   column: {
-            //     colors: ["transparent"],
-            //     opacity: 0,
-            //   },
-            //   borderColor: "black",
-            //   yaxis: {
-            //     lines: {
-            //       show: true,
-            //     },
-            //   },
-            //   Xaxis: {
-            //     lines: {
-            //       show: true,
-            //       colors: ["black"],
-            //     },
-            //   },
-            // },
-            xaxis: {
-                categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-            },
-        };
-        var chart = new ApexCharts(document.getElementById("sales"), options);
-        chart.render();
-    </script>
 
     <script src="https://kit.fontawesome.com/997b229808.js" crossorigin="anonymous"></script>
 
     <!-- echarts js -->
-  <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
-  <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script>
+  {{-- <script src="{{URL::asset('admin/assets/libs/echarts/echarts.min.js')}}"></script>
+  <script src="{{URL::asset('admin/assets/js/pages/echarts.init.js')}}"></script> --}}
 
     <!-- dashboard init -->
     <script src="{{URL::asset('dash/assets/js/pages/dashboard.init.js')}}"></script>

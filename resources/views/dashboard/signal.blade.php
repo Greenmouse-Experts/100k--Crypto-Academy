@@ -27,11 +27,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title mb-4">Signal link</h5>
-                            <div class="hstack gap-3">
-                                <input class="form-control me-auto" type="text" value="100kcrytpo/signal2022" readonly id="myInput"">
-                                <button type=" button" class="btn btn-success" onclick="myFunction()">JoinLink</button>
-                                <div class="vr"></div>
-                            </div>
+                            <p>Our signals, crypto calls, updates and guides take place in our Discord forum. You will find your personal invite link below.
+                            </p>
+                            <p><strong>Note: </strong>
+                                This link is your private invite link. Never share it with anyone under any circumstances. If our algorithm dictates that you shared this link, you will lose your access to our community.
+                            </p>
+                            <p><a href="https://discord.gg/mg7gjwdYPsCke" target="_blank" rel="noopener noreferrer">JOIN FORUM</a></p>
                         </div>
                     </div>
                 </div>
@@ -47,17 +48,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-4">Signal Strength</h4>
-                                <div id="gauge-chart" data-colors='["--bs-success","--bs-primary","--bs-danger"]' class="e-charts"></div>
-                            </div>
-                        </div>
-                        <!--end card-->
-                    </div>
-                </div>
+
                 <!-- <div class="row">
                     <div class="col-lg-12">
                         <div class="card">

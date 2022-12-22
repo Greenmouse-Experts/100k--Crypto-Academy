@@ -11,12 +11,14 @@
             <span key="t-dashboards">Dashboards</span>
           </a>
         </li>
+        @if(Auth::guard('admin')->user()->type == 'super admin')
         <li>
           <a href="{{route('admin.members')}}">
             <i class="bi bi-person-circle"></i>
             <span key="t-dashboards">Members</span>
           </a>
         </li>
+        @endif
         <li>
           <a href="{{route('admin.subscribers')}}">
             <i class="bi bi-journal-check"></i>
@@ -29,10 +31,11 @@
               <span key="t-dashboards">Unsubscribers</span>
             </a>
         </li>
+        @if(Auth::guard('admin')->user()->type == 'super admin')
         <li>
           <a href="{{route('admin.transaction')}}">
             <i class="bi bi-bank"></i>
-            <span key="t-dashboards">Transaction</span>
+            <span key="t-dashboards">Transaction <span class="badge bg-warning">{{\App\Models\Transaction::where('status', 2)->get()->count()}}</span></span>
           </a>
         </li>
         {{--
@@ -49,23 +52,26 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://discord.gg/mg7gjwdYPsCke" target="_blank">
             <i class="bi bi-reception-4"></i>
             <span key="t-dashboards">Signal Room</span>
           </a>
         </li>
+        @endif
         <li>
           <a href="{{route('admin.profile')}}">
             <i class="bi bi-sliders2-vertical"></i>
             <span key="t-tasks">Profile</span>
           </a>
         </li>
+        @if(Auth::guard('admin')->user()->type == 'super admin')
         <li>
           <a href="{{route('admin.role')}}">
             <i class="bi bi-people"></i>
-            <span key="t-dashboards">Admin User</span>
+            <span key="t-dashboards">Sub Admin</span>
           </a>
         </li>
+        @endif
         <!-- <li>
           <a>
             <i class="bi bi-person-check"></i>

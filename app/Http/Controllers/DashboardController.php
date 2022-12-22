@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Tp_Transactioon;
+use App\Notifications\SendVerificationCode;
+use App\Notifications\DepositNotification;
+use App\Notifications\WithdrawalNotification;
+use App\Notifications\WitdrawalNotificationOTP;
+use Illuminate\Support\Facades\Crypt;
 
 class DashboardController extends Controller
 {
@@ -280,17 +285,19 @@ class DashboardController extends Controller
 
     public function deposit_post(Request $request)
     {
+
         $user = User::findOrFail(Auth::user()->id);
-        $wall = UserWallet::where('user_id', $user->id)->first();
-        $oldbal = $wall->bal;
-        $wall->bal = $oldbal + $request->amount;
+        //$wall = UserWallet::where('user_id', $user->id)->first();
+        //$oldbal = $wall->bal;
+        //$wall->bal = $oldbal + $request->amount;
         $dep = new Transaction();
         $dep->user_id = $user->id;
         $dep->type = "Deposit";
         $dep->amount = $request->amount;
         $dep->address = $request->address;
-        $dep->status = 1;
-        $wall->update();
+        $dep->trans_hash = $request->trans_hash;
+        $dep->status = 2;
+        //$wall->update();
         $dep->save();
         $notice = new Notification();
         $notice->user_id = Auth::user()->id;
@@ -298,7 +305,8 @@ class DashboardController extends Controller
         $notice->admin_title = 'Someone just deposited';
         $notice->description = 'You have successfully make a deposit to your wallet';
         $notice->save();
-        Alert::success('Success', "You have successfully deposit to your wallet");
+        $user->notify(new DepositNotification($dep, $user));
+        Alert::success('Success', "You have successfully deposit to your wallet, please wait for admin to verify");
         return back();
     }
 
@@ -312,15 +320,42 @@ class DashboardController extends Controller
     {
         $user = User::where('id', Auth::user()->id)->first();
         if (!Hash::check($request->password, $user->password)) {
-            Alert::error('Error', 'Your password iis incorrect');
+            Alert::error('Error', 'Your password is incorrect');
             return back();
         }
         $userwallet = UserWallet::where('user_id', Auth::user()->id)->first();
         if ($request->wallet_type == "main_wallet" and $request->amount > $userwallet->bal) {
-            Alert::error('Error', 'You don\'t have sufficient Main Balance to withdraw!');
+            Alert::error('Error', 'You don\'t have sufficient Balance in your wallet to withdraw!');
             return back();
         }
-        if ($request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal) {
+        if (is_null($request->code) and $request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal) {
+            $code = mt_rand(100000, 999999);
+            $user->update([
+                'code' => $code
+            ]);
+            $user->notify(new WitdrawalNotificationOTP($user));
+            //Alert::success('Success', 'We have sent a otp to your email, please check!');
+            return redirect()->route('user.withdraw')->with([
+                'type' => 'success',
+                'token' => Crypt::encrypt($user->email),
+                'message' => 'Withdraw is pending, We have sent a otp to your email, please check to verify you withdrawal!',
+                'amount' => $request->amount,
+                'address' => $request->address,
+                'password' => $request->password,
+            ]);
+        }
+        if ($user->code == $request->code and $request->wallet_type == "main_wallet" and $request->amount < $userwallet->bal) {
+
+            $userfinder = Crypt::decrypt($request->token);
+            //dd($userfinder);
+            $user = User::where('email', $userfinder)->first();
+
+            $this->validate($request, [
+                'code' => ['required', 'numeric']
+            ]);
+            $user->code = null;
+            $user->update();
+
             $oldbal = $userwallet->bal;
             $userwallet->bal = $oldbal - $request->amount;
             $userwallet->update();
@@ -330,42 +365,43 @@ class DashboardController extends Controller
             $trans->amount = $request->amount;
             $trans->address = $request->address;
             $trans->method = 'Main Wallet';
-            $trans->status = 1;
+            $trans->status = 2;
             $trans->save();
             $notice = new Notification();
             $notice->user_id = Auth::user()->id;
             $notice->title = 'You just withdraw';
             $notice->admin_title = 'Someone just withdraw';
-            $notice->description = 'You have successfully withdraw to your address';
+            $notice->description = 'You have successfully withdraw to your address!';
             $notice->save();
-            Alert::success('Success', "You have successfully withdraw");
+            $user->notify(new WithdrawalNotification($trans, $user));
+            Alert::success('Success', "You have successfully withdraw, please wait for admin approval!");
             return back();
         }
-        if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
-            Alert::error('Error', 'You don\'t have sufficient Bonus Balance to withdraw. Please choose main wallet type!');
-            return back();
-        }
-        if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
-            $oldbal = $userwallet->ref_bonus;
-            $userwallet->ref_bonus = $oldbal - $request->amount;
-            $userwallet->update();
-            $trans = new Transaction();
-            $trans->type = 'Subscription';
-            $trans->user_id = Auth::user()->id;
-            $trans->method = 'Bonus Balance';
-            $trans->address = $request->address;
-            $trans->amount = $request->amount;
-            $trans->status = 1;
-            $trans->save();
-            $notice = new Notification();
-            $notice->user_id = Auth::user()->id;
-            $notice->title = 'You just withdraw';
-            $notice->admin_title = 'Someone just withdraw';
-            $notice->description = 'You have successfully withdraw to your address';
-            $notice->save();
-            Alert::success('Success', "You have successfully withdraw");
-            return back();
-        }
+        // if ($request->wallet_type == "ref_bonus" and $request->amount > $userwallet->ref_bonus) {
+        //     Alert::error('Error', 'You don\'t have sufficient Bonus Balance to withdraw. Please choose main wallet type!');
+        //     return back();
+        // }
+        // if ($request->wallet_type == "ref_bonus" and $request->amount < $userwallet->ref_bonus) {
+        //     $oldbal = $userwallet->ref_bonus;
+        //     $userwallet->ref_bonus = $oldbal - $request->amount;
+        //     $userwallet->update();
+        //     $trans = new Transaction();
+        //     $trans->type = 'Subscription';
+        //     $trans->user_id = Auth::user()->id;
+        //     $trans->method = 'Bonus Balance';
+        //     $trans->address = $request->address;
+        //     $trans->amount = $request->amount;
+        //     $trans->status = 1;
+        //     $trans->save();
+        //     $notice = new Notification();
+        //     $notice->user_id = Auth::user()->id;
+        //     $notice->title = 'You just withdraw';
+        //     $notice->admin_title = 'Someone just withdraw';
+        //     $notice->description = 'You have successfully withdraw to your address';
+        //     $notice->save();
+        //     Alert::success('Success', "You have successfully withdraw");
+        //     return back();
+        // }
     }
 
     public function subscribe()
@@ -388,6 +424,14 @@ class DashboardController extends Controller
     public function affiliate()
     {
         return view('dashboard.affiliate');
+    }
+
+    public function read_notice($id)
+    {
+        $notice = Notification::findOrFail($id);
+        $notice->status = 'read';
+        $notice->update();
+        return back();
     }
 
     public function profile_update(Request $request)

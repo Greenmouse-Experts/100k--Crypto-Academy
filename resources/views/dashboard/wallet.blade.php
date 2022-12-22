@@ -181,11 +181,14 @@
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Approved</span>
+                                                        @elseif($item->status == 2)
+                                                            <span class="badge badge-pill badge-soft-warning font-size-11">Pending</span>
+                                                        @elseif($item->status == 3)
+                                                            <span class="badge badge-pill badge-soft-danger font-size-11">Declined</span>
                                                         @else
                                                             <span class="badge bg-danger">Failed</span>
                                                         @endif
-
                                                     </td>
                                                     <td>
                                                         Crypto
@@ -206,11 +209,15 @@
                                                                         <p class="mb-2">Transaction id: <span class="text-primary">#100k{{$item->id}}</span></p>
                                                                         @if ($item->type == 'Subscription')
                                                                             <p class="mb-4">Wallet Type: <span class="text-primary">{{$item->method}}</span></p>
-                                                                        @else
-                                                                            <p class="mb-4">Billing Address: <span class="text-primary">{{$item->address}}</span></p>
                                                                         @endif
-
-
+                                                                        @if($item->type == 'Deposit')
+                                                                            <p class="mb-2">Deposit Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            <p class="mb-4">Deposit Trans Hash: <span class="text-primary">{{$item->trans_hash}}</span></p>
+                                                                        @endif
+                                                                        @if($item->type == 'Withdraw')
+                                                                            <p class="mb-2">Withdrawal Address: <span class="text-primary">{{$item->address}}</span></p>
+                                                                            <p class="mb-4">Withdrawal Trans Hash: <span class="text-primary">{{$item->trans_hash}}</span></p>
+                                                                        @endif
                                                                         <div class="table-responsive">
                                                                             <table class="table align-middle table-nowrap">
 
@@ -302,7 +309,7 @@
     </div>
     <!-- End Page-content -->
     <script>
-    
+
         var el = document.querySelector('.pag');
         el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
     </script>
