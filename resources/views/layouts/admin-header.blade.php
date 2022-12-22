@@ -82,7 +82,7 @@
                     </div>
                 </button>
                 @php
-                    $not = \App\Models\Notification::where('admin_status', 'unread')->get();
+                    $not = \App\Models\Notification::where('admin_status', 'unread')->orderBy('id', 'desc')->get();
                 @endphp
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">

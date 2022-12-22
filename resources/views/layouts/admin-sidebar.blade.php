@@ -45,12 +45,12 @@
             <span key="t-dashboards">Trainings</span>
           </a>
         </li> --}}
-        <li>
+        {{--<li>
           <a href="{{route('admin.affiliate')}}">
             <i class="bi bi-graph-up-arrow"></i>
             <span key="t-dashboards">Affiliate</span>
           </a>
-        </li>
+        </li>--}}
         <li>
           <a href="https://discord.gg/mg7gjwdYPsCke" target="_blank">
             <i class="bi bi-reception-4"></i>
