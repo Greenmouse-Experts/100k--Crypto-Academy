@@ -28,7 +28,7 @@
             <div class="col-lg-12">
                 <div class="affliata">
                     <p>
-                        100kCrypto wants to ensure their members do not lack investment funds. And that is why we give 40% commission to our affiliates.
+                        100kCrypto wants to ensure their members do not lack investment funds. And that is why we give 50% commission to our affiliates.
                     </p>
                     <p>
                         To ensure that every member wins, we have in-house marketers who will promote your affiliate link with paid and organic ads. All you have to do is to give them the job.
@@ -36,7 +36,6 @@
                     <p>
                         Additionally, we have excellent affiliate training mentorship and great affiliate materials to help you get unending sales. See you in the inside
                     </p>
-
                 </div>
             </div>
             <div class="col-lg-3"></div>
@@ -86,6 +85,24 @@
                 </div>
             </div>
             <div class="col-lg-1"></div>
+            <p class="ensure">
+                <b>To ensure even bigger earnings for our members and an income that is completely passive, our 50% commissions are paid 4 levels deep. </b>
+            </p>
+            <p>
+                Level 1:  30%  - (Your direct referral) 
+            </p>
+            <p>
+                Level 2: 10%  - ( Referrals from level 1)
+            </p>
+            <p>
+                Level 3:  5%  - (Referrals from level 2)
+            </p>
+            <p>
+                Level 4:  5%  - (Referrals from level 3)
+            </p>
+            <p class="sure">
+            In addition to our excellent affiliate training, we have in-house marketing experts who will promote your links for you and get you unending sales. All you have to do is to give them the job and they bring you results. 
+            </p>
         </div>
     </div>
 </section>

@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="Welcome To {{config('app.name')}}">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!-- Favocon -->
-        <link rel="shortcut icon" href="{{URL::asset('assets/images/fav.png')}}" type="image/x-icon">
+        <link rel="shortcut icon" href="https://res.cloudinary.com/greenmouse-tech/image/upload/v1671715599/EProd%20Images/20221125_224354_1_bku9wb_1_voaw4e.jpg" type="image/x-icon">
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,8 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-12 all">
-                        <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview"  width="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" src="https://www.youtube.com/embed/NZ-BodGKluU" title="100KCrypto Investing Getting Started Guide 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview"  width="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>

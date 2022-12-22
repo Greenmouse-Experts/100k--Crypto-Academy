@@ -1951,11 +1951,10 @@ footer .input-group-text img{
 }
 .affliata p{
     font-weight: 500;
-    font-size: 18px;
 }
 .Affliate .text-center{
     padding: 40px 0 0 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
 }
 .Affliate .alt{
@@ -2082,4 +2081,10 @@ footer .input-group-text img{
         max-width: 100% !important;
         margin: auto !important;
     }
+}
+.ensure{
+    padding: 50px 0 0 0;
+}
+.sure{
+    padding: 10px 0 0 0;
 }

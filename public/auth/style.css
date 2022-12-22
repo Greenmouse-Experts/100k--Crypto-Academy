@@ -29,12 +29,148 @@ body {
     background-color: #000;
     border-radius: 2px;
 }
-
+/*****Header Navbar*****/
+header .navbar{
+    padding: 5px 5px !important;
+    background-color: #003D6C;
+}
+header .navbar .navbar-brand img{
+    width: 110px;
+}
+header .navbar .navbar-nav{
+    position: relative;
+    left: 150px;
+    margin-top: 10px;
+}
+header a{
+    text-decoration: none;
+}
+header .navbar .nav-item{
+    padding: 5px 30px;
+}
+header .navbar .nav-item .nav-link{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+header nav .navbar-nav .nav-item .active{
+    color: #fff !important;
+    border-top: 1px solid #fff;
+}
+header .navbar .nav-item .nav-link:hover{
+    color: #fff;
+}
+header .navbar .nav-item .nav-link:after {
+    display:block;
+    content: '';
+    padding: 2px 0 0 0;
+    border-radius: 1px;
+}
+header .navbar .nav-item .nav-link:hover::after{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+header .navbar .nav-auth{
+    margin-top: 23px;
+}
+header .navbar .nav-auth a{
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 2px;
+    font-weight: 600;
+    font-size: 15px;
+}
+header .navbar .nav-auth a.btn-signup{
+    background-color: #fff;
+    transition: 0.6s;
+    color: #1D79D0;
+}
+header .navbar .navbar-toggler{
+    border: 1px solid #fff !important;
+}
+header .navbar .navbar-toggler i{
+    color: #fff;
+}
+header .navbar .navbar-toggler:focus, .header .navbar .navbar-toggler:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #fff !important; 
+}
+@media(max-width: 1400px){
+    header .navbar .nav-item{
+        padding: 5px 15px;
+    }
+}
+@media(max-width: 1199px){
+    header .navbar .nav-item{
+        padding: 5px 10px;
+    }
+    header .navbar .navbar-nav{
+        position: relative;
+        left: 80px;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 991px){
+    header .navbar .offcanvas{
+        background-color: #000;
+    }
+    header .navbar .navbar-nav{
+        position: relative;
+        left: 20px;
+        margin-top: 10px;
+    }
+    header .navbar .offcanvas-body{
+        margin-top: -20px;
+    }
+    header .navbar .nav-item{
+        padding: 7px 1px;
+    }
+    .header .navbar .nav-item .nav-link{
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    header .navbar .nav-auth a{
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin: 2px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    header .navbar .nav-auth{
+        margin-top: 10px;
+    }
+    header .navbar .btn-offcanvas-close i{
+        font-size: 22px;
+        color: #fff;
+        background-color: #000;
+        border: none;
+    }
+    header .navbar .offcanvas button{
+        background-color: #000;
+        border: none;
+    }
+}
+/* @media(max-width: 373px){
+    header .navbar .navbar-brand img{
+        width: 50px;
+    }
+} */
+/* Header Ends */
 /**********SIGN IN ************/
 #lent {
     background-color: #003D6C;
 }
-
+.sign-in{
+    padding: 65px 0 0 0;
+}
 .sign-in .images img {
     margin-top: 30px !important;
     width: 30%;
@@ -156,7 +292,9 @@ body {
 #lent {
     background-color: #003D6C;
 }
-
+.log{
+    padding: 120px 0px 0px 0px;
+}
 .log .images img {
     margin-top: 30px !important;
     width: 25%;

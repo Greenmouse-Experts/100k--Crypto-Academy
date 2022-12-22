@@ -19,7 +19,7 @@
                 <div class="images">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668693550/EProd%20Images/ezgif.com-gif-maker_qshc4y.gif" class="svg" draggable="false" alt="">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669044548/EProd%20Images/Group_8795_p0bdrh.png" class="right" alt="">
-                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669044549/EProd%20Images/Group_8726_thigog.png" class="left" alt="">
+                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1671721574/EProd%20Images/Group_8870_ota2nu.png" class="left" alt="">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669044219/EProd%20Images/business-3d-three-young-women-with-phones_1_qfa39d.png" class="middle" alt="">
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <div class="perfect">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669045649/EProd%20Images/icons8-classroom-50_2_1_fxovhs.png" draggable="false" alt="">
                         <h1>
-                            5+
+                            10+
                         </h1>
                         <p>
                             Total Analyst
@@ -66,7 +66,7 @@
                     <div class="perfect">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669045649/EProd%20Images/icons8-personal-trainer-50_1_dta78u.png" draggable="false" alt="">
                         <h1>
-                            40%
+                            50%
                         </h1>
                         <p>
                             Affiliate Bonus
@@ -94,7 +94,7 @@
             <div class="col-lg-6">
                 <div class="colum">
                     <!-- <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668698654/EProd%20Images/undraw_reading_time_re_phf7_2_qyzokx.png" draggable="false" alt=""> -->
-                    <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/NZ-BodGKluU" title="100KCrypto Investing Getting Started Guide 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -219,7 +219,7 @@
                         ”
                     </p>
                     <h6>
-                        Abdul 
+                        James 
                     </h6>
                 </div>
             </div>

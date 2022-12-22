@@ -4,8 +4,8 @@
             <div class="col-sm-3">
                 <div class="conting">
                     <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" draggable="false" alt="">
-                    <p>
-                        Support@100kcrypto.com
+                    <p style="color: #003D6C !important;">
+                        hhhhhhhhhhhhhh
                     </p>
                     <div class="speacial">
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1668766054/EProd%20Images/Line_5_zj46r0.png" draggable="false" alt="">
@@ -38,7 +38,7 @@
                         </a>
                     </p>
                     <p>
-                        <a href="{{route('blog')}}">
+                        <a href="https://medium.com/@100kcryptoinvesting/subscribe">
                             Blog
                         </a>
                     </p>

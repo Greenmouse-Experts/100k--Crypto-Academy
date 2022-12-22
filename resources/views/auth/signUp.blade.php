@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" >
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <!-- Favocon -->
-    <link rel="shortcut icon" href="{{URL::asset('assets/images/fav.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/greenmouse-tech/image/upload/v1671715599/EProd%20Images/20221125_224354_1_bku9wb_1_voaw4e.jpg" type="image/x-icon">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,58 @@
     <div style="z-index: 100000; width: 100%; position: absolute;">
         @include('layouts.alert')
     </div>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="header">
+            <div class="container">
+                <a class="navbar-brand" href="{{route('index')}}">
+                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" alt="EPROD">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-square"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2">
+                            <li class="nav-item">
+                                <a href="{{route('index')}}" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" class="routers">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('about')}}" class="nav-link {{ (request()->is('about')) ? 'active' : '' }}" class="routers">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('affiliate')}}" class="nav-link {{ (request()->is('affiliate')) ? 'active' : '' }}" class="routers">
+                                    Affiliate
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('faq')}}" class="nav-link {{ (request()->is('faq')) ? 'active' : '' }}" class="routers">
+                                    FAQs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('contact')}}" class="nav-link {{ (request()->is('contact')) ? 'active' : '' }}" class="routers">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="nav-auth">
+                            <a href="{{route('signIn')}}" class="btn-login">Sign In</a>
+                            <a href="{{route('signUp')}}" class="btn-signup">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- Alerts End -->
     <!-- Sign-up -->
     <section class="sign-in">
@@ -45,11 +97,11 @@
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="images">
+                        <!-- <div class="images">
                             <a href="{{route('index')}}">
                                 <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" alt="">
                             </a>
-                        </div>
+                        </div> -->
                         <div class="sign">
                             <form class="sign-div" action="{{ route('register')}}" method="post">
                                 @csrf
@@ -129,4 +181,5 @@
             </div>
         </div>
     </section>
+    <script src="{{URL::asset('auth/js/bootstrap.min.js')}}"></script>
 </body>

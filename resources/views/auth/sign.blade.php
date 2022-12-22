@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta http-equiv="X-UA-Compatible" >
+
+<head>
+    <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <!-- Favocon -->
-    <link rel="shortcut icon" href="{{URL::asset('assets/images/fav.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/greenmouse-tech/image/upload/v1671715599/EProd%20Images/20221125_224354_1_bku9wb_1_voaw4e.jpg" type="image/x-icon">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +22,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>{{config('app.name')}} - SignIn</title>
-    
+
     <script>
         window.setTimeout(function() {
-            $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function(){
-                $(this).remove(); 
+            $(".alert-timeout").fadeTo(500, 0).slideUp(1000, function() {
+                $(this).remove();
             });
         }, 8000);
     </script>
@@ -37,18 +38,70 @@
         @include('layouts.alert')
     </div>
     <!-- Alerts End -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="header">
+            <div class="container">
+                <a class="navbar-brand" href="{{route('index')}}">
+                    <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" alt="EPROD">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-square"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2">
+                            <li class="nav-item">
+                                <a href="{{route('index')}}" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" class="routers">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('about')}}" class="nav-link {{ (request()->is('about')) ? 'active' : '' }}" class="routers">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('affiliate')}}" class="nav-link {{ (request()->is('affiliate')) ? 'active' : '' }}" class="routers">
+                                    Affiliate
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('faq')}}" class="nav-link {{ (request()->is('faq')) ? 'active' : '' }}" class="routers">
+                                    FAQs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('contact')}}" class="nav-link {{ (request()->is('contact')) ? 'active' : '' }}" class="routers">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="nav-auth">
+                            <a href="{{route('signIn')}}" class="btn-login">Sign In</a>
+                            <a href="{{route('signUp')}}" class="btn-signup">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- Sign-up -->
     <section class="log">
-        <div class="container">
+        <div class="container justify-content-center">
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="images">
+                        <!-- <div class="images">
                             <a href="{{route('index')}}">
                                 <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669718215/EProd%20Images/20221125_224354_1_bku9wb.jpg" alt="">
                             </a>
-                       </div>
+                        </div> -->
                         <div class="sign">
                             <form class="sign-div" action="{{ route('user.login')}}" method="post">
                                 @csrf
@@ -60,8 +113,7 @@
                                         <label>Email</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <input type="email" placeholder="Enter your email address" name="email"
-                                                    class="input" required>
+                                                <input type="email" placeholder="Enter your email address" name="email" class="input" required>
                                             </div>
                                         </div>
                                     </div>
@@ -70,8 +122,7 @@
                                         <label>Password</label>
                                         <div class="row">
                                             <div class="col-md-12 mb-4">
-                                                <input type="password" placeholder="Enter Your Password" name="password"
-                                                    class="input" required>
+                                                <input type="password" placeholder="Enter Your Password" name="password" class="input" required>
                                             </div>
                                         </div>
                                     </div>
@@ -84,8 +135,7 @@
                                         <button class="form-btn" type="submit">Log in </button>
                                     </div>
                                     <!--Message-->
-                                    <p style="text-align: center;margin-top: 20px;">Don’t have an account ? <a
-                                            href="{{route('signUp')}}">Sign Up</a> </p>
+                                    <p style="text-align: center;margin-top: 20px;">Don’t have an account ? <a href="{{route('signUp')}}">Sign Up</a> </p>
                                 </div>
                             </form>
                         </div>
@@ -95,4 +145,5 @@
             </div>
         </div>
     </section>
+    <script src="{{URL::asset('auth/js/bootstrap.min.js')}}"></script>
 </body>

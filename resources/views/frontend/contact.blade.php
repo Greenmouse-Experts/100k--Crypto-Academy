@@ -24,17 +24,19 @@
                 <div class="col-md-6">
                     <div class="support">
                         <p>
-                        “ Members satisfaction is our top priority! Our support service is available 24/7 to assist you with any questions you may have on our Platform: 
+                        Members' satisfaction is our top priority! Our support team is available 24/7 to assist you with any questions you may have with regards to our community, payments and other business operations: 
                         </p>
                         <p>
-                        For our subscribed members, use the support section in our signal forum. For non-subscribers and/or other issues, send us an email or use the contact form.”
+                        For our subscribed members, use the support section in our signal forum. For non-subscribers, we have a dedicated support team on Telegram waiting to respond to you asap.
                         </p>
                         <ul>
                             <li>
                                 
                             </li>
                             <li>
-                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667815607/EProd%20Images/Group_221_lfiz3t.png" alt="">
+                                <a href="support@100kcrypto.com">
+                                <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1667815607/EProd%20Images/Group_221_lfiz3t.png" title="Email Us" alt="">
+                                </a>
                             </li>
                             <li>
                                 
