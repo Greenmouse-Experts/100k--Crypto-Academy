@@ -78,6 +78,7 @@ class AdminController extends Controller
         $a->email = $request->email;
         $a->password = Hash::make('admin1234');
         $a->type = 'sub admin';
+        $a->is_admin = 1;
         $a->save();
         Alert::success('Success', 'Sub Admin created successfully with default password: admin1234');
         return back();
@@ -172,6 +173,15 @@ class AdminController extends Controller
         return view('admin.viewmembers', compact('user'));
     }
 
+    public function admin_change_type(Request $request, $id)
+    {
+        $user = Admin::where('id', $id)->first();
+        $user->is_admin = $request->status;
+        $user->update();
+        Alert::success('Success', 'Sub admin Status Changed Successfully');
+        return back();
+    }
+    
     public function change_type(Request $request, $id)
     {
         $user = User::where('id', $id)->first();
@@ -223,6 +233,9 @@ class AdminController extends Controller
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
             if ($user->is_admin == 1) {
                 return redirect()->route('admin.welcome');
+            }
+            if ($user->is_admin == 2) {
+                return back()->with('failure_report', 'You have been blocked');
             }
 
             return back()->with('failure_report', 'You are not an Administrator');
