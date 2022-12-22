@@ -80,7 +80,7 @@
                                         <tr>
                                             <td colspan="2">
                                                 <span data-bs-toggle="tooltip" data-bs-placement="top" title="Approve">
-                                                    <a href="#jobActive-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-success"><i class="bi bi-check2"></i></i>
+                                                    <a href="#jobActive-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-success"><i class="bi bi-check2"></i> Approve
                                                     </a>
                                                 </span>
                                                 <div class="modal fade" id="jobActive-{{$trans->id}}" tabindex="-1" aria-labelledby="jobActiveLabel" aria-hidden="true">
@@ -111,7 +111,7 @@
                                             </td>
                                             <td>
                                                 <span data-bs-toggle="tooltip" data-bs-placement="top" title="Decline">
-                                                    <a href="#jobDelete-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-danger"><i class="bi bi-eye-slash"></i></a>
+                                                    <a href="#jobDelete-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-danger"><i class="bi bi-eye-slash"></i> Decline</a>
                                                 </span>
                                                 <div class="modal fade" id="jobDelete-{{$trans->id}}" tabindex="-1" aria-labelledby="jobDeleteLabel" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered modal-md">
@@ -145,7 +145,7 @@
                                         <tr>
                                             <td colspan="2">
                                                 <span data-bs-toggle="tooltip" data-bs-placement="top" title="Approve">
-                                                    <a href="#withActive-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-md bg-success"><i class="bi bi-check2"></i></i>
+                                                    <a href="#withActive-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-md bg-success"><i class="bi bi-check2"></i> Approve
                                                     </a>
                                                 </span>
                                                 <div class="modal fade" id="withActive-{{$trans->id}}" tabindex="-1" aria-labelledby="jobActiveLabel" aria-hidden="true">
@@ -181,7 +181,7 @@
                                             </td>
                                             <td>
                                                 <span data-bs-toggle="tooltip" data-bs-placement="top" title="Decline">
-                                                    <a href="#withDelete-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-danger"><i class="bi bi-eye-slash"></i></a>
+                                                    <a href="#withDelete-{{$trans->id}}" data-bs-toggle="modal" class="btn btn-sm bg-danger"><i class="bi bi-eye-slash"></i> Decline</a>
                                                 </span>
                                                 <div class="modal fade" id="withDelete-{{$trans->id}}" tabindex="-1" aria-labelledby="jobDeleteLabel" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered modal-lg">
