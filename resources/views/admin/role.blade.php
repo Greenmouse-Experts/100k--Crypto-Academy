@@ -30,7 +30,6 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-
                             <div class="table-responsive">
                                 <table class="table align-middle table-nowrap table-hover">
                                     <thead class="table-light">
@@ -39,6 +38,7 @@
                                             <th scope="col">Name</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Joined Date</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -60,21 +60,76 @@
                                                     <td>{{$item->email}}</td>
                                                     <td>
                                                         <div>
-                                                            <a href="javascript: void(0);" class="font-size-11 m-1">{{$item->created_at->format('D M Y')}} at {{$item->created_at->format('h:m a')}}</a>
+                                                            <a href="javascript: void(0);" class="font-size-11 m-1">{{$item->created_at->format('D d, M Y')}} at {{$item->created_at->format('h:m a')}}</a>
                                                         </div>
                                                     </td>
                                                     <td>
+                                                        @if ($item->is_admin == 1)
+                                                            <span class="badge bg-success">Active</span>
+                                                        @else
+                                                            <span class="badge bg-danger">Inactive</span>
+                                                        @endif
+                                                    </td>
+                                                    <td>
                                                         <ul class="list-unstyled hstack gap-1 mb-0">
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
-                                                                <a href="{{route('admin.viewmembers', $item->id)}}" class="btn btn-sm btn-soft-primary"><i class="mdi mdi-eye-outline"></i></a>
+                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Activate">
+                                                                <a href="#jobActive-{{$item->id}}" data-bs-toggle="modal" class="btn btn-sm btn-soft-success"><i class="bi bi-check2"></i></i>
+                                                                </a>
                                                             </li>
-                                                            {{-- <li data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <a href="#subscriberedit" class="btn btn-sm btn-soft-info"><i class="mdi mdi-pencil-outline"></i></a>
+                                                            <div class="modal fade" id="jobActive-{{$item->id}}" tabindex="-1" aria-labelledby="jobActiveLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered modal-md">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-body px-4 text-center">
+                                                                            <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                            <div class="avatar-sm mb-4 mx-auto">
+                                                                                <div class="avatar-title bg-primary text-primary bg-opacity-10 font-size-20 rounded-3">
+                                                                                    <i class="mdi mdi-trash-can-outline"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p class="text-muted font-size-16 mb-4">Are you sure you want to activate this Sub Admin.</p>
+
+                                                                            <div class="hstack gap-2 justify-content-center mb-0">
+                                                                                <form action="{{route('admin.change_type', $item->id)}}" method="post">
+                                                                                @csrf
+                                                                                    <input type="hidden" name="status" value="1">
+                                                                                    <button type="submit" class="btn btn-success">Activate Now</button>
+                                                                                </form>
+
+                                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Deactivate">
+                                                                <a href="#jobDelete-{{$item->id}}" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="bi bi-eye-slash"></i></a>
                                                             </li>
-                                                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <a href="#jobDelete" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="mdi mdi-delete-outline"></i></a>
-                                                            </li>
-                                                        </ul> --}}
+                                                            <div class="modal fade" id="jobDelete-{{$item->id}}" tabindex="-1" aria-labelledby="jobDeleteLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered modal-md">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-body px-4 text-center">
+                                                                            <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                            <div class="avatar-sm mb-4 mx-auto">
+                                                                                <div class="avatar-title bg-primary text-primary bg-opacity-10 font-size-20 rounded-3">
+                                                                                    <i class="mdi mdi-trash-can-outline"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p class="text-muted font-size-16 mb-4">Are you sure you want to permanently deactivate this Sub Admin.</p>
+
+                                                                            <div class="hstack gap-2 justify-content-center mb-0">
+                                                                                <form action="{{route('admin.change_type', $item->id)}}" method="post">
+                                                                                @csrf
+                                                                                    <input type="hidden" name="status" value="2">
+                                                                                    <button type="submit" class="btn btn-danger">Deactivate Now</button>
+                                                                                </form>
+
+                                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </ul>
                                                     </td>
                                                 </tr>
                                             @endforeach

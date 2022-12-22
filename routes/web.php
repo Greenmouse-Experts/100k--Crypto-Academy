@@ -88,6 +88,7 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/transaction-details/{id}', [App\Http\Controllers\AdminController::class, 'transaction_details'])->name('transaction.details');
     Route::get('/viewmember/{id}', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');
     Route::post('users/change_type/{id}', [App\Http\Controllers\AdminController::class, 'change_type'])->name('users.change_type');
+    Route::post('admin/change_type/{id}', [App\Http\Controllers\AdminController::class, 'admin_change_type'])->name('admin.change_type');
     //deposit trans
     Route::post('approvetrans/{id}', [App\Http\Controllers\AdminController::class, 'approve_deposit'])->name('transaction.deposit.approve');
     Route::post('declinetrans/{id}', [App\Http\Controllers\AdminController::class, 'decline_deposit'])->name('transaction.deposit.decline');
