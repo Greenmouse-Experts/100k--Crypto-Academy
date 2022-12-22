@@ -75,7 +75,7 @@
                                                                     </a>
                                                                 </li>
                                                                 <div class="modal fade" id="jobActive-{{$item->id}}" tabindex="-1" aria-labelledby="jobActiveLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                                                                    <div class="modal-dialog modal-dialog-centered modal-md">
                                                                         <div class="modal-content">
                                                                             <div class="modal-body px-4 text-center">
                                                                                 <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -103,7 +103,7 @@
                                                                     <a href="#jobDelete-{{$item->id}}" data-bs-toggle="modal" class="btn btn-sm btn-soft-danger"><i class="bi bi-eye-slash"></i></a>
                                                                 </li>
                                                                 <div class="modal fade" id="jobDelete-{{$item->id}}" tabindex="-1" aria-labelledby="jobDeleteLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                                                                    <div class="modal-dialog modal-dialog-centered modal-md">
                                                                         <div class="modal-content">
                                                                             <div class="modal-body px-4 text-center">
                                                                                 <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
