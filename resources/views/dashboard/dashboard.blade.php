@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                {{-- <div class="col-lg-3">
                     <div class="runtime">
                         <h1>Total Members</h1>
                         <p>
@@ -44,8 +44,8 @@
                         <h4>Subscribers</h4>
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Icon_pvw92p.png" draggable="false" alt="">
                     </div>
-                </div>
-                <div class="col-lg-3">
+                </div> --}}
+                <div class="col-lg-6">
                     <div class="runtime">
                         <h1>Total Balance</h1>
                         <p>
@@ -55,7 +55,7 @@
                         <img src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1669119628/EProd%20Images/Iconnn_zk4z7z.png" draggable="false" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-6">
                     <div class="runtime">
                         <h1>Video Guide</h1>
                         <p>
@@ -118,6 +118,7 @@
                     </div>
                 </div> --}}
             </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
@@ -162,11 +163,14 @@
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Approved</span>
+                                                        @elseif($item->status == 2)
+                                                            <span class="badge badge-pill badge-soft-warning font-size-11">Pending</span>
+                                                        @elseif($item->status == 3)
+                                                            <span class="badge badge-pill badge-soft-danger font-size-11">Declined</span>
                                                         @else
                                                             <span class="badge bg-danger">Failed</span>
                                                         @endif
-
                                                     </td>
                                                     <td>
                                                         <i class="fab fa-cc-mastercard me-1"></i> Crypto

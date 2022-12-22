@@ -98,7 +98,7 @@
                     <div data-simplebar style="max-height: 230px">
                         @if ($not->count() > 0)
                             @foreach ($not as $item)
-                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                <a href="{{route('read.notice', $item->id)}}" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
                                             <span class="avatar-title bg-success rounded-circle font-size-16">

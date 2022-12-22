@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Notification;
 use App\Models\Transaction;
 use App\Models\User;
+use App\Models\UserWallet;
+use App\Notifications\DeclineDepositNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\ApproveDepositNotification;
+use App\Notifications\ApproveWithdrawalNotification;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -62,22 +67,103 @@ class AdminController extends Controller
 
     public function role()
     {
-        return view('admin.role');
+        $users = Admin::where('type', '!=', 'super admin')->paginate(10);
+        return view('admin.role', compact('users'));
     }
 
+    public function create_admin(Request $request)
+    {
+        $a = new Admin();
+        $a->name = $request->name;
+        $a->email = $request->email;
+        $a->password = Hash::make('admin1234');
+        $a->type = 'sub admin';
+        $a->save();
+        Alert::success('Success', 'Sub Admin created successfully with default password: admin1234');
+        return back();
+    }
     public function unsubscribers()
     {
         $users = User::orderBy('id', 'Desc')->where('subscribe', '0')->paginate(10);
         return view('admin.unsubscribers', compact('users'));
     }
 
+    public function search_subscriber(Request $request)
+    {
+        $search = User::where('email', $request->email)->where('subscribe', '1')->first();
+        if (is_null($search)) {
+            $result = 'no';
+        } else {
+            $result = 'yes';
+        }
+        //dd($result);
+        return redirect()->route('admin.welcome')->with([
+            'search' => $result,
+        ]);
+    }
 
+    public function approve_deposit($id)
+    {
+        $trans = Transaction::findOrFail($id);
+        $trans->status = 1;
+        $wall = UserWallet::where('user_id', $trans->user_id)->first();
+        $oldbal = $wall->bal;
+        $wall->bal = $oldbal + $trans->amount;
+        $wall->update();
+        $trans->update();
+        $user = User::where('id', $trans->user_id)->first();
+        $user->notify(new ApproveDepositNotification($trans, $user));
+        Alert::success('Success', 'Deposit transaction approved successfully');
+        return back();
+    }
+
+    public function decline_deposit($id)
+    {
+        $trans = Transaction::findOrFail($id);
+        $trans->status = 3;
+        $trans->update();
+        $user = User::where('id', $trans->user_id)->first();
+        $user->notify(new DeclineDepositNotification($trans, $user));
+        Alert::success('Success', 'Deposit transaction Declined successfully');
+        return back();
+    }
+
+    public function approve_withdraw(Request $request, $id)
+    {
+        $trans = Transaction::findOrFail($id);
+        $trans->trans_hash = $request->trans_hash;
+        $trans->status = 1;
+        $trans->update();
+        $user = User::where('id', $trans->user_id)->first();
+        $user->notify(new ApproveWithdrawalNotification($trans, $user));
+        Alert::success('Success', 'Withdrawal transaction approved successfully');
+        return back();
+    }
+
+    public function decline_withdraw($id)
+    {
+        $trans = Transaction::findOrFail($id);
+        $trans->status = 3;
+        $wall = UserWallet::where('user_id', $trans->user_id)->first();
+        $oldbal = $wall->bal;
+        $wall->bal = $oldbal + $trans->amount;
+        $wall->update();
+        $trans->update();
+        Alert::success('Success', 'Withdrawal transaction declined successfully');
+        return back();
+    }
     public function transaction()
     {
-        $trans = Transaction::orderBy('id', 'Desc')->paginate(10);
+        $trans = Transaction::orderBy('id', 'Desc')->get();
         $tcredit = Transaction::where('type', 'Deposit')->sum('amount');
         $tdebit = Transaction::where('type', 'Withdraw')->sum('amount');
         return view('admin.transaction', compact('trans', 'tcredit', 'tdebit'));
+    }
+
+    public function transaction_details($id)
+    {
+        $trans = Transaction::findOrFail($id);
+        return view('admin.transaction-details', compact('trans'));
     }
 
     public function viewmembers($id)
@@ -188,6 +274,14 @@ class AdminController extends Controller
         ]);
 
         Alert::success('Success', 'Password Updated Successfully!');
+        return back();
+    }
+
+    public function read_notice($id)
+    {
+        $notice = Notification::findOrFail($id);
+        $notice->admin_status = 'read';
+        $notice->update();
         return back();
     }
 

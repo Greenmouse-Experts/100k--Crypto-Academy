@@ -58,10 +58,12 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit'])->name('user.deposit');
     Route::post('/deposit', [App\Http\Controllers\DashboardController::class, 'deposit_post'])->name('user.deposit.post');
     Route::get('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw'])->name('user.withdraw');
+    Route::get('/read-notice/{id}', [App\Http\Controllers\DashboardController::class, 'read_notice'])->name('read.notice');
     Route::post('/withdraw', [App\Http\Controllers\DashboardController::class, 'withdraw_post'])->name('user.withdraw.post');
     Route::get('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe'])->name('user.subscribe');
     Route::post('/subscribe', [App\Http\Controllers\DashboardController::class, 'subscribe_now'])->name('user.subscribe.post');
     Route::get('/profile', [App\Http\Controllers\DashboardController::class, 'profile'])->name('user.profile');
+    Route::get('/signal-room', [App\Http\Controllers\DashboardController::class, 'signal'])->name('signal.room');
     Route::post('/profile/upload/picture', [App\Http\Controllers\DashboardController::class, 'profile_upload_picture'])->name('user.profile.upload.picture');
     Route::post('/profile/update', [App\Http\Controllers\DashboardController::class, 'profile_update'])->name('user.profile.update');
     Route::post('/password/update', [App\Http\Controllers\DashboardController::class, 'password_update'])->name('user.password.update');
@@ -82,10 +84,21 @@ Route::prefix('adminwelcome')->group(function () {
     Route::get('/viewdetails', [App\Http\Controllers\AdminController::class, 'viewdetails'])->name('admin.viewdetails');
     Route::get('/signal', [App\Http\Controllers\AdminController::class, 'signal'])->name('admin.signal');
     Route::get('/role', [App\Http\Controllers\AdminController::class, 'role'])->name('admin.role');
+    Route::get('/admin-read-notice/{id}', [App\Http\Controllers\AdminController::class, 'read_notice'])->name('read.notice');
+    Route::get('/transaction-details/{id}', [App\Http\Controllers\AdminController::class, 'transaction_details'])->name('transaction.details');
     Route::get('/viewmember/{id}', [App\Http\Controllers\AdminController::class, 'viewmembers'])->name('admin.viewmembers');
     Route::post('users/change_type/{id}', [App\Http\Controllers\AdminController::class, 'change_type'])->name('users.change_type');
+    //deposit trans
+    Route::post('approvetrans/{id}', [App\Http\Controllers\AdminController::class, 'approve_deposit'])->name('transaction.deposit.approve');
+    Route::post('declinetrans/{id}', [App\Http\Controllers\AdminController::class, 'decline_deposit'])->name('transaction.deposit.decline');
+    //Withdrawal trans
+    Route::post('approvewithtrans/{id}', [App\Http\Controllers\AdminController::class, 'approve_withdraw'])->name('transaction.withdraw.approve');
+    Route::post('declinewithtrans/{id}', [App\Http\Controllers\AdminController::class, 'decline_withdraw'])->name('transaction.withdraw.decline');
+
     Route::get('/logout-admin', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin.logout');
     Route::post('/profile/update', [App\Http\Controllers\AdminController::class, 'profile_update'])->name('admin.profile.update');
+    Route::post('/admin/create', [App\Http\Controllers\AdminController::class, 'create_admin'])->name('admin.create');
+    Route::post('/subscriber-search', [App\Http\Controllers\AdminController::class, 'search_subscriber'])->name('subscriber.search');
     Route::post('/password/update', [App\Http\Controllers\AdminController::class, 'password_update'])->name('admin.password.update');
 });
 

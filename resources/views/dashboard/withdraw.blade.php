@@ -45,6 +45,9 @@
 
                     <form method="POST" action="{{route('user.withdraw.post')}}">
                         @csrf
+                        @if (\Session::has('token'))
+                            <input type="hidden" name="token" value="{{\Session::get('token')}}">
+                        @endif
                         <div class="row">
                             <div class="col-sm-6">
                                 <input type="hidden" name="wallet_type" value="main_wallet">
@@ -58,24 +61,52 @@
                                         </select>
                                     </div>
                                 </div>-->
-                                <div class="mb-3">
-                                    <label>Amount to withdraw</label>
-                                    <input type="tel" required name="amount" class="form-control">
-                                </div>
-                                <div class="mb-4">
-                                    <label>Withdraw Address</label>
-                                    <input type="text" required name="address" class="form-control">
-                                </div>
+                                @if (\Session::has('amount'))
+                                    <div class="mb-3">
+                                        <label>Amount to withdraw</label>
+                                        <input type="tel" required name="amount" value="{{\Session::get('amount')}}" readonly class="form-control">
+                                    </div>
+                                @else
+                                    <div class="mb-3">
+                                        <label>Amount to withdraw</label>
+                                        <input type="tel" required name="amount" class="form-control">
+                                    </div>
+                                @endif
+                                @if (\Session::has('address'))
+                                    <div class="mb-3">
+                                        <label>Withdraw Address</label>
+                                        <input type="text" required name="address" value="{{\Session::get('address')}}" readonly class="form-control">
+                                    </div>
+                                @else
+                                    <div class="mb-4">
+                                        <label>Withdraw Address</label>
+                                        <input type="text" required name="address" class="form-control">
+                                    </div>
+                                @endif
+                                @if (\Session::has('type'))
+                                    <div class="mb-3">
+                                        <label>Enter OTP</label>
+                                        <input type="text" required name="code" value="" class="form-control">
+                                    </div>
+                                @endif
                             </div>
                             <div class="col-sm-6">
                                 <div class="mb-3">
                                     <label>Chain name</label>
                                     <input type="text" class="form-control" readonly value="TRC-20">
                                 </div>
-                                <div class="mb-3">
-                                    <label>Password</label>
-                                    <input type="password" required name="password" class="form-control">
-                                </div>
+                                @if (\Session::has('password'))
+                                    <div class="mb-3">
+                                        <label>Confirm Password</label>
+                                        <input type="password" required name="password" value="{{\Session::get('password')}}" readonly class="form-control">
+                                    </div>
+                                @else
+                                    <div class="mb-3">
+                                        <label>Password</label>
+                                        <input type="password" required name="password" class="form-control">
+                                    </div>
+                                @endif
+
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <button type="submit" class="btn btn-success waves-effect waves-light">Confirm Withdrawal</button>
@@ -128,11 +159,14 @@
                                                     </td>
                                                     <td>
                                                         @if ($item->status == 1)
-                                                            <span class="badge badge-pill badge-soft-success font-size-11">Successful</span>
+                                                            <span class="badge badge-pill badge-soft-success font-size-11">Approved</span>
+                                                        @elseif($item->status == 2)
+                                                            <span class="badge badge-pill badge-soft-warning font-size-11">Pending</span>
+                                                        @elseif($item->status == 3)
+                                                            <span class="badge badge-pill badge-soft-danger font-size-11">Declined</span>
                                                         @else
                                                             <span class="badge bg-danger">Failed</span>
                                                         @endif
-
                                                     </td>
                                                     <td>
                                                         {{$item->method}}

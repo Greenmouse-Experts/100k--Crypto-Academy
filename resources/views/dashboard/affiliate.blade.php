@@ -46,7 +46,7 @@
                             <h5 class="card-title mb-4">My Affiliate Link</h5>
                             <div class="hstack gap-3">
                                 <input class="form-control me-auto" type="text" value="{{URL::to('').'/ref/'.Auth::user()->affiliate_id}}" id="myInput">
-                                <button type=" button" class="btn btn-secondary" onclick="myFunction()">copyText</button>
+                                <button type=" button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy" class="btn btn-secondary" onclick="copyFunction()"><i class="mdi mdi-content-copy"></i></button>
                                 <div class="vr"></div>
                             </div>
                         </div>
@@ -113,6 +113,20 @@
             </div>
         </div>
     </div>
+    <script>
+        function copyFunction() {
+  // Get the text field
+        var copyText = document.getElementById("myInput");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+
+        }
+    </script>
     <script>
         $(document).ready(function(){
             $("#myInpuAA2").on("keyup", function() {
