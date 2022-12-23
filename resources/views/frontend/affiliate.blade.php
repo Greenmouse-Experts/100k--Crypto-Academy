@@ -89,16 +89,16 @@
                 <b>To ensure even bigger earnings for our members and an income that is completely passive, our 50% commissions are paid 4 levels deep. </b>
             </p>
             <p>
-                Level 1:  30%  - (Your direct referral) 
+                <b>Level 1:</b>  30%  - (Your direct referral) 
             </p>
             <p>
-                Level 2: 10%  - ( Referrals from level 1)
+                <b>Level 2:</b> 10%  - ( Referrals from level 1)
             </p>
             <p>
-                Level 3:  5%  - (Referrals from level 2)
+                <b>Level 3:</b>  5%  - (Referrals from level 2)
             </p>
             <p>
-                Level 4:  5%  - (Referrals from level 3)
+                <b>Level 4:</b>  5%  - (Referrals from level 3)
             </p>
             <p class="sure">
             In addition to our excellent affiliate training, we have in-house marketing experts who will promote your links for you and get you unending sales. All you have to do is to give them the job and they bring you results. 

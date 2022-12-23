@@ -291,7 +291,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-lg-12 all">
-                                <iframe src="https://drive.google.com/file/d/1m_Gv8NS-KWcJ3rAo242yeMXAy-9Z7aby/preview" width="100%" height="300"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/NZ-BodGKluU" title="100KCrypto Investing Getting Started Guide 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
