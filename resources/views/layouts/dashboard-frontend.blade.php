@@ -104,6 +104,16 @@
     <!-- App js -->
     <script src="{{URL::asset('dash/assets/js/app.js')}}"></script>
     <script>
+            $(function(){
+        $("body").on('hidden.bs.modal', function (e) {
+            var $iframes = $(e.target).find("iframe");
+            $iframes.each(function(index, iframe){
+            $(iframe).attr("src", $(iframe).attr("src"));
+            });
+        });
+        });
+    </script>
+    <script>
         function showPreview(event) {
             if (event.target.files.length > 0) {
                 var src = URL.createObjectURL(event.target.files[0]);
